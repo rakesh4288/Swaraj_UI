@@ -15,7 +15,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
         <img src="images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        स्वराज UI</a>
+        <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,7 +38,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="ECMA_6_Dashboard.html">ECMA 6</a>
+            <a class="nav-link" href="ES_6_Dashboard.html">ECMA 6</a>
           </li>
         </ul>
       </div>
@@ -51,7 +51,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <h1>All UI Practice Dashboard !</h1>
+          <h1>All UI Practice Dashboard ! <i class="fa fa-address-card-o" aria-hidden="true"></i> </h1>
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@
   <section class="container">
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-        
+        Font Awesome <a href="https://fontawesome.com/v4/icons/" target="_blank">https://fontawesome.com/v4/icons/</a>
       </div>
 
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -74,12 +74,18 @@
   <div class="container">
       <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved 2023</span>
+              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
           </div>
       </div>
   </div>
 </footer>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
 </body>
 </html>
