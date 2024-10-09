@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="css/mainStyle.css" rel="stylesheet">
+  <title>Let Const new keyword in ES6</title>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        UI Practice</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="HTML_Dashboard.html">HTML</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="CSS_Dashboard.html">CSS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="Javascript_Dashboard.html">JavaScript</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="ECMA_6_Dashboard.html">ECMA 6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="mainBody">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <section id="es6-promises">
+          <div id="page-heading">
+            <h3 class="pull-left">What is Promises in JavaScript?  Part I</h3>
+            <div class="pull-right">
+                <a href="ECMA_6_Dashboard.html" class="btn btn-info btn-sm">
+                  <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+                  Back to Dashboard
+                </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div>
+            <p>
+              Promises is a new concept in JavaScript. Promise is an object that may produce two states condition:
+              <ul>
+                <li>Either Resolve or</li>
+                <li>Either Reject</li>
+              </ul>
+            </p>
+
+            <p>
+              While executing a promise sometimes it is possible to network failure Or may be huge traffic on internet so it will wait for the server response. Because Promise is very eager it will definitely be executed weather it will success or failed.
+            </p>
+
+            <p>
+              We can handle the resolve and reject status by using then and catch block. Yes, Promise providing the two method for handing the upcoming response.
+            </p>
+      
+            <p class="text-danger">
+              We can use promise - when we have to perform some set of action and after that it will execute some or produce some result. And Promise is very eager it will definitely be executed whether the result will success or failed.After we can map the execution flow using .then() and .catch() callback function.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="siteFooter">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <span class="footerContent">Copyright &copy; All right Reserved 2023</span>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  let myPromise = new Promise(function(resolve,reject){
+    let status = true;
+    if(status){
+      resolve("Yes, Everything is fine");
+    } else {
+      reject("No, Everything is Not fine");
+    }
+  });
+
+  myPromise.then(function(fromResolve){
+    console.log(fromResolve);
+  }).catch(function(fromReject){
+    console.log(fromReject);
+  });
+
+  // SeTime Out Function
+  console.log("1");
+  setTimeout(function(){
+    console.log("2");
+  },3000);
+
+  setTimeout(function(){
+    console.log("4");
+  },0);
+  console.log("3");
+  
+</script>
+</body>
+</html>

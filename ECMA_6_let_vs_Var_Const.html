@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="css/mainStyle.css" rel="stylesheet">
+  <title>Let Const new keyword in ES6</title>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        UI Practice</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="HTML_Dashboard.html">HTML</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="CSS_Dashboard.html">CSS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="Javascript_Dashboard.html">JavaScript</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="ECMA_6_Dashboard.html">ECMA 6</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="mainBody">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <section id="es6-let-const">
+          <div id="page-heading">
+            <h3 class="pull-left">Difference between Let and Var keyword in JavaScript?</h3>
+            <div class="pull-right">
+                <a href="ECMA_6_Dashboard.html" class="btn btn-danger btn-sm">
+                  <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+                  Back to Dashboard
+                </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div>
+            <p>
+              Actually, both are using for creating a variable. Whereas Var keyword is the traditional approach and Let is the new keyword which is associated from ECMA6
+            </p>
+
+            <p class="text-danger">The Main difference is that Let keyword has a block level scope and Var is the function level scope.</p>
+    
+            <p class="text-danger">Note: Function expression cannot hoisted which is created by Let Keyword</p>
+            <p class="text-danger">Note: Function expression cannot hoisted which is created by Var Keyword</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="siteFooter">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <span class="footerContent">Copyright &copy; All right Reserved 2023</span>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  if(true){
+    let myName = "Rakesh";
+    console.log(myName);
+  }
+  //console.log(myName); // it will give ReferenceError
+
+  function abc(){
+    var abName = "Rajvika";
+    console.log(abName);
+    if(true){
+      let myName = "Lalita";
+      console.log(myName);
+    }
+    //console.log('myName =', myName);
+  }
+  abc();
+
+  //------------------------------------------//
+  const wwe = "Lalita";
+  //wwe = "Rajvika";
+
+  //const bb;
+  //bb = "Hello";
+  // You can not re-assign the value which is defined by the const keyword.
+  // And in this case bb has already defined with undefined values
+</script>
+</body>
+</html>
