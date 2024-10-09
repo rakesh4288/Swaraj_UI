@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="css/mainStyle.css" rel="stylesheet">
   <title>ECMA 6 Dashboard</title>
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="images/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        UI Practice</a>
+        <img src="images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        स्वराज Practice</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -79,14 +80,14 @@
           <a class="list-group-item list-group-item-action active" aria-current="true">
             Quick Links
           </a>
-          <a href="ECMA_6_Class_1.html" class="list-group-item list-group-item-action">Class Example 1</a>
-          <a href="ECMA_6_Class_2.html" class="list-group-item list-group-item-action">Class Example 2</a>
+          <a href="ES_6_Class_1.html" class="list-group-item list-group-item-action">Class Example 1</a>
+          <a href="ES_6_Class_2.html" class="list-group-item list-group-item-action">Class Example 2</a>
 
-          <a href="ECMA_6_Class_3_Inheritance.html" class="list-group-item list-group-item-action">Class Example with inheritance</a>
+          <a href="ES_6_Class_3_Inheritance.html" class="list-group-item list-group-item-action">Class Example with inheritance</a>
 
-          <a href="ECMA_6_Symbols.html" class="list-group-item list-group-item-action">ES6 Symbols</a>
+          <a href="ES_6_Symbols.html" class="list-group-item list-group-item-action">ES6 Symbols</a>
 
-          <a href="ECMA_6_For_of.html" class="list-group-item list-group-item-action"> For Of new loop in ES6</a>
+          <a href="ES_6_For_of.html" class="list-group-item list-group-item-action"> For Of new loop in ES6</a>
         </div>
       </div>
 
@@ -96,15 +97,17 @@
             Another Features
           </a>
       
-          <a href="ECMA_6_Arrow_Function.html" class="list-group-item list-group-item-action"> Arrow Function</a>
+          <a href="ES_6_Arrow_Function.html" class="list-group-item list-group-item-action"> 
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Arrow Function</a>
 
-          <a href="ECMA_6_let_vs_Var_Const.html" class="list-group-item list-group-item-action">Let Const new keyword in ES6 </a>
+          <a href="ES_6_Object_Literals.html" class="list-group-item list-group-item-action">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Object Literals </a>
 
-          <a href="ECMA_6_Object_Literals.html" class="list-group-item list-group-item-action">Object Literals </a>
+          <a href="ES_6_Spread_Operator.html" class="list-group-item list-group-item-action">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Spread Operator </a>
 
-          <a href="ECMA_6_Spread_Operator.html" class="list-group-item list-group-item-action">Spread Operator </a>
-
-          <a href="ECMA_6_Template_String.html" class="list-group-item list-group-item-action">Template String/Literals </a>
+          <a href="ES_6_Template_String.html" class="list-group-item list-group-item-action">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Template String/Literals </a>
         </div>
       </div>
 
@@ -114,11 +117,11 @@
             Promises
           </a>
       
-          <a href="ECMA_6_Promise_1.html" class="list-group-item list-group-item-action">Promises Example 1 </a>
+          <a href="ES_6_Promise_1.html" class="list-group-item list-group-item-action">Promises Example 1 </a>
 
-          <a href="ECMA_6_Promise_2.html" class="list-group-item list-group-item-action">Promises Example 2 </a>
+          <a href="ES_6_Promise_2.html" class="list-group-item list-group-item-action">Promises Example 2 </a>
 
-          <a href="ECMA_6_Promise_3.html" class="list-group-item list-group-item-action">Promises Example 3 </a>
+          <a href="ES_6_Promise_3.html" class="list-group-item list-group-item-action">Promises Example 3 </a>
         </div>
       </div>
     </div>
@@ -129,11 +132,16 @@
   <div class="container">
       <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved 2023</span>
+              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
           </div>
       </div>
   </div>
 </footer>
+<script>
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
