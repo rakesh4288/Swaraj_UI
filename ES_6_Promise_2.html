@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-  <link href="css/mainStyle.css" rel="stylesheet">
-  <title>Let Const new keyword in ES6</title>
+  <link href="css/mainStyle.css" rel="stylesheet" />
+  <title>Promises in JavaScript</title>
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="images/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        UI Practice</a>
+        <img src="images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,56 +47,61 @@
 </header>
 
 <main class="mainBody">
+  <section class="pageHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="pull-left">
+            <h1>What is Promises in JavaScript?  Part II</h1>
+          </div>
+
+          <div class="pull-right">
+            <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Back to Dashboard </a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <section id="es6-promises">
-          <div id="page-heading">
-            <h3 class="pull-left">What is Promises in JavaScript?  Part II</h3>
-            <div class="pull-right">
-                <a href="ECMA_6_Dashboard.html" class="btn btn-info btn-sm">
-                  <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
-                  Back to Dashboard
-                </a>
+        <div>
+          <h5>When we have to perform some set of action in JavaScript. It may be some calculation or some set of code or modules that would be execute in some time.</h5>
+          <h5 class="text-success">So in this scenario we can use the JavaScript Promises. Because it will definitely execute and provide two state: Either it will come up with the Resolve Success method or oit maby chance to get Failed</h5>
+          <hr>
+          <div class="row">
+            <div class="col-md-4">
+              <p>
+                <img src="images/promise_1.png" class="img-fluid" alt="">
+              </p>
             </div>
-            <div class="clearfix"></div>
+
+            <div class="col-md-8">
+              <h6>When we will the status of Promises so we can handle this situation by then() and catch()block</h6>
+              <h6 class="text-danger"><b>then():</b> When you will receive the success from Promise execution then you can handle into then() block and you can call some another function to execute</h6>
+
+              <h6 class="text-danger"><b>catch():</b> similarly this will also follow for reject status after promise exection.</h6>
+            </div>
           </div>
 
-          <div class="alert border-danger">
-            <h1>Promises in JavaScript</h1>
-            <h5>When we have to perform some set of action in JavaScript. It may be some calculation or some set of code or modules that would be execute in some time.</h5>
-            <h5 class="text-success">So in this scenario we can use the JavaScript Promises. Because it will definitely execute and provide two state: Either it will come up with the Resolve Success method or oit maby chance to get Failed</h5>
-            <hr>
-            <div class="row">
-              <div class="col-md-4">
-                <p>
-                  <img src="images/promise_1.png" class="img-fluid" alt="">
-                </p>
-              </div>
+          <hr>
 
-              <div class="col-md-8">
-                <h6>When we will the status of Promises so we can handle this situation by then() and catch()block</h6>
-                <h6 class="text-danger"><b>then():</b> When you will receive the success from Promise execution then you can handle into then() block and you can call some another function to execute</h6>
-
-                <h6 class="text-danger"><b>catch():</b> similarly this will also follow for reject status after promise exection.</h6>
-              </div>
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                <img src="images/promise_2.png" class="img-fluid" alt="">
+              </p>
             </div>
 
-            <hr>
-
-            <div class="row">
-              <div class="col-md-6">
-                <p>
-                  <img src="images/promise_2.png" class="img-fluid" alt="">
-                </p>
-              </div>
-
-              <div class="col-md-6">
-              </div>
+            <div class="col-md-6">
             </div>
-
           </div>
-        </section>
+
+        </div>
       </div>
     </div>
   </div>
@@ -105,7 +111,7 @@
   <div class="container">
       <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved 2023</span>
+              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
           </div>
       </div>
   </div>
@@ -113,6 +119,13 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
+
 <script>
   // Example 1
   let complete = true;
@@ -203,6 +216,34 @@
   Promise_4(true).then(interviewPassed).catch(interviewFailed);
   //Promise_4(false).catch(interviewFailed);
 
+  // Example 100
+  function ExampPromise(math,english,science,hindi,sanskrit){
+    return new Promise(function(resolve,reject){
+      console.log("We are calculating. Please wait...");
+      let total = math + english + science + hindi + sanskrit;
+      let result = total/5;
+      //console.log("result = ", result);
+      setTimeout(function(){
+        if(result>=60){
+          resolve(`Exam = Passed with ${result} percentages`);
+        } else {
+          reject(`Exam = Failed with ${result} with percentages`);
+        }
+      },2000);
+    });
+  }
+
+  function examPassed(result){
+    console.log(result);
+    //document.write(result);
+  }
+
+  let examFailed = (error)=>{
+    console.log(error);
+  }
+
+  ExampPromise(88,65,98,55,65).then(examPassed).catch(examFailed);
+  /*************************************************/
 </script>
 </body>
 </html>

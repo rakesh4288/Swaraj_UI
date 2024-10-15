@@ -7,7 +7,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="css/mainStyle.css" rel="stylesheet" />
-  <title>Promises in JavaScript</title>
+  <title>Async Await</title>
 </head>
 <body>
 <header>
@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="pull-left">
-            <h1>What is Promises in JavaScript?  Part I</h1>
+            <h1>How use async await function in JavaScript ?</h1>
           </div>
 
           <div class="pull-right">
@@ -69,33 +69,46 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <div>
-          <p>
-            Promises is a new concept in JavaScript. Promise is an object that may produce two states condition:
-            <ul>
-              <li>Either Resolve or</li>
-              <li>Either Reject</li>
-            </ul>
-          </p>
+        <h4>"async and await make promises easier to write"</h4>
+        <h4>async makes a function return a Promise</h4>
+        <h4>await makes a function wait for a Promise</h4>
 
-          <p>
-            While executing a promise sometimes it is possible to network failure Or may be huge traffic on internet so it will wait for the server response. Because Promise is very eager it will definitely be executed weather it will success or failed.
-          </p>
+        <p>
+          Async and Await in JavaScript is used to simplify handling the asynchronous operations using promises. By enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage complex asynchronous flows.
+        </p>
+      </div>
+    </div>
 
-          <p>
-            We can handle the resolve and reject status by using then and catch block. Yes, Promise providing the two method for handing the upcoming response.
-          </p>
-    
-          <p class="text-danger">
-            We can use promise - when we have to perform some set of action and after that it will execute some or produce some result. And Promise is very eager it will definitely be executed whether the result will success or failed.After we can map the execution flow using .then() and .catch() callback function.
-          </p>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="alert alert-info">
+          <h4>Async Function:</h4>
+          <p>The async function allows us to write promise-based code as if it were synchronous. This ensures that the execution thread is not blocked.</p>
 
-          <p>
-            <img src="images/Promise_Part_1.png" alt="Promise_Part_1" class="img-fluid" />
-          </p>
+          <p>The keyword <b>async</b> before a function makes the function return a promise:</p>
 
+          <pre><span>async&nbsp;function&nbsp;myFunction() {</span><br><span>&nbsp;&nbsp;return&nbsp;"Hello";</span><br><span>}</span><br></pre>
+
+          <div>
+            <h5>Promise Handling:</h5> Async functions always return a promise. If a value is returned that is not a promise, JavaScript automatically wraps it in a resolved promise.
+
+            <p>
+              <img src="images/async_await_1.png" alt="async_await_1" class="img-fluid" />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="alert alert-warning">
+          <h4>Await Keyword</h4>
+          <p>The await keyword can only be used inside an async function.</p>
+          <p>The await keyword makes the function pause the execution and wait for a resolved promise before it continues:</p>
           <p>
-            <a href="ES_6_Promise_2.html" class="btn btn-success btn-sm">Promises Part 2</a>
+            <b>Execution Pause:</b> <br/> Await makes the code wait until the promise returns a result, allowing for cleaner and more manageable asynchronous code.
+          </p>
+          <p>
+            <img src="images/async_await_2.png" alt="async_await_2" class="img-fluid" />
           </p>
         </div>
       </div>
@@ -120,24 +133,6 @@
   const now = new Date();
   let year = now.getFullYear();
   document.getElementById("currentYear").innerHTML = year;
-</script>
-
-<script>
-  let myPromise = new Promise(function(resolve,reject){
-    let status = true;
-    if(status){
-      resolve("Yes, Everything is fine");
-    } else {
-      reject("No, Everything is Not fine");
-    }
-  });
-
-  myPromise.then(function(fromResolve){
-    console.log(fromResolve);
-  }).catch(function(fromReject){
-    console.log(fromReject);
-  });
-  
 </script>
 </body>
 </html>
