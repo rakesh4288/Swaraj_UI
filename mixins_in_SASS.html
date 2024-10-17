@@ -1,19 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mixin in SASS</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  </head>
-  <body>
-    <br>
-    <div class="container">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="css/mainStyle.css" rel="stylesheet" />
+  <title>All UI Practice</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top gradienHeader">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pages_js/Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <h1>Mixin in SASS ! <i class="fa fa-address-card-o" aria-hidden="true"></i> </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="alert border-success">
-            <h2> <u>Mixin in SASS</u> </h2>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <h5 class="text-success">In CSS development we are writing a some similar code multiple times like headings paragraphs image responsive code so for reducing this effort we can use Mixin functionlity from SASS. This is one kind of CSS function and this will be define only one time and you can call multiple times. </h5>
 
             <h5> <p>Remember how we wrote <code class="highlighter-rouge">@keyframes</code> when creating <strong><a href="https://marksheet.io/css-animations.html" target="_blank">CSS animations</a></strong>? The Sass mixin syntax is fairly similar:</p> </h5>
@@ -40,37 +90,26 @@
           </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
     </div>
+  </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+</body>
 
-    <div class="alert alert-warning">
-      <h2 class="text-danger"> 
-        function expression can not be hoisted which is created by Let & Var keyword !!
-      </h2>
-    </div>
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      function outer(){
-        var outer_variable = "I am outer variable";
-        if(true){
-          let inside_if = "This variable belongs to curly brasis";
-          console.log("inside from If = " + inside_if);
-        }
-        console.log(outer_variable);
-        //console.log(inside_if);
-		  }
-		
-		  outer();
-
-      //desing(); // this will produce the error Because function expression can not be Hoisted which is created by Let & var keyboard
-      var desing = function(){
-        console.log("function expression can not be hoisted which is created by Let & Var keyword !!");
-      }
-    </script>
-  </body>
 </html>
