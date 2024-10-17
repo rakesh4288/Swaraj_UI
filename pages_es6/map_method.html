@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Map in ES6</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_js/Javascript_Dashboard.html">JavaScript</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>Es6 .map() Method</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <p>
+            <code class="text-danger">map()</code> creates a new array from calling a function for every array element.
+          </p>
+
+          <p>
+            <code class="text-danger">map()</code> does not execute the function for empty elements.
+          </p>
+
+          <p>
+            <code class="text-danger">map()</code> does not change the original array.
+          </p>
+
+          <p>
+            <code class="text-danger">map()</code> method of Array instances creates a new array populated with the
+            results of calling a provided function on every element in the calling array.
+          </p>
+
+          <p>
+            <img src="../images/array_map.png" alt="array_map" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+      <hr class="bg-primary" />
+
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h3>why we use map function instead of for loop</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+    // Syntax
+    // map(callbackFn)
+    // map(callbackFn, thisArg)
+
+    const array1 = [1, 2, 3, 4];
+    const map1 = array1.map((item) => item * 2);
+    console.log("result =", map1);
+    // Expected output: Array [2, 4, 6, 8]
+  </script>
+
+  <script>
+    // Whe we are use .map() instead of for loop
+    let names = ["rakesh", "lalita", "rajvika", "rajlakshmi"];
+    // ["Rakesh", "Lalita", "Rajvika", "Rajlakshmi"] <-- Capitalize 1st letter of each element
+
+    // function for Create Capitalize First Letter
+    const capitalize = (str) => {
+      return str.charAt(0).toUpperCase() + str.slice(1)
+    }
+    // Let's run this function and pass the string parameter
+    const result = capitalize("abc");
+    console.log("capitalize result =", result);
+
+    // Manually manipulate the array
+    const name0 = capitalize(names[0]);
+    console.log("name O index =", name0);
+
+    const name1 = capitalize(names[1]);
+    console.log("name 1 index =", name1);
+
+    const name2 = capitalize(names[2]);
+    console.log("name 2 index =", name2);
+
+    const name3 = capitalize(names[3]);
+    console.log("name 3 index =", name3);
+
+    // But This is not correct approach for handling the array
+
+    // Now we should to use the For Loop for interating the array
+    let new_names = []
+    for (var i = 0; i < names.length; i++) {
+      new_names.push(capitalize(names[i]));
+    }
+    console.log('names array before for loop =', names);
+    console.log('new_names array after for loop =', new_names);
+    // This is not best approach Because before calling the capitalize function we can also manipulate the existing array
+
+    // So the Best approach is here to use the .map() 
+    // it is using new array.
+    // it does not modified the original array
+    const new_array = names.map((item) => capitalize(item));
+    console.log('names array before map =', names);
+    console.log('new_array array after map =', new_array);
+  </script>
+</body>
+
+</html>

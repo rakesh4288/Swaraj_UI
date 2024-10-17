@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Async Await</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_js/Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>How use async await function in JavaScript ?</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h4>"async and await make promises easier to write"</h4>
+          <h4>async makes a function return a Promise</h4>
+          <h4>await makes a function wait for a Promise</h4>
+
+          <p>
+            Async and Await in JavaScript is used to simplify handling the asynchronous operations using promises. By
+            enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage
+            complex asynchronous flows.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <div class="alert alert-info">
+            <h4>Async Function:</h4>
+            <p>The async function allows us to write promise-based code as if it were synchronous. This ensures that the
+              execution thread is not blocked.</p>
+
+            <p>The keyword <b>async</b> before a function makes the function return a promise:</p>
+
+            <pre><span>async&nbsp;function&nbsp;myFunction() {</span><br><span>&nbsp;&nbsp;return&nbsp;"Hello";</span><br><span>}</span><br></pre>
+
+            <div>
+              <h5>Promise Handling:</h5> Async functions always return a promise. If a value is returned that is not a
+              promise, JavaScript automatically wraps it in a resolved promise.
+
+              <p>
+                <img src="../images/async_await_1.png" alt="async_await_1" class="img-fluid" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <div class="alert alert-warning">
+            <h4>Await Keyword</h4>
+            <p>The await keyword can only be used inside an async function.</p>
+            <p>The await keyword makes the function pause the execution and wait for a resolved promise before it
+              continues:</p>
+            <p>
+              <b>Execution Pause:</b> <br /> Await makes the code wait until the promise returns a result, allowing for
+              cleaner and more manageable asynchronous code.
+            </p>
+            <p>
+              <img src="../images/async_await_2.png" alt="async_await_2" class="img-fluid" />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h3>Advantages of Async and Await</h3>
+          <p>
+            <b>Improved Readability:</b> Async and Await allow asynchronous code to be written in a synchronous style,
+            making it easier to read and understand.
+          </p>
+
+          <p>
+            <b>Error Handling:</b> Using try/catch blocks with async/await simplifies error handling.
+          </p>
+
+          <p>
+            <b>Avoids Callback Hell:</b> Async and Await prevent nested callbacks and complex promise chains, making the
+            code more linear and readable.
+          </p>
+
+          <p>
+            <b>Better Debugging:</b> Debugging async/await code is more intuitive since it behaves similarly to
+            synchronous code.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+</body>
+</html>

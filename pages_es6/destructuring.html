@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>ES6 Destructuring</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_js/Javascript_Dashboard.html">JavaScript</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>What is Destructuring in ES6 ?</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="destructuring-with-array">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <p>
+              Destructuring is a new feature introduced in ES6 which allows you to extract values from Object or Arrays
+              or objects and assign them to variables in a more concise and readable way. It simplifies the process of
+              extracting specific data from complex structures.
+            </p>
+
+            <p class="alert alert-warning">
+              Destructuring does not change the original object. <br />
+              Destructuring can be used with any iterables.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <div id="array-destructuring" class="alert alert-info">
+              <h4>Destructuring Arrays with old approach:</h4>
+              <p>
+                <img src="../images/destructuring_array_with_old_approach.png" alt="destructuring_with_old_approach"
+                  class="img-fluid" />
+              </p>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div id="array-destructuring" class="alert alert-success">
+              <h4>Destructuring Arrays with New approach using ES6</h4>
+              <p>
+                <img src="../images/destructuring_arraywith_new_approach.png" alt="destructuring_with_old_approach"
+                  class="img-fluid" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-6">
+            <div class="alert alert-secondary">
+              <h5>Destructuring array with the help of spread operator:</h5>
+              <pre><span>const numbers = [1, 2, 3, 4, 5];</span><br><br><span>// Skipping the second element</span><br><span>const [first, , third, ...rest] = numbers;</span><br><br><span>console.log(first); // Output: 1</span><br><span>console.log(third); // Output: 3</span><br><span>console.log(rest);  // Output: [4, 5]</span><br></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="bg-primary" />
+
+    <section id="destructuring-with-objects">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4>Destructuring with Objects</h4>
+            <p>
+              Destructuring is exactly the same. We may have an array that we are working with, but we only need some of
+              the items contained in these.
+            </p>
+
+            <p>Destructuring makes it easy to extract only what is needed.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <div class="alert alert-warning">
+              <h5>Basic Object Destructuring:</h5>
+              <pre><span>const person = { name: 'John', age: 30 };</span><br><br><span>// Destructuring assignment</span><br><span>const { name, age } = person;</span><br><br><span>console.log(name); // Output: John</span><br><span>console.log(age);  // Output: 30</span></pre>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="alert alert-danger">
+              <h5>Alias (Renaming Variables):</h5>
+              <pre><span>const person = { name: 'John', age: 30 };</span><br><br><span>// Destructuring assignment</span><br><span>const { name, age } = person;</span><br><br><span>console.log(name); // Output: John</span><br><span>console.log(age);  // Output: 30</span></pre>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="alert alert-primary">
+              <h5>Destructuring Function Parameters:</h5>
+              <pre><span>// Destructuring function parameters</span><br><span>function printPersonDetails({ name, age }) {</span><br><span>  console.log(`Name: ${name}, Age: ${age}`);</span><br><span>}</span><br><br><span>const person = { name: 'Alice', age: 28 };</span><br><span>printPersonDetails(person);</span><br><span>// Output: Name: Alice, Age: 28</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      Referred By: <a href="https://www.geeksforgeeks.org/what-is-destructuring-in-es6/"
+        target="_blank">https://www.geeksforgeeks.org/what-is-destructuring-in-es6/</a>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+  <script>
+    const empInfo = {
+      empId: '123456',
+      empName: 'Rakesh Shah',
+    }
+    const updateEmpInfo = { ...empInfo, address: 'Pune India' }
+    console.log('updateEmpInfo =', updateEmpInfo);
+
+
+    // Lets' Old approach for assigning the array values
+    const fruits = ['Apple', 'Banana', 'Orange', 'Mango',]
+    const apple = fruits[0];
+    const banana = fruits[1];
+    const orange = fruits[2];
+    const mango = fruits[3];
+
+    console.log(apple);
+    console.log(banana);
+    console.log(orange);
+    console.log(mango);
+
+    // well this is old approach for assigning a value into new variable
+    // we need to take care about the arrays indexing
+
+
+    const cars = ['Tata Punch', 'Suzuki Dezire', 'Mahindra Scorpio', 'Hyundai Aura'];
+    // Destructuring assignment
+    const [punch, dezire, scorpio, aura] = cars;
+    console.log(punch); // Output: Tata Punch
+    console.log(dezire); // Output: Suzuki Dezire
+    console.log(scorpio); // Output: Mahindra Scorpio
+    console.log(aura); // Output: Hyundai Aura
+
+    // Here we can directly use the value of Array and assign into new variable
+
+
+  </script>
+</body>
+
+</html>
