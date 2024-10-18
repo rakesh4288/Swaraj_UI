@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>filter()</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_js/Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>ES6 | Array filter() Method</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <p>The Array filter() is an inbuilt method, this method creates a new array with elements that follow or pass
+            the given criteria and condition.</p>
+
+          <p>The <code class="text-danger">filter()</code> method creates a new array filled with elements that pass a
+            test provided by a function.</p>
+
+          <p>The <code class="text-danger">filter()</code> method does not execute the function for empty elements.</p>
+
+          <p>The <code class="text-danger">filter()</code> method does not change the original array.</p>
+
+          <pre class="alert alert-info">var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])</pre>
+
+          <p><strong>Parameter:</strong> This method accepts 2 parameters which was mentioned above and described below:
+          </p>
+
+          <ul>
+            <li><strong>Callback:</strong> The function is a predicate, to test each element of the array. Return true
+              to keep the element, false otherwise. It accepts three arguments:
+              <ul>
+                <li><strong>element:</strong> The current element being processed in the array.</li>
+                <li><strong>index(Optional):</strong> The index of the current element being processed in the array.
+                </li>
+                <li><strong>array(Optional):</strong> The array filter was called upon.</li>
+              </ul>
+            </li>
+            <li><strong>thisArg(Optional):</strong> Value to use as this when executing the callback.</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="bg-primary"/>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h5>Example 1: <br/>The filter function filters all the numeric values in the array greater than 18 </h5>
+          <p>
+            <img src="../images/array_filter_1.png" alt="array_filter_1" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+
+      <hr class="bg-primary"/>
+      
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h5>Example 2: <br/>The filter function filters all the words in the array which have length greater than 5  </h5>
+          <p>
+            <img src="../images/array_filter_2.png" alt="array_filter_2" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+
+      <hr class="bg-primary"/>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h5>Example 3: <br/>The filter function with array of objects  </h5>
+          <p>
+            <img src="../images/array_filter_3.png" alt="array_filter_3" class="img-fluid" />
+          </p>
+
+          <h5>Output:</h5>
+          <p>
+            <img src="../images/array_filter_3_1.png" alt="array_filter_3_1" class="img-fluid" />
+          </p>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h4>Remember one main point:</h4>
+          <ul>
+            <li>When you are using curly brasis {} inside the callback then you must have to use the return keyword just before conditions</li>
+            <li>If you are not using the curly basis {} inside the filter function and you are writing one line code then No need to wrtie the return keyword</li>
+          </ul>
+
+          <h5>with return keyword:</h5>
+          <p>
+            <img src="../images/array_filter_3_2.png" alt="array_filter_3_2" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+    // Filter with numerical values
+    var age = [17,10,28,45,18,30,14,36,27,5];
+    const result = age.filter((item) => item >= 18);
+    console.log('result =', result);
+    // output: [28, 45, 18, 30, 36, 27]
+
+  
+    
+    
+    // Filter with strings
+    const fruits = ["Apple", "Kiwi", "Watermelon", "Orange", "Mango", "Pineapple", "Banana", "Papaya", "Strawberry"];
+    const fruitsResult = fruits.filter((item) => item.length > 8);
+    console.log('Result =', fruitsResult);
+    // output: ["Watermelon", "Pineapple", "Strawberry",]
+  
+  
+    // Filter with array of object
+    const users = [
+      {
+        id: 1,
+        name: "Rakesh Shah",
+        location: "Pune"
+      },
+      {
+        id: 2,
+        name: "Nitish Lamba",
+        location: "Noida"
+      },
+      {
+        id: 4,
+        name: "Deepika SD",
+        location: "Kochhi"
+      },
+      {
+        id: 5,
+        name: "Pramod Patil",
+        location: "Pune"
+      },
+      {
+        id: 7,
+        name: "Dishant Adlakha",
+        location: "Noida"
+      }
+    ]
+
+    // const filteredUsers = users.filter((item) => item.location === "Pune");
+
+
+    const filteredUsers = users.filter((item) => {
+      return item.location === "Pune"
+    });
+
+
+    // console.log("filtered Users =", filteredUsers);
+  </script>
+</body>
+</html>
