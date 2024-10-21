@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Multiple CheckBox</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>How to handle the multiple checkbox</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h4>List of 12 Jyotirlingas in India With Names & Places</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Somnath" id="Somnath" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Somnath">
+              (1) Somnath - Gir Somnath In Gujarat
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Nageshwar" id="Nageshwar" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Nageshwar">
+              (2) Nageshwar - Daarukavanam In Gujarat
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Bhimashankar" id="Bhimashankar" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Bhimashankar">
+              (3) Bhimashankar - Pune In Maharashtra
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Trimbakeshwar" id="Trimbakeshwar" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Trimbakeshwar">
+              (4) Trimbakeshwar - Nashik In Maharashtra
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Grishneshwar" id="Grishneshwar" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Grishneshwar">
+              (5) Grishneshwar - Aurangabad In Maharashtra
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Vaidyanath" id="Vaidyanath" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Vaidyanath">
+              (6) Vaidyanath - Deoghar In Jharkhand
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Mahakaleshwar" id="Mahakaleshwar" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Mahakaleshwar">
+              (7) Mahakaleshwar - Ujjain In Madhya Pradesh
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Omkareshwar" id="Omkareshwar" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Omkareshwar">
+              (8) Omkareshwar - Khandwa In Madhya Pradesh
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Kashi" id="Kashi" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Kashi">
+              (9) Kashi Vishwanath - Varanasi In Uttar Pradesh
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Kedarnath" id="Kedarnath" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Kedarnath">
+              (10) Kedarnath - Kedarnath In Uttarakhand
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Rameshwaram" id="Rameshwaram" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Rameshwaram">
+              (11) Rameshwaram - Rameswaram Island In Tamil Nadu
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Mallikarjuna" id="Mallikarjuna" name="jyotirlingas"
+              onchange="choosejyotirlingas()">
+            <label class="form-check-label" for="Mallikarjuna">
+              (12) Mallikarjuna - Srisailam In Andhra Pradesh
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+    function choosejyotirlingas() {
+      var checkbox = document.querySelectorAll('input[name="jyotirlingas"');
+      var selected = [];
+      for (var i = 0; i < checkbox.length; i++) {
+        if (checkbox[i].checked === true) {
+          selected.push(checkbox[i].value)
+        }
+      }
+      console.log('selected checkbox =', selected);
+    }
+  </script>
+</body>
+
+</html>
