@@ -49,34 +49,34 @@ body{
 }
 
 h1{
-    font-size: 2rem;
+    /* font-size: 2rem; */
     color: #edb413;
     text-shadow: 0 2px 3px rgb(0 0 0 / 30%);
 }
 
 h2{
-    font-size: 1.75rem;
+    /* font-size: 1.75rem; */
     color: #046071;
 }
 
 h3{
-    font-size: 1.50rem;
+    /* font-size: 1.50rem; */
     color:#6904cb;
 }
 
 h4{
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     color: #02265a;
 }
 
 h5{
-    font-size: 1rem;
-    color: #010e21;
+    /* font-size: 1rem; */
+    color: #f10869;
 }
 
 h6{
-    font-size: 0.75rem;
-    color: #030508;
+    /* font-size: 0.75rem; */
+    color: #0c0c0c;
 }
 
 .list-group-item {
