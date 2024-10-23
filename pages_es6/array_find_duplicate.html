@@ -56,7 +56,7 @@
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="pull-left">
-              <h1>How to remove Duplicate values from Array ?</h1>
+              <h1>How to find Duplicate values from Array ?</h1>
             </div>
 
             <div class="pull-right">
@@ -88,11 +88,11 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <div id="filter-method">
             <h6>Now let's understand the filter method. As we know filter() method is from ES6 and by using this method
-              we easily filter the the value and remove it.</h6>
+              we easily filter the the value and find it.</h6>
 
             <p>Here is the screenshot:</p>
             <p>
-              <img src="../images/arra_find_duplicate_value.png" alt="remove_duplicate_values_using_filter"
+              <img src="../images/arra_find_duplicate_value.png" alt="arra_find_duplicate_value"
                 class="img-fluid" />
             </p>
           </div>
@@ -123,10 +123,21 @@
   <script>
 
 
-    const array1 = [12, 3, 10, 43, 10, 54, 333, 10, 45, 34, 10, 43, 10];
-    const result = array1.filter((item, index) => array1.indexOf(item) === index);
-    console.log('Final Result =', result);
-    // expected output: [12, 3, 10, 43, 54, 333, 45, 34]
+    const array1 = [12, 3, 10, 43, 10, 54, 333, 10, 34, 10];
+    const duplicateValue = array1.filter((item, index) => array1.indexOf(item) !== index);
+    console.log("duplicate =", duplicateValue);
+    // Expected Output: [10, 10, 10, 10, 10]
+
+    let count = 0;
+    for (var i = 0; i <= duplicateValue.length; i++) {
+      if (10 === duplicateValue[i]) {
+        count = count + 1
+      }
+    }
+
+    console.log("Duplicate Count = ", count);
+    // Expected Output: 4
+
 
 
   </script>
