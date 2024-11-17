@@ -1,106 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jquery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  </head>
-  <body>
-    <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="alert border-success">
-            <p>The two object can not be compared whether all properties and value are the same.</p>
-			
-			      <p><i>this</i> refers to the current context into JavaScript</p>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Sample</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>Heading</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h2>Sample Heading</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
     </div>
+  </footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script>
+  <script>
     console.log([] + []); // NO any result Because both array are empty
-	  console.log([1] + [2+"2"]); // 122
-	  console.log([1] + [3]); // 13
-	  console.log({} + {}); // result: [object Object][object Object]
-	 
-	 /**********************************************/
+    console.log([1] + [2 + "2"]); // 122
+    console.log([1] + [3]); // 13
+    console.log({} + {}); // result: [object Object][object Object]
 
-	 function a(){
-		return "Hello"
-	 }
-	 
-	 var sentence = a('Hi');
-	 console.log("Setence = ", sentence);
+    /**********************************************/
 
-   /**********************************************/
-   
-   x = 5;
-   var x;
-   function xyz(){
-    console.log("inside of X = ", x);
-    console.log("Y = ", y);
-    y = 10;
-    var y;
-    console.log("Y = ", y);
-   }
-
-   xyz();
-   console.log("X = ", x);
-
-   /**********************************************/
-   
-   console.log("55 == '55'", 55 == "55");
-   console.log("55 === '55'", 55 === "55");
-   
-   /**********************************************/
-
-   //const bb; // bb has assigned with Undefined value;
-   //bb = "Indore"; // So we can not re-assign the value
-
-  /**********************************************/
-  Bhopal();
-  function Bhopal(){
-    console.log("Bhopal");
-  }
-  Bhopal();
-
-  singrauli();
-  let singrauli = function(){
-    console.log("singrauli");
-  }
-
-  indore();
-  
-  var foo = function(){
-    console.log("foo === foo ", foo === foo);
-  }
-  foo();
-
-  /**********************************************/
-  function jojo(){
-    return {
-      test:1,
-      name: "Rakesh",
-      lastName: "Shah"
+    function a() {
+      return "Hello"
     }
-  }
 
-  jojo();
-  //console.log("jojo=", typeof(jojo)); // This will print the Function name only
-  //console.log("jojo()=", typeof(jojo())); // This will print the object inside function we have object which is returning
-  /**********************************************/
+    var sentence = a('Hi');
+    console.log("Setence = ", sentence);
 
-   
-    </script>
-  </body>
+    /**********************************************/
+
+    x = 5;
+    var x;
+    function xyz() {
+      console.log("X 1 = ", x);
+      console.log("Y 1 = ", y);
+      y = 10;
+      var y;
+      console.log("Y 2 = ", y);
+    }
+
+    xyz();
+    console.log("X 2 = ", x);
+
+    /**********************************************/
+
+    console.log("55 == '55'", 55 == "55"); // true
+    console.log("55 === '55'", 55 === "55"); // false
+
+    /**********************************************/
+
+    // const bb; // bb has assigned with Undefined value;
+    // bb = "Indore"; // So we can not re-assign the value
+
+    /**********************************************/
+    Bhopal();
+    function Bhopal() {
+      console.log("Bhopal");
+    }
+    Bhopal();
+
+    // singrauli(); // Uncaught ReferenceError: Cannot access 'singrauli' before initialization
+    // let singrauli = function(){
+    //   console.log("singrauli");
+    // }
+
+    /**********************************************/
+
+    var foo = function () {
+      console.log("foo === foo ", foo === foo);
+    }
+    foo();
+
+    /**********************************************/
+    function jojo() {
+      return {
+        test: 1,
+        firstName: "Rakesh",
+        lastName: "Shah"
+      }
+    }
+
+    jojo();
+    
+    console.log("jojo()=", typeof(jojo())); // This will print the object inside function we have object which is returning
+  </script>
+</body>
+
 </html>

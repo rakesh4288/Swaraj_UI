@@ -1,90 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jquery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  </head>
-  <body>
-    <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="alert border-success">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Sample</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>Heading</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script>
-    function test(){
-      console.log("The Value of X ",x);
+    <section class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h2>Sample Heading</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+    function test() {
+      console.log("The Value of X ", x);
       var x = 5;
     }
     test();
 
-    for(var i=1; i<5;i++){
-      setTimeout(function(){
-        console.log(i);
-      },1000);
-    }
+    /**********************************************/
+
+    // for(var i=1; i<5;i++){
+    //   setTimeout(function(){
+    //     console.log(i);
+    //   },1000);
+    // }
+
+    // for(let i=1; i<5;i++){
+    //   setTimeout(function(){
+    //     console.log(i);
+    //   },1000);
+    // }
 
     // setInterval(function(){
-    //   for(var i = 1; i<=2; i++){
+    //   for(var i = 0; i<=5; i++){
     //     console.log(i);
     //   }
     // },1000);
 
-    for (var i = 0; i < 5; i++) {
-      (function (i) {
-        setTimeout(function () {
-          console.log(i);
-        }, 3000*i);
-      })(i);
-    };
+    // for (var i = 0; i < 5; i++) {
+    //   (function (i) {
+    //     setTimeout(function () {
+    //       console.log(i);
+    //     }, 2000*i);
+    //   })(i);
+    // };
 
-    /**************************************/
+    /**********************************************/
 
-    function abc(a,b){
+    function abc(a, b) {
       console.log("Result = " + a + b);
-      console.log("result = ", a + b);
+      console.log("Result = ", a + b);
     }
-    abc(5,6);
+    abc(5, 6);
 
-  /**************************************/
-  const WWF = ["Undertaker","Triple H"];
-  // WWF = ["Undertaker","Triple H","ROCK"]; 
-  // console.log("WWE = ", WWF);
-  // We can not reassign the this array value since this is created by using const keyword
-  
-  // So we can perform all Array manipulation properties//
-  WWF.push("HBK");
-  console.log("WWE = ", WWF);
-  WWF.pop();
-  console.log("WWE = ", WWF);
-  WWF.shift();
-  console.log("WWE = ", WWF);
-  WWF.unshift("Edge");
-  console.log("WWE = ", WWF);
+    console.log(1 + 2 + "3" + 4 + 5);
+    console.log(1 + 2 + "3" + 4 - 5);
 
+    /**********************************************/
 
-  let country = "India";
-  let country = "Hongkong";
-  country = "Spain";
-  console.log("country = ", country);
+    const WWE = ["Undertaker", "Triple H"];
+    // WWE = ["Undertaker","Triple H","ROCK"]; 
+    // console.log("WWE = ", WWE);
+    // We can not reassign the this array value since this is created by using const keyword
 
-  let country = "India";
-  country = "Hongkong";
-  console.log("country = ", country);
+    // So we can perform all Array manipulation properties//
+    WWE.push("HBK"); // it will add new element after last index
+    console.log("WWE = ", WWE);
+
+    WWE.pop(); // it will delete element after last index
+    console.log("WWE = ", WWE);
+
+    WWE.shift(); // it will delete element from first index
+    console.log("WWE = ", WWE);
+
+    WWE.unshift("Edge"); // it will add new element from first index
+    console.log("WWE = ", WWE);
+
+    let country = "India";
+    let country = "Hongkong"; // Uncaught SyntaxError: Identifier 'country' has already been declared
+    country = "Spain";
+    console.log("country = ", country);
+
   </script>
-  </body>
+</body>
+
 </html>
