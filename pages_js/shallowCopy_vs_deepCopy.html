@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Shallow Copy Vs Deep Copy</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>What is Shallow Copy and Deep Copy ?</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="shallow-copy">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <p class="alert alert-warning">In JavaScript, shallow copy and deep copy are two ways to clone an object or
+            array</p>
+          <h4>Shallow Copy:</h4>
+          <p>A shallow copy occurs when you copy the reference of an object to a new variable.</p>
+          <p>In this process, only the top-level properties are copied, while nested objects or arrays still reference
+            the original memory location. This means that if you change the nested properties in one object, those
+            changes will reflect in the other because they share the same memory reference.</p>
+
+          <h5>How Shallow Copy Works:</h5>
+          <p>When you assign one object to another using the assignment operator (=), a shallow copy is created:</p>
+
+          <p>
+            <img src="../images/Shallow_Copy.png" class="img-fluid" alt="Shallow_Copy" />
+          </p>
+
+          <p>
+            <b>Explanation:</b> From the above example, it is seen that when the name of newEmployee is modified, it is also reflected for the old employee object. This can cause data inconsistency. This is known as a shallow copy. The newly created object has the same memory address as the old one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="bg-dark"/>
+
+    <section class="container" id="deep-copy">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h4>Deep Copy:</h4>
+          <p>
+            A deep copy creates a completely independent copy of the object, including all nested objects or arrays. This ensures that changes made to one object do not affect the other. Each object is stored in a separate memory location, making them entirely independent.
+          </p>
+
+          <h5>Creating a Deep Copy:</h5>
+          <p>
+            For creating a deep copy we use <b>JSON.parse()</b> and <b>JSON.stringify()</b> methods. Let us take an example to understand it better.
+          </p>
+
+          <p>
+            <img src="../images/Deep_Copy.png" class="img-fluid" alt="Deep_Copy" />
+          </p>
+
+          <p>
+            <b>Explanation:</b> Here the new object is created using the JSON.parse() and JSON.stringify() methods of JavaScript. JSON.stringify() takes a JavaScript object as an argument and then transforms it into a JSON string. This JSON string is passed to the JSON.parse() method which then transforms it into a JavaScript object.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+    // Shallow Copy Example:
+    let employee = {
+      empId: "43534",
+      name: "Raj Lakshmi Shah",
+      address: "Indore",
+    }
+
+    console.log("Employee=> ", employee);
+    // Output: {empId: 'E102', name: 'Raj Lakshmi Shah', address: 'Indore'}
+
+    let newEmployee = employee;    // This is a Shallow copy
+
+    console.log("--- Shallow Copy : Modifing the address of employee ---");
+    newEmployee.address = "Bhopal";
+
+    console.log("Employee=> ", employee);
+    // Output: {empId: 'E102', name: 'Raj Lakshmi Shah', address: 'Bhopal'}
+    
+    console.log("New Employee=> ", newEmployee);
+    // Output: {empId: 'E102', name: 'Raj Lakshmi Shah', address: 'Bhopal'}
+
+
+    // Deep Copy Example:
+    let student = {
+      rollNumber: 32,
+      name: 'Rajvika Shah',
+      gender: 'female',
+      address: 'Jaipur'
+    }
+    console.log("student =>", student);
+    // Output: {rollNumber: 32, name: 'Rajvika Shah', gender: 'female', address: 'Jaipur'}
+
+    let newStudent = JSON.parse(JSON.stringify(student)); // This is Deep Copy
+    // we used JSON.Parse and JSON.stringify methods for cloning
+
+    console.log("--- Deep Copy : Modifing the address of student ---");
+    newStudent.address = "Mumbai"
+
+    console.log("student =>", student);
+    // Output: {rollNumber: 32, name: 'Rajvika Shah', gender: 'female', address: 'Jaipur'}
+
+    console.log("new student =>", newStudent);
+    // Output: {rollNumber: 32, name: 'Rajvika Shah', gender: 'female', address: 'Mumbai'}
+
+  </script>
+</body>
+
+</html>

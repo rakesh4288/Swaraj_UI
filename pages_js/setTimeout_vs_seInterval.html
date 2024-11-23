@@ -119,6 +119,7 @@
   </script>
 
   <script>
+    // Example 1:
     // console.log("A");
     // console.log("C");
 
@@ -126,16 +127,55 @@
     //   console.log("B");
     // }, 0);
 
-    // SeTime Out Function
-    console.log("1");
-    setTimeout(function () {
-      console.log("2");
-    }, 2000);
+    /**************************************/
 
-    setTimeout(function () {
-      console.log("4");
-    }, 0);
-    console.log("3");
+    // Example 2:
+    // console.log("1");
+    // setTimeout(function () {
+    //   console.log("2");
+    // }, 2000);
+
+    // setTimeout(function () {
+    //   console.log("4");
+    // }, 0);
+    // console.log("3");
+
+    /**************************************/
+
+    // Example 3:
+    // for (let i = 0; i<10; i++ ) {
+    //   setTimeout(function() {
+    //     console.log(i);
+    //   }, 1000);
+    // }
+
+    /**************************************/
+
+    // Example 4:
+    // for (var i = 0; i <= 5; i++) {
+    //   (function (i) {
+    //     setTimeout(function () {
+    //       console.log(i);
+    //     }, 2000 * i);
+    //   })(i);
+    // }
+
+    /**************************************/
+
+    // Example 5:
+    console.log("1: Script Started");
+    
+    setTimeout(() => {
+      console.log("2: SetTimeout Function Executed");
+    }, 1000);
+
+    Promise.resolve(true).then(function() {
+      console.log("3: Promise Function started working");
+    }).then(function() {
+      console.log("4: Promise Function started Executed");
+    });
+
+    console.log("5: Script Finished");
   </script>
 </body>
 

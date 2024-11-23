@@ -8,7 +8,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Closure</title>
+  <title>Sample</title>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="pull-left">
-              <h1>What is the Closure in JavaScript?</h1>
+              <h1>Heading</h1>
             </div>
 
             <div class="pull-right">
@@ -73,16 +73,7 @@
     <section class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <p>JavaScript Closure is nothing but just mechanism or approach which can be used for accessing a private member
-            or information from another function.</p>
-
-          <p class="text-danger">
-            We can understand by its meaning - It is helping to get private data of any function.
-          </p>
-
-          <p>
-            <img src="../images/closure.png" alt="closure" class="img-fluid" />
-          </p>
+          <h2>Sample Heading</h2>
         </div>
       </div>
     </section>
@@ -105,51 +96,16 @@
     let year = now.getFullYear();
     document.getElementById("currentYear").innerHTML = year;
   </script>
+
   <script>
-    // this is Traditional Function
-    function person(name) {
-      this.name = name;
-    }
-
-    let me = new person("Rakesh");
-    console.log(me); // this will print the object
-    console.log(me.name); // this will print "Rakesh" Because we passed the parameter
-
-    // Now see the another example
-    function chicku(pName) {
-      var _name = pName;
-    }
-
-    let you = new chicku("Lalita");
-    console.log(you); // this will show the blank object Because there is no any public properties available in this function
-    console.log(you._name); // this will print the Undefined Because _name is the private data member
-
-    // Now let's see the below example
-    function marriage(groom, bride) {
-      var bride = bride;
-      var groom = groom;
-      this.getCouple = function () {
-        return groom + " Weds " + bride;
+    let count = 0;
+    (function printCount(){
+      if(count === 0) {
+        let count = 1;
+        console.log("inside = ",count);
       }
-    }
-    let sadi = new marriage("Rakesh", "Lalita");
-    console.log(sadi.getCouple());
-
-    /**************************************/
-
-    
-    function init() {
-      var myName = "Rakesh";
-      function displayName(){
-        myName = "Rakesh Kumar Shah";
-        console.log("Inner Function =", myName); // Rakesh Kumar Shah
-      }
-      console.log("Outer Function =", myName); // Rakesh
-      displayName();
-    }
-    init();
-
-
+      console.log("outside = ",count);
+    }) ();
   </script>
 </body>
 
