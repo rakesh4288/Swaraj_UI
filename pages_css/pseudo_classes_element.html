@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="../css/mainStyle.css" rel="stylesheet" />
@@ -51,7 +52,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="pull-left">
-            <h1>CSS Pseudo Classes</h1>
+            <h1>CSS Pseudo Classes & Pseudo-Elements</h1>
           </div>
 
           <div class="pull-right">
@@ -65,10 +66,11 @@
     </div>
   </section>
 
-  <section class="container">
+  <section id="pseudo-classes"x class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <div id="pseudo-classes">
+        <div>
+          <h3>What are Pseudo-Classes?</h3>
           <p>A pseudo-class is used to define a special state of an element.</p>
           <p>
             <ul>
@@ -77,8 +79,50 @@
               <li>Style an element when it gets focus</li>
               </ul>
           </p>
+
+          <div class="alert alert-warning">
+            <b>Note:</b> <code class="w3-codespan">a:hover</code> MUST come after <code class="w3-codespan">a:link</code> and 
+            <code class="w3-codespan">a:visited</code> in the CSS definition in order to be effective! <code class="w3-codespan">a:active</code> MUST come after 
+            <code class="w3-codespan">a:hover</code> in the CSS definition in order to be effective!
+            Pseudo-class names are not case-sensitive.
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="bg-primary" />
+
+  <section id="pseudo-element" class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div>
+          <h3>What are Pseudo-Elements?</h3>
+          <p>A CSS pseudo-element is used to style specific parts of an element.</p>
           <p>
-            <img src="../images/Pseudo_Elements.png" class="img-fluid" alt="">
+            <ul>
+              <li>Style the first letter or line, of an element</li>
+              <li>Insert content before or after an element</li>
+              <li>Style the markers of list items</li>
+            </ul>
+          </p>
+
+          <p class="alert alert-info">The ::first-line pseudo-element is used to add a special style to the first line of a text.</p>
+
+          <p class="alert alert-warning">
+            The ::first-letter pseudo-element is used to add a special style to the first letter of a text.
+          </p>
+
+          <p class="alert alert-danger">
+            The ::before pseudo-element can be used to insert some content before the content of an element.
+          </p>
+
+          <p class="alert alert-primary">
+            The ::after pseudo-element can be used to insert some content after the content of an element.
+          </p>
+
+          <p class="alert alert-success">
+            The ::marker pseudo-element selects the markers of list items, and it will apply with the markers of list items
           </p>
         </div>
       </div>
