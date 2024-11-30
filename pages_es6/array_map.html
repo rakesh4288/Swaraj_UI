@@ -98,12 +98,12 @@
       <div class="row">
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
           <h3>why we use map function instead of for loop</h3>
-          <p>map() and forEach() are both valuable methods for working with arrays in JavaScript.</p>
+          <p>map() and forEach() both are valuable methods for working with arrays in JavaScript.</p>
           <h5>Map Method:</h5>
           <p>Map method producing a new array without changing original array</p>
           <p>And you can add any condition and that condition will iterate on every element</p>
 
-          <h5>For Each method: </h5>
+          <h5>For Each Loop (forEach): </h5>
           <p>When we need to make any operation on existing array then we can use the for each method</p>
         </div>
 
@@ -152,9 +152,9 @@
     const map1 = array1.map((item) => item * 2);
     console.log("result =", map1);
     // Expected output: Array [2, 4, 6, 8]
-  </script>
 
-  <script>
+    /**********************************************/
+
     // Whe we are use .map() instead of for loop
     let names = ["rakesh", "lalita", "rajvika", "rajlakshmi"];
     // ["Rakesh", "Lalita", "Rajvika", "Rajlakshmi"] <-- Capitalize 1st letter of each element
@@ -197,6 +197,17 @@
     const new_array = names.map((item) => capitalize(item));
     console.log('names array before map =', names);
     console.log('new_array array after map =', new_array);
+
+    /**********************************************/
+
+    const anyNumber = [1,2,3,4];
+    const squareValues = anyNumber.map((element) => element*2);
+    console.log('squareValues =', squareValues);
+    
+
+    const res2 = anyNumber.forEach((val, i, arr) =>  (arr[i] = val * 2));
+    console.log('res2 =', res2);
+    console.log('anyNumber 2 =', anyNumber);
   </script>
 </body>
 

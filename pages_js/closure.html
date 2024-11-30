@@ -149,7 +149,18 @@
     }
     init();
 
+    /**************************************/
 
+    function Parent() {
+      var myName = "Ram Badan Shah";
+      console.log(`Parent Function = ${myName}`);
+      function Child() {
+        var myName = "Rakesh Kumar Shah";
+        console.log(`Child Function = ${myName}`);
+      }
+      Child();
+    }
+    Parent();
   </script>
 </body>
 

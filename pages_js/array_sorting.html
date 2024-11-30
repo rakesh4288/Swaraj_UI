@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,16 +8,19 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample</title>
+  <title>Array Sorting</title>
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
           <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -24,19 +28,19 @@
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../index.html">Home</a>
             </li>
-            
+
             <li class="nav-item">
               <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
             </li>
-  
+
             <li class="nav-item">
               <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
             </li>
-  
+
             <li class="nav-item">
               <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
             </li>
-  
+
             <li class="nav-item">
               <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
             </li>
@@ -46,68 +50,258 @@
     </nav>
   </header>
 
-<main class="mainBody">
-  <section class="pageHeader">
-    <div class="container">
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>JavaScript Array sort() Method</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <div class="pull-left">
-            <h1>JavaScript Array Sorting !</h1>
+          <h4>
+            Reference By: 
+            <a href="https://www.geeksforgeeks.org/javascript-array-sort-method/" target="_blank">
+              https://www.geeksforgeeks.org/javascript-array-sort-method/
+            </a>
+          </h4>
+
+          <div id="sorting-array-of-strings">
+            <h3>Sorting Array of Strings</h3>
+            <p>The JS array.sort() method rearranges the array elements alphabetically and returns a sorted array.</p>
+            <p>It does not create a new array but updates the original array.</p>
+
+            <p>
+              <img src="../images/array_sorting_1.png" class="img-fluid img-thumbnail" alt="array_sorting_1" />
+            </p>
+
+            <pre class="alert alert-info"><span>arr.sort(compareFunction);</span></pre>
+
+            <h5>Parameters</h5>
+            <ul>
+              <li value="1">
+                <b><code><strong>arr</strong></code></b><b><strong>:</strong></b><span> The array to be sorted.</span>
+              </li>
+              <li value="2">
+                <b><code><strong>compareFunction</strong></code></b><b><strong> (Optional): </strong></b><span>A
+                  function that defines the sort order. If omitted, the array elements are sorted based on their string
+                  Unicode code points.</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="pull-right">
-            <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              Back to Dashboard </a>
+          <hr class="bg-primary" />
+
+          <div id="sorting-numeric-array">
+            <h3>Sorting a Numeric Array in JS</h3>
+            <div class="row">
+              <div class="col-6 border">
+                <h5>Ascending Order</h5>
+                <p>Array.sort() sorts the elements in lexicographical order whether a string or number.</p>
+
+                <p>
+                  <img src="../images/array_sorting_2.png" class="img-fluid" alt="array_sorting_2" />
+                </p>
+
+                <h6>
+                  JavaScript’s sort() is different from languages like C++ , Java and Python. It compares array elements
+                  alphabetically as strings rather than numbers.This causes elements to be sorted based on character
+                  Unicode values instead of numerical order.
+                </h6>
+                <br /><br />
+                <h4>To sort the numeric array property we have to pass a comparator function.</h4>
+
+                <p>
+                  <img src="../images/array_sorting_3.png" class="img-fluid" alt="array_sorting_3" />
+                </p>
+              </div>
+
+              <div class="col-6 border">
+                <h5>Descending Order</h5>
+                <p>change the comparator function to sort the array in descending order.</p>
+                <p>
+                  <img src="../images/array_sorting_4.png" class="img-fluid" alt="array_sorting_4" />
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="clearfix"></div>
+
+          <hr class="bg-primary" />
+
+          <div id="sort-array-of-strings-in-reverse-order">
+            <h3>Sort Array of Strings in Reverse Order</h3>
+            <p>We can use the string.localeCompare() method in the comparator function to sort in reverse order.</p>
+            <p>
+              <img src="../images/array_sorting_5.png" class="img-fluid" alt="array_sorting_5" />
+            </p>
+
+            <p>
+              <img src="../images/array_sorting_6.png" class="img-fluid" alt="array_sorting_6" />
+            </p>
+          </div>
+
+          <hr class="bg-danger" />
+
+          <div id="sorting-array-of-objects">
+            <h3>Sorting Array of Objects</h3>
+            <p>The array of objects can be sorted on the basis of property values.</p>
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  <img src="../images/array_sorting_7.png" class="img-fluid" alt="array_sorting_7" />
+                </p>
+              </div>
+
+              <div class="col-md-6">
+                <p>
+                  <img src="../images/array_sorting_7.png" class="img-fluid" alt="array_sorting_8" />
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <img src="../images/Array-Sorting.png" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
         </div>
       </div>
     </div>
-  </section>
+  </footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
 
-  <section class="container">
-    <div class="row">
-      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <p>
-          <img src="../images/Array-Sorting.png" class="img-fluid" />
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
+  <script>
 
-<footer class="siteFooter">
-  <div class="container">
-      <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
-          </div>
-      </div>
-  </div>
-</footer>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script>
-  // Copyright Year script
-  const now = new Date();
-  let year = now.getFullYear();
-  document.getElementById("currentYear").innerHTML = year;
-</script>
+    let cities = ["Bhopal", "Kochhi", "Sindhudurga", "Kodaikanal", "Pune", "Jaipur", "Agra", "Madurai"]
+    // Sorting the array
+    cities.sort();
+    console.log("Sorted Cities =", cities);
+    // Expected Output: ['Agra', 'Bhopal', 'Jaipur', 'Kochhi', 'Kodaikanal', 'Madurai', 'Pune', 'Sindhudurga']
 
-<script>
-  // Array Sorting
-  var array = [10,5,3,6,9,2,4,1,7];
-  for(var i=0;i<=array.length-1;i++){
-    for(var j=0; j<=array.length-i-1;j++){
-      if(array[j] > array[j+1]){
-        var temp = array[j];
-        array[j] = array[j+1];
-        array[j+1] = temp;
-      }
-    }
-  }
-  console.log("Sorting =", array);
-</script>
+    /******************  ******************/
+
+    const amount = [10, 20, 25, 100, 40];
+    amount.sort()
+    console.log("Sorted Amount =", amount);
+    // Expected Output:  [10, 100, 20, 25, 40]
+
+    // JavaScript’s sort() is different from languages like C++ , Java and Python. It compares array elements alphabetically as strings rather than numbers.
+    // This causes elements to be sorted based on character Unicode values instead of numerical order.
+
+    /******************  ******************/
+
+    const dollar = [10, 20, 25, 100, 40];
+    dollar.sort((a, b) => a - b)
+    console.log("Ascending Order =", dollar);
+    // Expected Output: [10, 20, 25, 40, 100]
+
+    /******************  ******************/
+
+    const inr = [10, 20, 25, 100, 40];
+    inr.sort((a, b) => b - a);
+    console.log("Descending  Order =", inr);
+    // Expected Output: [100, 40, 25, 20, 10]
+
+    /******************  ******************/
+
+    let wwe = ["Shawn Michaels", "John Cena", "Triple H", "Undertaker", "Randy orton", "Alexa Bliss"];
+    console.log("Original Array =", wwe);
+    // Expected Output: ["Shawn Michaels", "John Cena", "Triple H", "Undertaker", "Randy orton", "Alexa Bliss"]
+    
+    wwe.sort((x,y) => x.localeCompare(y));
+    console.log("Sorted Array =", wwe);
+    // Expected Output:  ['Alexa Bliss', 'John Cena', 'Randy orton', 'Shawn Michaels', 'Triple H', 'Undertaker']
+
+    /******************  ******************/
+
+    let country = ["India", "United States", "Italy", "Denmark", "Canada", "Australia"];
+    console.log("Original Array =", country);
+    // Expected Output: ["India", "United States", "Italy", "Denmark", "Canada", "Australia"]
+    country.sort((x, y) => y.localeCompare(x));
+    console.log("Sorted Country =", country);
+    // Expected Output: ['United States', 'Italy', 'India', 'Denmark', 'Canada', 'Australia']
+
+    /******************  ******************/
+
+    // Array of a objects with different names and ages
+    let person = [
+      { name: 'Rahul', age: 28 },
+      { name: 'Jatin', age: 25 },
+      { name: 'Vikas', age: 32 },
+      { name: 'Rohit', age: 35 }
+    ];
+
+    // Sort the objects for age
+    person.sort((x,y) => x.age - y.age);
+    console.log("Person Object By Age =", person);
+    // Expected Output: 
+    /* 
+    [
+      { name: 'Jatin', age: 25 },
+      { name: 'Rahul', age: 28 },
+      { name: 'Vikas', age: 32 },
+      { name: 'Rohit', age: 35 }
+    ]
+    */
+
+    // Sort object for names
+    person.sort((x,y) => x.name.localeCompare(y.name));
+    console.log("Person Object By Name =", person);
+
+    /* 
+    [
+      { name: 'Jatin', age: 25 },
+      { name: 'Rahul', age: 28 },
+      { name: 'Rohit', age: 35 },
+      { name: 'Vikas', age: 32 }
+    ]
+    */
+
+    /******************  ******************/
+
+    // Array Sorting
+    // var array = [10,5,3,6,9,2,4,1,7];
+    // for(var i=0;i<=array.length-1;i++){
+    //   for(var j=0; j<=array.length-i-1;j++){
+    //     if(array[j] > array[j+1]){
+    //       var temp = array[j];
+    //       array[j] = array[j+1];
+    //       array[j+1] = temp;
+    //     }
+    //   }
+    // }
+    // console.log("Sorting =", array);
+  </script>
 </body>
+
 </html>

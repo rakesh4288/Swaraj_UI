@@ -106,6 +106,18 @@
       }
       console.log("outside = ",count);
     }) ();
+
+    /**********************************************/
+
+    function showMessage (marks) {
+      // const message = marks || 'Absent'; // if marks is coming 0 then will print the Absent because 0 is the falsy value in JavaScript
+      const message = marks ?? 'Absent'; // ?? handling the null and undefined if any of these coming then it will print "Absent"
+      console.log(`Marks ${message}`);
+    }
+
+    showMessage(75);
+    showMessage(0);
+    showMessage(55);
   </script>
 </body>
 
