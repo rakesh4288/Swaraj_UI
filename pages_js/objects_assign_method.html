@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Objects assign method</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<main class="mainBody">
+  <section class="pageHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="pull-left">
+            <h1>What is Objects assign method in JavaScript</h1>
+          </div>
+
+          <div class="pull-right">
+            <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Back to Dashboard </a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <p>
+          The Object.assign() method is used to copy the values and properties from one or more source objects to a target object. It invokes getters and setters since it uses both [[Get]] on the source and [[Set]] on the target.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <p class="alert alert-info">
+          The Object.assign() method copies properties from one or more source objects to a target object.
+        </p>
+
+        <div class="alert alert-warning">
+          <h4>Related Methods:</h4>
+          <p>
+            <a href="objects_assign_method.html">Object.assign()</a> copies properties from a source object to a target object.
+          </p>
+          <p><a href="objects_create_method.html">Object.create()</a> creates an object from an existing object.</p>
+          <p><a href="objects_fromEntries_method.html">Object.fromEntries()</a> creates an object from a list of keys/values.</p>
+          </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Syntax:</h5>
+        <pre class="alert-info"><span>Object.assign(target, ...sources);</span></pre>
+
+        <h5>Parameters:</h5>
+        <ul>
+          <li><b>target:</b> It is the target object to which values and properties have to be copied.</li>
+          <li><b>sources:</b> It is the source object from which values and properties have to be copied.</li>
+        </ul>
+
+        <h5>Return Value:</h5>
+        <p>Object.assign() returns the target object.</p>
+      </div>
+    </div>
+
+    <hr class="bg-danger"/>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <p>
+          <img src="../images/Object_assign.png" class="img-fluid" alt="Object_assign" />
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="siteFooter">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
+
+<script>
+  const employee = {
+    name: 'Rakesh Shah',
+    city: 'Pune',
+    position: 'Team Lead'
+  }
+
+
+
+  // Create Target Object
+  const person1 = {
+    firstName: "Rakesh",
+    lastName: "Shah",
+    age: 31,
+    eyeColor: "blue"
+  };
+
+  // Create Source Object
+  const person2 = {firstName: "Raj Lakshmi", lastName: "Shah", age: 21};
+
+  // Assign Source to Target
+  const newDetails = Object.assign(person1, person2);
+  console.log("newDetails =", newDetails);
+  // Expected Output:
+  /*
+    age: 21
+    eyeColor: "blue"
+    firstName: "Raj Lakshmi"
+    lastName: "Shah"
+  */
+
+
+</script>
+</body>
+</html>
