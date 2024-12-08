@@ -133,11 +133,6 @@
           <p>
             <img src="../images/array_filter_3.png" alt="array_filter_3" class="img-fluid" />
           </p>
-
-          <h5>Output:</h5>
-          <p>
-            <img src="../images/array_filter_3_1.png" alt="array_filter_3_1" class="img-fluid" />
-          </p>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -182,54 +177,96 @@
     console.log('result =', result);
     // output: [28, 45, 18, 30, 36, 27]
 
-  
-    
+    /**********************************************/
     
     // Filter with strings
     const fruits = ["Apple", "Kiwi", "Watermelon", "Orange", "Mango", "Pineapple", "Banana", "Papaya", "Strawberry"];
     const fruitsResult = fruits.filter((item) => item.length > 8);
     console.log('Result =', fruitsResult);
     // output: ["Watermelon", "Pineapple", "Strawberry",]
-  
+
+    /**********************************************/
   
     // Filter with array of object
     const users = [
-      {
-        id: 1,
-        name: "Rakesh Shah",
-        location: "Pune"
-      },
-      {
-        id: 2,
-        name: "Nitish Lamba",
-        location: "Noida"
-      },
-      {
-        id: 4,
-        name: "Deepika SD",
-        location: "Kochhi"
-      },
-      {
-        id: 5,
-        name: "Pramod Patil",
-        location: "Pune"
-      },
-      {
-        id: 7,
-        name: "Dishant Adlakha",
-        location: "Noida"
-      }
+      { id: 1, name: "Rakesh Shah", location: "Pune"},
+      { id: 2,name: "Nitish Lamba", location: "Noida"},
+      { id: 3, name: "Deepika SD", location: "Kochhi"},
+      { id: 4, name: "Pramod Patil", location: "Pune"},
+      { id: 5, name: "Dishant Adlakha", location: "Noida"},
+      { id: 6, name: "Vijay Adane", location: "Pune"}
     ]
 
-    // const filteredUsers = users.filter((item) => item.location === "Pune");
+    const filteredUsers1 = users.filter((item) => item.location === "Pune");
+    console.log("filtered Users 1 =", filteredUsers1);
+    // Expected Output:
+    /*
+      0: {id: 1, name: 'Rakesh Shah', location: 'Pune'}
+      1: {id: 4, name: 'Pramod Patil', location: 'Pune'}
+      2: {id: 6, name: 'Vijay Adane', location: 'Pune'}
+    */
 
-
-    const filteredUsers = users.filter((item) => {
+    const filteredUsers2 = users.filter((item) => {
       return item.location === "Pune"
     });
 
+    console.log("filtered Users 2 =", filteredUsers2);
+    // Expected Output:
+    /*
+      0: {id: 1, name: 'Rakesh Shah', location: 'Pune'}
+      1: {id: 4, name: 'Pramod Patil', location: 'Pune'}
+      2: {id: 6, name: 'Vijay Adane', location: 'Pune'}
+    */
 
-    // console.log("filtered Users =", filteredUsers);
+    /**********************************************/
+
+    const numbers = [2,4,5,76,43,98,46,32,30,68,54,22,28,7];
+    const isPrime = numbers.filter((n) => n % 2 === 0);
+    console.log("isPrime Numbers =", isPrime);
+
+    /**********************************************/
+
+    const products = [
+      { id: 1, name: 'Laptop', color: 'black', price: 499},
+      { id: 2, name: 'Smartphone', color: 'white', price: 399},
+      { id: 3,name: 'Headphone', color: 'Gray', price: 299},
+      { id: 4, name: 'Tablet', color: 'Blue',price: 399},
+      { id: 5,name: 'Keyboards',color: 'black', price: 150},
+      { id: 6, name: 'Monitor', color: 'black', price: 550},
+      { id: 7, name: 'Mouse', color: 'white', price: 50}
+    ]
+
+    const affordablePrice = products.filter((product) => product.price < 200);
+    console.log("affordablePrice =", affordablePrice);
+    // Expected Output:
+    /*
+      0: {id: 5, name: 'Keyboards', color: 'black', price: 150}
+      1: {id: 7, name: 'Mouse', color: 'white', price: 50}
+    */
+
+    /**********************************************/
+
+    // We can use the other string method as well for filtering
+    const matchingString = products.filter((product) => product.name.includes("phone"));
+    console.log("matchingString =", matchingString);
+    // Expected Output:
+    /*
+      0: {id: 2, name: 'Smartphone', color: 'white', price: 399}
+      1: {id: 3, name: 'Headphone', color: 'Gray', price: 299}
+    */
+
+    /**********************************************/
+    
+    // Now we can two conditions same time for filtering
+    const conditionsFiltering = products.filter((product) => {
+      return product.color === "white" && product.price < 500
+    });
+    console.log("conditionsFiltering =", conditionsFiltering);
+    // Expected Output:
+    /*
+      0: {id: 2, name: 'Smartphone', color: 'white', price: 399}
+      1: {id: 7, name: 'Mouse', color: 'white', price: 50}
+    */
   </script>
 </body>
 </html>
