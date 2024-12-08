@@ -118,6 +118,42 @@
 
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h5 class="alert alert-primary">
+            within .map() we can also add new key value in existing array of object. Using ...spread operator we can perform this operation
+          </h5>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h6>Straight forward Example:</h6>
+          <p>
+            <img src="../images/map_method_adding_new_properties.png"
+              class="img-fluid" alt="map_method_adding_new_properties" />
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h6>Based on condition Example:</h6>
+          <p>
+            <img src="../images/map_method_adding_new_properties_with_condition.png"
+              class="img-fluid" alt="map_method_adding_new_properties_with_condition" />
+          </p>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h6>&nbsp;</h6>
+          <p>
+            <img src="../images/map_method_adding_new_properties_with_condition_2.png"
+              class="img-fluid" alt="map_method_adding_new_properties_with_condition" />
+          </p>
+        </div>
+      </div>
+
+      <hr class="bg-info"/>
+      
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <iframe width="100%" height="500" src="https://www.youtube.com/embed/4OjaPp4IjSI?si=dI_W4ly3TcUjQ7C-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
@@ -163,52 +199,162 @@
     const capitalize = (str) => {
       return str.charAt(0).toUpperCase() + str.slice(1)
     }
+
     // Let's run this function and pass the string parameter
     const result = capitalize("abc");
     console.log("capitalize result =", result);
 
     // Manually manipulate the array
     const name0 = capitalize(names[0]);
-    console.log("name O index =", name0);
+    console.log("name O index =", name0); // Rakesh
 
     const name1 = capitalize(names[1]);
-    console.log("name 1 index =", name1);
+    console.log("name 1 index =", name1); // Lalita
 
     const name2 = capitalize(names[2]);
-    console.log("name 2 index =", name2);
+    console.log("name 2 index =", name2); // Rajvika
 
     const name3 = capitalize(names[3]);
-    console.log("name 3 index =", name3);
+    console.log("name 3 index =", name3); // Rajlakshmi
 
     // But This is not correct approach for handling the array
-
-    // Now we should to use the For Loop for interating the array
+    // Now we should to use the For Loop for interating the array and perform the operation
     let new_names = []
     for (var i = 0; i < names.length; i++) {
       new_names.push(capitalize(names[i]));
     }
-    console.log('names array before for loop =', names);
-    console.log('new_names array after for loop =', new_names);
-    // This is not best approach Because before calling the capitalize function we can also manipulate the existing array
+    console.log('For Loop: names array before for loop =', names);
+    // Expected Output: ['rakesh', 'lalita', 'rajvika', 'rajlakshmi']
+
+    console.log('For Loop: new_names array after for loop =', new_names);
+    // Expected Output: ['Rakesh', 'Lalita', 'Rajvika', 'Rajlakshmi']
+
+    // This is also not a best approach Because we are using new variable to assign the returns of capitalize function
+    // This is also manipulating the original array which is not correct
+    // in real world project many times we son't want to modify the original array
 
     // So the Best approach is here to use the .map() 
-    // it is using new array.
     // it does not modified the original array
+    // You can perform any operations inside that
+
     const new_array = names.map((item) => capitalize(item));
-    console.log('names array before map =', names);
-    console.log('new_array array after map =', new_array);
+    console.log('.map(): names array before map =', names);
+    // Expected Output: ['rakesh', 'lalita', 'rajvika', 'rajlakshmi']
+
+    console.log('.map(): new_array array after map =', new_array);
+    // Expected Output: ['Rakesh', 'Lalita', 'Rajvika', 'Rajlakshmi']
 
     /**********************************************/
 
     const anyNumber = [1,2,3,4];
     const squareValues = anyNumber.map((element) => element*2);
     console.log('squareValues =', squareValues);
-    
+    // Expected Output: [2, 4, 6, 8]
 
-    const res2 = anyNumber.forEach((val, i, arr) =>  (arr[i] = val * 2));
-    console.log('res2 =', res2);
-    console.log('anyNumber 2 =', anyNumber);
+    /**********************************************/
+
+    const products = [
+      { id: 1, name: 'Laptop', color: 'black', price: 499},
+      { id: 2, name: 'Smartphone', color: 'white', price: 399},
+      { id: 3,name: 'Headphone', color: 'Gray', price: 299},
+      { id: 4, name: 'Tablet', color: 'Blue',price: 399},
+      { id: 5,name: 'Keyboards',color: 'black', price: 150},
+      { id: 6, name: 'Monitor', color: 'black', price: 550},
+      { id: 7, name: 'Mouse', color: 'white', price: 50}
+    ]
+
+    const afterDiscount1 = products.map((product) => {
+      return product.price * 0.5
+    });
+
+    console.log("afterDiscount1 =", afterDiscount1);
+    // Expected Output: [249.5, 199.5, 149.5, 199.5, 75]
+
+    const afterDiscount2 = products.map((product) => {
+      return {
+        ...product,
+        price: product.price * 0.5,
+      }
+    });
+    console.log("afterDiscount2 =", afterDiscount2);
+    // Expected Output:
+    /*
+      0 : {id: 1, name: 'Laptop', color: 'black', price: 249.5}
+      1 : {id: 2, name: 'Smartphone', color: 'white', price: 199.5}
+      2 : {id: 3, name: 'Headphone', color: 'Gray', price: 149.5}
+      3 : {id: 4, name: 'Tablet', color: 'Blue', price: 199.5}
+      4 : {id: 5, name: 'Keyboards', color: 'black', price: 75}
+      5 : {id: 6, name: 'Monitor', color: 'black', price: 275}
+      6 : {id: 7, name: 'Mouse', color: 'white', price: 25}
+    */
+
+    /**********************************************/
+    
+    const updatedResult = products.map((product) => {
+      return {
+        ...product,
+        storeName: 'Croma'
+      }
+    });
+    
+    console.log("After Adding new properties =", updatedResult);
+    // Expected Output:
+    /*    
+      0: {id: 1, name: 'Laptop', color: 'black', price: 499, storeName: 'Croma'}
+      1: {id: 2, name: 'Smartphone', color: 'white', price: 399, storeName: 'Croma'}
+      2: {id: 3, name: 'Headphone', color: 'Gray', price: 299, storeName: 'Croma'}
+      3: {id: 4, name: 'Tablet', color: 'Blue', price: 399, storeName: 'Croma'}
+      4: {id: 5, name: 'Keyboards', color: 'black', price: 150, storeName: 'Croma'}
+      5: {id: 6, name: 'Monitor', color: 'black', price: 550, storeName: 'Croma'}
+      6: {id: 7, name: 'Mouse', color: 'white', price: 50, storeName: 'Croma'}
+    */
+
+    /**********************************************/
+
+    const students = [
+      { id: 1, name:'Amit', age: 12},
+      { id: 2, name:'Dishant', age: 15},
+      { id: 3, name:'Rajvika', age: 6},
+      { id: 4, name:'Aniket', age: 10},
+      { id: 5, name:'Manav', age: 18},
+      { id: 6, name:'Mansi', age: 14},
+      { id: 7, name:'Amrish', age: 20},
+      { id: 8, name:'Anil', age: 18},
+      { id: 9, name:'Subhash', age: 17},
+    ]
+
+    const categoriesStudent = students.map((student) => {
+      let category;
+      if(student.age >= 18) {
+        category = "Adult";
+      } else if (student.age >= 12 && student.age <=17) {
+        category = "Younger";
+      } else {
+          category = "Child";
+      }
+      return {
+        ...student,
+        category
+      }
+    });
+
+    console.log("categoriesStudent =", categoriesStudent);
+
+    /**********************************************/
+
+    // Expected Output:
+    /*
+      0: {id: 1, name: 'Amit', age: 12, category: 'Younger'}
+      1: {id: 2, name: 'Dishant', age: 15, category: 'Younger'}
+      2: {id: 3, name: 'Rajvika', age: 6, category: 'Child'}
+      3: {id: 4, name: 'Aniket', age: 10, category: 'Child'}
+      4: {id: 5, name: 'Manav', age: 18, category: 'Adult'}
+      5: {id: 6, name: 'Mansi', age: 14, category: 'Younger'}
+      6: {id: 7, name: 'Amrish', age: 20, category: 'Adult'}
+      7: {id: 8, name: 'Anil', age: 18, category: 'Adult'}
+      8: {id: 9, name: 'Subhash', age: 17, category: 'Younger'}
+    */
+  
   </script>
 </body>
-
 </html>
