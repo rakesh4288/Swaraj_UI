@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Reverse an Array</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<main class="mainBody">
+  <section class="pageHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="pull-left">
+            <h1>How to reverse an array in JavaScript</h1>
+          </div>
+
+          <div class="pull-right">
+            <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Back to Dashboard </a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h4>(1) Using reverse() - Best and mostly used</h4>
+        <p>
+          The reverse() method reverses the order of the elements in an array.
+        </p>
+        <p class="alert alert-warning">
+          The main drawback is that - it overwrites the original array, which is not good in real development.
+        </p>
+
+        <p>
+          <img src="../images/array_reverse_1.png" class="img-fluid" alt="array_reverse_1" />
+        </p>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h4>(2) Using toReversed() - New Array is Needed</h4>
+        <p>This is also helps to reverse the array</p>
+        <p class="alert alert-warning">
+          But the best benefit is that - This will not modify the original array it will keep as it is.
+        </p>
+
+        <p>
+          <img src="../images/array_reverse_2.png" class="img-fluid" alt="array_reverse_2" />
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="bg-info"/>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h4>(3) Using for Loop</h4>
+        <p>
+          We use the for loop to reverse an array in JavaScript. First, we will create an empty array and then use the for loop to insert the original array elements in reversed order. This is the traditional approach for handling any loop process
+        </p>
+
+        <p>
+          <img src="../images/array_reverse_3.png" class="img-fluid" alt="array_reverse_3" />
+        </p>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h4>(4) Using unshift() Method</h4>
+        <p>
+          We will create an empty array revArray to store the reversed array elements. First, use the forEach() loop to iterate over each element of the original array and use unshift() method to insert each element at the start of revArray, reversing the order of elements.
+        </p>
+
+        <p>
+          <img src="../images/array_reverse_4.png" class="img-fluid" alt="array_reverse_4" />
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="bg-success"/>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h4>(5) Using reduce() Method</h4>
+        <p>
+          We will use the reduce() method on original array and take empty as an accumulator and append each element at the beginning of the array. At the end, we will get the reverse array from the original array. 
+        </p>
+
+        <p>
+          <img src="../images/array_reverse_5.png" class="img-fluid" alt="array_reverse_5" />
+        </p>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h4>(6) Using map() Method</h4>
+        <p>
+          The map() method iterates over each element of the original array where index parameter represents the current position of the element. The array[array.length - 1 - index] accesses elements from the end of the array moving towards the beginning.
+        </p>
+
+        <p>
+          <img src="../images/array_reverse_6.png" class="img-fluid" alt="array_reverse_6" />
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="siteFooter">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
+
+<script>
+  // Example 1: Using simple revers() method
+  const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+  const fruits2 = fruits1.reverse();
+  console.log('fruits2 =', fruits2);
+  // Expected Output: ['Mango', 'Apple', 'Orange', 'Banana']
+  console.log('fruits1 =', fruits1);
+  // Expected Output: ['Mango', 'Apple', 'Orange', 'Banana']
+
+  let number1 = [ 1, 2, 3, 4, 5 ];
+  let number2 = number1.reverse();
+  console.log("number1 =", number1); // [5, 4, 3, 2, 1]
+  console.log("number2 =", number2); // [5, 4, 3, 2, 1]
+  /*
+    - Here you can see in above example
+    - the original array is also modified which is not good
+    - in real case sometimes we just just receive the array from other sources
+  */
+
+  /********************************/
+
+  // Example 2: Using toReversed() method
+  const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+  const fruits4 = fruits3.toReversed();
+  console.log('fruits4 =', fruits4);
+  // Expected Output: ['Mango', 'Apple', 'Orange', 'Banana']
+  console.log('fruits3 =', fruits3);
+  // Expected Output: ['Banana', 'Orange', 'Apple', 'Mango']
+
+  let number3 = [ 1, 2, 3, 4, 5 ];
+  let number4 = number3.toReversed();
+  console.log("number4 =", number4); // [5, 4, 3, 2, 1]
+  console.log("number3 =", number3); // [1, 2, 3, 4, 5]
+  /*
+    - Here you can see in above example
+    - the original array is not modified which is good
+    - in real case sometimes we just just receive the array from other sources
+  */
+
+  /********************************/
+
+  // Example 3: Using for loop
+  let number5 = [ 1, 2, 3, 4, 5 ];
+  let number6 = []
+  for (let i = number5.length-1; i>=0; i-- ) {
+    number6.push(number5[i]);
+  }
+  console.log("number6 =", number6);
+  // Expected Output: [5, 4, 3, 2, 1]
+
+  let fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+  let fruits6 = []
+  for(let i = fruits5.length-1; i>=0; i--) {
+    fruits6.push(fruits5[i]);
+  }
+  console.log('fruits6 =', fruits6);
+  // Expected Output: ['Mango', 'Apple', 'Orange', 'Banana']
+
+  /********************************/
+
+  // Example 4: Using unshift() Method
+  let number7 = [ 1, 2, 3, 4, 5 ];
+  let number8 = []
+  number7.forEach((element) => {
+    number8.unshift(element)
+  });
+  console.log("number8 =", number8);
+  // Expected Output: [5, 4, 3, 2, 1]
+
+  let fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+  let fruits8 = []
+  fruits7.forEach((element) => {
+    fruits8.unshift(element);
+  });
+
+  console.log('fruits8 =', fruits8);
+  // Expected Output: ['Mango', 'Apple', 'Orange', 'Banana']
+
+  /********************************/
+
+  // Example 5: Using reduce() Method
+  let number9 = [ 1, 2, 3, 4, 5 ];
+  let number10 = [];
+  number10 = number9.reduce((acc, item) => [item].concat(acc), []);
+  console.log("number10 =", number10);
+  // Expected Output: [5, 4, 3, 2, 1]
+
+  let fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+  let fruits10 = []
+  fruits10 = fruits9.reduce((acc, item) => [item].concat(acc), []);
+  console.log('fruits10 =', fruits10);
+  // Expected Output: ['Mango', 'Apple', 'Orange', 'Banana']
+
+  /********************************/
+
+  // Example 6: Using map() Method
+  let number11 = [ 1, 2, 3, 4, 5 ];
+  let number12 = [];
+  number12 = number11.map((item, index) => number11[number11.length-1-index]);
+  console.log("number12 =", number12);
+  // Expected Output: [5, 4, 3, 2, 1]
+
+  let fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+  let fruits12 = []
+  fruits12 = fruits11.map((item, index) =>fruits11[fruits11.length-1-index]);
+  console.log('fruits12 =', fruits12);
+  // Expected Output: ['Mango', 'Apple', 'Orange', 'Banana']
+
+
+</script>
+</body>
+</html>
