@@ -56,7 +56,7 @@
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="pull-left">
-              <h1>Spread operator in ES6</h1>
+              <h1>ES6 Spread Operator</h1>
             </div>
 
             <div class="pull-right">
@@ -74,23 +74,91 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div>
-            <p>Actually ECMAScript 6 introduced the spread operator. <br>
-              The syntax is three dots(...) and followed by the iterable array. <br>
-            </p>
-
             <p>
-              It is expanding the array into individual elements. So, it can be used to expand the array in a places
-              where zero or more elements are expected.
+              Spread Operator is a very simple and powerful feature introduced in the ES6 standard of JavaScript, By using this feature we can write the nicer and shorter code.
             </p>
 
-            <ul>
-              <li>Spread operator ... is assocated with array which iterarting.</li>
-              <li>While using ...variableName our array can become the single line.</li>
-              <li>Spread operator can merge the array value and its spread the array data from array </li>
-              <li>When we need to merge two array values then we can use the spread operator</li>
-              <li>And also when we need to merge two array value then we can use the spread operator.</li>
-            </ul>
+            <h6 class="text-danger">
+              The JavaScript spread operator is denoted by three dots (…). <br/> The spread operator helps the iterable objects to expand into then individual elements. <i class="text-success">In other words, the spread operator allows us to copy all the elements from the existing array or object into another array or object.</i>
+            </h6>
+
+            <br/>
           </div>
+        </div>
+      </div>
+
+      <div id="example-1" class="row">
+        <div class="col-md-6">
+          <h5> 1. Adding The Multiple Elements Using Spread Operator</h5>
+            <p>
+              Even though we get the content on one array inside the other one, actually it is an array inside another array which is definitely what we didn’t want. <br/>If we want the content to be inside a single array we can make use of the spread operator. 
+            </p>
+
+            <h6>We can also insert at the beginning and both begin and end together also</h6>
+        </div>
+
+        <div class="col-md-6">
+          <img src="../images/Spread_operator_img_1.png" alt="Spread_operator_img_1" class="img-fluid" />
+        </div>
+      </div>
+
+      <hr class="bg-primary"/>
+
+      <div id="example-2" class="row">
+        <div class="col-md-6">
+          <h5> 2. Concatenate Arrays using Spread Operator</h5>
+            <p>
+              The spread operator can be used to concatenate more than one array.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+          <img src="../images/Spread_operator_img_2.png" alt="Spread_operator_img_2" class="img-fluid" />
+        </div>
+      </div>
+
+      <hr class="bg-info"/>
+
+      <div id="example-3" class="row">
+        <div class="col-md-6">
+          <h5> 3. Now let's check Objects with Spread Operator</h5>
+            <p>
+              ES6 has added spread property to object literals in javascript. The spread operator (…) with objects is used to create copies of existing objects with new or updated values or to make a copy of an object with more properties. Let’s take an example of how to use the spread operator on an object, 
+            </p>
+        </div>
+
+        <div class="col-md-6">
+          <img src="../images/Spread_operator_img_3.png" alt="Spread_operator_img_3" class="img-fluid" />
+        </div>
+      </div>
+
+      <hr class="bg-danger"/>
+
+      <div id="example-4" class="row">
+        <div class="col-md-6">
+          <h5> 4. Spread operator for merging objects.</h5>
+            <p>
+              In this example, we will use the spread operator for merging objects.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+          <img src="../images/Spread_operator_img_4.png" alt="Spread_operator_img_4" class="img-fluid" />
+        </div>
+      </div>
+
+      <hr class="bg-secondary"/>
+
+      <div id="example-5" class="row">
+        <div class="col-md-6">
+          <h5> 5. Spread operator to split the string into an array of strings.</h5>
+            <p>
+              In this example, We will use the spread operator to split the string into an array of strings.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+          <img src="../images/Spread_operator_img_5.png" alt="Spread_operator_img_5" class="img-fluid" />
         </div>
       </div>
     </div>
@@ -116,7 +184,27 @@
   </script>
 
   <script>
-    // Example 1
+    // Example 1: Expand using spread operator
+    let a = [10,20];
+    let b = [...a, 30, 40];
+    console.log(b);
+    // Output: [10, 20, 30, 40]
+
+    // Example 2: Concatenate Arrays using Spread Operator
+    let a1 = [10, 20];
+    let b1 = [30, 40];
+    let c1 = [50, 60]
+    let d1 = [...a1, ...b1, ...c1];
+
+    console.log(d1);
+    // Output: [10, 20, 30, 40, 50, 60]
+
+    const cars1 = ["Tata", "BMW", "Toyota", "MERCEDES"];
+    const cars2 = ["Nisaan", "Mahindra", "Maruti Suzuki", "Kia"];
+    const cars3 = [...cars1, ...cars2];
+    console.log('Cars3 =', cars3);
+
+
     var line1 = ['Hello Sir!', 'Welcome', 'to', 'Rajvika', 'House !'];
     var line2 = ["Your Booking", "is", "confirmed", "for", "marriage function"];
     console.log(...line1);
@@ -124,8 +212,45 @@
 
     var line3 = [...line1, ...line2, 'Please', 'share', 'our', 'Booking number'];
     console.log(...line3);
+  
+    // Example 3: Now let's check Objects with Spread Operator
+    const cars4 = {
+      brand: 'BMW',
+      color: 'Red'
+    }
 
-    // Example 2
+    // copy cars4 object using spread operator to create cars5 object
+    const cars5 = {...cars4};
+    console.log('cars5 =', cars5);
+    // Output: { brand: 'BMW', color: 'Red' 
+
+    // Example 4: In this example, we will use the spread operator for merging objects.
+    // cars6 is a object which is containing the attributes Brand & Color
+    const cars6 = {
+      Brand: "Toyota",
+      Color: "RED"
+    }
+
+    // cars7 is a object which is containing  the attributes Brand, Color & Year
+    const cars7 = {
+      Brand: "Nissan",
+      Color: "BLUE",
+      Year: 2004
+    }
+
+    const cars8 = {...cars6, ...cars7};
+    console.log('cars8 =', cars8);
+    // Output: {Brand: 'Nissan', Color: 'BLUE', Year: 2004}
+    // You can see here Brand and Color replaced with Nisan and Blue
+
+    // Example 5: spread operator to split the string into an array of strings.
+    const car ="TATA";
+    const spread = [...car];
+    console.log('spread =', spread);
+    // OUTPUT: ['T', 'A', 'T', 'A']
+
+
+    // Example 6: With using function
     function user(name, city) {
       console.log("Hey Hi My name is " + name + " and i am living in " + city);
     }
@@ -135,8 +260,9 @@
 
     /*************************************************/
     var city = ["Pune", "Bhopal", "Bangalore", "Chennai", "Hyderabad"];
-    console.log(...city); // It will spread this variable separately
-    console.log([...city]);
+    console.log("Spready City =", ...city); 
+    // It will spread this variable separately
+    console.log("Spready City =", [...city]);
   </script>
 </body>
 

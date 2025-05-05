@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample</title>
+  <title>Template String</title>
 </head>
 <body>
 <header>
@@ -69,8 +69,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <h5>Basically template string are using for concating two string dynamically and we are using backtick (` `)
-          character with $ to operate them.</h5>
+        <h5>
+          Basically template string are using for concatenation two string dynamically and <i class="text-danger">we are using backtick (` `)
+            character with $ to operate them.</i>
+        </h5>
+        <br/>
         <p>
           Before ES6, template literals were called as template strings. Unlike quotes in strings, template literals
           are enclosed by the backtick (` `) character (key below the ESC key in QWERTY keyboard). Template literals
@@ -106,11 +109,17 @@
 </script>
 
 <script>
-   var user = "Rajvika Sahu";
-    var company = "Infosys";
-    //var result = "Hello" + user + " Welcome to " + company; // this was before ES6 for concatenating
-    var result = `Hello ${user} Welcome to ${company}`;
-    console.log(result);
+
+
+  var user = "Rajvika Shah";
+  var company = "Infosys";
+  //var result = "Hello" + user + " Welcome to " + company; // this was before ES6 for concatenating
+
+  var result = `Hello ${user} Welcome to ${company}`;
+  console.log(result);
+  // output: Hello Rajvika Shah Welcome to Infosys
+
+
 </script>
 </body>
 </html>
