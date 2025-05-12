@@ -73,17 +73,29 @@
     <section class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <p>JavaScript hoisting is the default behavior of moving the declaration on the top.</p>
+          <p>JavaScript hoisting is the default behavior of moving the declaration on of the top.</p>
           <p>
-            In a JavaScript – We can use any variable and later we can declare. In the other words you can say that
+            In a JavaScript - We can use any variable and later we can declare. In the other words you can say that
             variable can be used before it has been declared.
           </p>
 
-          <p class="text-danger">Note: Function expression cannot be hoisted, only traditional function can be hoisted.
+          <p class="alert alert-danger">Note: Function expression cannot be hoisted, only traditional function can be hoisted.
           </p>
 
-          <p class="text-danger">Note: Let & Var keyword also cannot be hoisted. </p>
+          <p class="alert alert-danger">Note: Let & Var keyword also cannot be hoisted. </p>
         </div>
+      </div>
+
+      <hr class="bg-primary"/>
+
+      <div>
+        <img src="../images/Hoisting_1.png" alt="Hoisting_1" class="img-fluid" />
+      </div>
+
+      <hr class="bg-primary"/>
+
+      <div>
+        <img src="../images/Hoisting_2.png" alt="Hoisting_2" class="img-fluid" />
       </div>
     </section>
   </main>
@@ -107,25 +119,33 @@
   </script>
 
   <script>
-    abc();
+
+    // Variable Hoisting
     yy = "Yes";
-    console.log("Before declaration of variable =", yy);
+    console.log("Before the declaration of variable =", yy); // Output: Yes
     var yy;
 
+    // Function Hoisting
+    abc(); // Here you can see we have called the function first then declare it later
     function abc() {
       xyz = "Yes";
-      console.log("from function also =", xyz);
+      console.log("from function also =", xyz); // Output: Yes
       var xyz;
     }
 
+    // Function Expression
+    // desire();
 
-    //desire(); // this function can not be executable Because its Function Expression
+    // If we try to call this desire function before
+    // So this function will not be executed because its Function Expression 
 
     var desire = function () {
       wwe = "Triple H";
       console.log("From Function Expression = ", wwe);
     }
+
     desire();
+
 
     // tata(); -- TypeError: tata is not a function
     var tata = function () {
@@ -135,13 +155,15 @@
     tata();
 
     /**************************************/
+
     var sam = 1;
     function sample_1() {
-      console.log(sam);
+      console.log('sample_1 =', sam);
       sam = 2;
     }
     sample_1();
 
+    /**************************************/
 
     var tt = 100;
     function task() {
@@ -149,7 +171,18 @@
       var tt = 100;
     }
     task();
+
+    /**************************************/
+
+    let city = "Pune";
+    const sindoor = () => {
+      console.log("City 1 =", city);
+      city = "Phoenix";
+      console.log("City 2 =", city);
+      var city;
+    }
+
+    sindoor();
   </script>
 </body>
-
 </html>

@@ -76,7 +76,7 @@
           <h4>List of 12 Jyotirlingas in India With Names & Places</h4>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Somnath" id="Somnath" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Somnath">
               (1) Somnath - Gir Somnath In Gujarat
             </label>
@@ -84,7 +84,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Nageshwar" id="Nageshwar" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Nageshwar">
               (2) Nageshwar - Daarukavanam In Gujarat
             </label>
@@ -92,7 +92,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Bhimashankar" id="Bhimashankar" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Bhimashankar">
               (3) Bhimashankar - Pune In Maharashtra
             </label>
@@ -100,7 +100,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Trimbakeshwar" id="Trimbakeshwar" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Trimbakeshwar">
               (4) Trimbakeshwar - Nashik In Maharashtra
             </label>
@@ -108,7 +108,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Grishneshwar" id="Grishneshwar" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Grishneshwar">
               (5) Grishneshwar - Aurangabad In Maharashtra
             </label>
@@ -116,7 +116,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Vaidyanath" id="Vaidyanath" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Vaidyanath">
               (6) Vaidyanath - Deoghar In Jharkhand
             </label>
@@ -124,7 +124,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Mahakaleshwar" id="Mahakaleshwar" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Mahakaleshwar">
               (7) Mahakaleshwar - Ujjain In Madhya Pradesh
             </label>
@@ -132,7 +132,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Omkareshwar" id="Omkareshwar" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Omkareshwar">
               (8) Omkareshwar - Khandwa In Madhya Pradesh
             </label>
@@ -140,7 +140,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Kashi" id="Kashi" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Kashi">
               (9) Kashi Vishwanath - Varanasi In Uttar Pradesh
             </label>
@@ -148,7 +148,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Kedarnath" id="Kedarnath" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Kedarnath">
               (10) Kedarnath - Kedarnath In Uttarakhand
             </label>
@@ -156,7 +156,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Rameshwaram" id="Rameshwaram" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Rameshwaram">
               (11) Rameshwaram - Rameswaram Island In Tamil Nadu
             </label>
@@ -164,7 +164,7 @@
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="Mallikarjuna" id="Mallikarjuna" name="jyotirlingas"
-              onchange="choosejyotirlingas()">
+              onchange="chooseJyotirlingas()">
             <label class="form-check-label" for="Mallikarjuna">
               (12) Mallikarjuna - Srisailam In Andhra Pradesh
             </label>
@@ -193,7 +193,7 @@
   </script>
 
   <script>
-    function choosejyotirlingas() {
+    function chooseJyotirlingas() {
       var checkbox = document.querySelectorAll('input[name="jyotirlingas"');
       var selected = [];
       for (var i = 0; i < checkbox.length; i++) {

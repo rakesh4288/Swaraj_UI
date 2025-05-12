@@ -8,7 +8,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Map in ES6</title>
+  <title>array.map()</title>
 </head>
 
 <body>
@@ -97,21 +97,25 @@
 
       <div class="row">
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <h3>why we use map function instead of for loop</h3>
+          <h3>Why we use map() function instead of forEach()</h3>
           <p>map() and forEach() both are valuable methods for working with arrays in JavaScript.</p>
-          <h5>Map Method:</h5>
+          <h5>map() Method:</h5>
           <ul>
-            <li>Map method producing a new array without changing original array</li>
+            <li>Map method producing a new array without the changing original array</li>
             <li>And you can add any condition and that condition will iterate on every element</li>
           </ul>
 
-          <h5>For Each Loop (forEach): </h5>
-          <p>When we need to make any operation on existing array then we can use the for each method</p>
+          <h5>forEach() Loop : </h5>
+          <ul>
+            <li>forEach() loop is a built in function that executes a provided function for each array element.</li>
+            <li>It does not return a new array and does not modify the original array.</li>
+            <li>It is generally using for iteration purpose and performing the actions on each array element.</li>
+          </ul>
         </div>
 
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
           <p>
-            <img src="../images/map_vs_foreach.png" alt="map_vs_foreach" class="img-fluid" />
+            <img src="../images/ForEachLoop.png" alt="map_vs_foreach" class="img-fluid" />
           </p>
         </div>
       </div>
@@ -219,7 +223,7 @@
     const name3 = capitalize(names[3]);
     console.log("name 3 index =", name3); // Rajlakshmi
 
-    // But This is not correct approach for handling the array
+    // But This is not correct approach for handling the array index wise
     // Now we should to use the For Loop for interating the array and perform the operation
     let new_names = []
     for (var i = 0; i < names.length; i++) {
@@ -356,7 +360,35 @@
       7: {id: 8, name: 'Anil', age: 18, category: 'Adult'}
       8: {id: 9, name: 'Subhash', age: 17, category: 'Younger'}
     */
+    
+
   
+    
+    // Example 1: forEach() Loop
+    const array2 = [1, 2, 3, 4, 5];
+    const array3 = array2.forEach((element) => {
+      console.log('forEach() =', element);
+    });
+    console.log('array3=', array3);
+    // Output: 
+    /*
+    forEach() = 1
+    forEach() = 2
+    forEach() = 3
+    forEach() = 4
+    forEach() = 5
+    */
+
+    // Example 2: Copy every element from one array to another array using Array.forEach() method.
+    const array4 = [2, 4, 6, 8];
+    let array5 = [];
+    array4.forEach((item) => {
+      array5.push(item * item);
+    });
+    console.log('array5 =', array5);
+    // Output: [4, 16, 36, 64]
+
+
   </script>
 </body>
 </html>

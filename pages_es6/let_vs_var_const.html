@@ -82,9 +82,60 @@
             <p class="text-danger">The Main difference is that Let keyword has a block level scope and Var is the
               function level scope.</p>
 
-            <p class="text-danger">Note: Function expression cannot hoisted which is created by Let Keyword</p>
-            <p class="text-danger">Note: Function expression cannot hoisted which is created by Var Keyword</p>
+            <p class="alert alert-info">Note: Function expression cannot hoisted which is created by Let Keyword</p>
+            <p class="alert alert-info">Note: Function expression cannot hoisted which is created by Var Keyword</p>
           </div>
+        </div>
+      </div>
+
+      <hr class="bg-danger"/>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h5>More Details:</h5>
+          <h6>
+            <b>var:</b> Declares variables with function or global scope and allows re-declaration and updates within the same scope.
+          </h6>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <img src="../images/let_var_const_img_1.png" alt="let_var_const_img_1" class="img-fluid" />
+        </div>
+      </div>
+
+      <hr class="bg-primary"/>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h5>Block Scope with let</h5>
+          <h6>
+            This feature introduced in ES6. This means the variable is only accessible within the block (like loops or conditionals) where it is declared.
+          </h6>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <img src="../images/let_var_const_img_2.png" alt="let_var_const_img_2" class="img-fluid" /> <br/><br/>
+          <img src="../images/let_var_const_img_3.png" alt="let_var_const_img_3" class="img-fluid" />
+        </div>
+      </div>
+
+      <hr class="bg-success"/>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h5>Immutability with const</h5>
+          <h6>
+            const is used to declare variables that should not be reassigned after their initial assignment. This keyword is also block-scoped like let.
+          </h6>
+
+          <ul>
+            <li>The variable country is declared with const, meaning its value cannot be reassigned after initialization.</li>
+            <li>The value of country (which is India) is printed to the console.</li>
+          </ul>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <img src="../images/let_var_const_img_4.png" alt="let_var_const_img_4" class="img-fluid" /> 
         </div>
       </div>
     </div>
@@ -110,10 +161,19 @@
   </script>
 
   <script>
+    function sindoor() {
+      var operation = "Operation Sindoor Started";
+      console.log(operation);
+    }
+
+    sindoor();
+    // Output: Operation Sindoor Started
+
     if (true) {
       let myName = "Rakesh";
       console.log(myName);
     }
+
     //console.log(myName); // it will give ReferenceError
 
     function abc() {
@@ -123,13 +183,25 @@
         let myName = "Lalita";
         console.log(myName);
       }
-      //console.log('myName =', myName);
+      // console.log('myName =', myName);
+      // it will give the Uncaught ReferenceError Because myName is not defined at functional level
     }
     abc();
 
+
+    if(true){
+      const country = "India";
+      console.log(country); // Output: India
+    }
+
+    // console.log('country = ', country);
+    // it will also through the error like - Uncaught ReferenceError: country is not defined
+
+
     //------------------------------------------//
+
     const wwe = "Lalita";
-    //wwe = "Rajvika";
+    // wwe = "Rajvika";
 
     //const bb;
     //bb = "Hello";

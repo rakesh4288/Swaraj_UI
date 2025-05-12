@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample ES6</title>
+  <title>For Of Loop</title>
 </head>
 
 <body>
@@ -75,7 +75,13 @@
             into Array Format.</p>
           <h4 class="text-danger">For of can also be work with array value</h4>
           <p>
-            <img src="../images/For_of_Loop.png" alt="For_of_Loop" class="img-fluid" />
+            <h5>Example 1:</h5>
+            <img src="../images/For_of_Loop_1.png" alt="For_of_Loop_1" class="img-fluid" />
+          </p>
+
+          <p>
+            <h5>Example 2:</h5>
+            <img src="../images/For_of_Loop_2.png" alt="For_of_Loop_2" class="img-fluid" />
           </p>
         </div>
       </div>
@@ -104,11 +110,17 @@
   <script>
     
     
-    // This loop will iterate this string single
+    // This loop will iterate this string
     var country = "INDIA";
     for (var value of country) {
       console.log("Separating Value = ", value);
     }
+
+    // Separating Value =  I
+    // Separating Value =  N
+    // Separating Value =  D
+    // Separating Value =  I
+    // Separating Value =  A
 
     // For Of Loop can also iterate with Array variable
     var arr = ["R", "A", "K", "E", "S", "H"];
@@ -116,8 +128,12 @@
       console.log("For of Array =", myValue);
     }
 
-
+    // For of Array = R
+    // For of Array = A
+    // For of Array = K
+    // For of Array = E
+    // For of Array = S
+    // For of Array = H
   </script>
 </body>
-
 </html>

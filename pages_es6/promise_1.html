@@ -75,7 +75,7 @@
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div>
             <p>
-              Promises is a new concept in JavaScript. Promise is an object that may produce two states condition:
+              Promises is a new feature in ES6. Promise is an object that may produce two states condition:
             <ul>
               <li>Either Resolve or</li>
               <li>Either Reject</li>
@@ -95,7 +95,7 @@
 
             <p class="text-danger">
               We can use promise - when we have to perform some set of action and after that it will execute some or
-              produce some result. And Promise is very eager it will definitely be executed whether the result will
+              produce some result. Promise is very eager it will definitely be executed whether the result will
               success or failed.After we can map the execution flow using .then() and .catch() callback function.
             </p>
 
@@ -147,6 +147,18 @@
       console.log(fromReject);
     });
 
+    const fetchingUsers = async () => {
+      const url = 'https://dummyjson.com/users';
+      try {
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log('res =', res.users);
+      } catch (error) {
+        console.log('Error coming');
+      }
+    };
+
+    fetchingUsers();
   </script>
 </body>
 

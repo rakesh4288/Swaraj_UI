@@ -74,15 +74,15 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="alert border-primary">
-            <p>
-              Actually Event loop is something which is handling the asynchronous code execution in JavaScript.
-            </p>
+            <h5>
+              Actually Event loop is something which is handling the asynchronous behaviour code execution in the JavaScript.
+            </h5>
 
             <p>
-              As you know the Javascript is single thread language, which means the two statement can not be executed in
-              parallely And JavaScript is executing our code line by line which means each javascript statements are
-              synchronous. But there is a way to run your code asynchronously, if you use setTimeout() function which
-              makes sure that your code executes after specified time (in millisecond). Example code:
+              As you know the Javascript is a single thread language, which means the two statement can not be executed in
+              same time in the JavaScript and the JavaScript is executing our code line by line which means each javascript statements are
+              synchronous. <br/>But there is a way to run your code asynchronously, if you use setTimeout() function which
+              makes sure that your code executes after specified time (in millisecond). <br/>Example code:
             </p>
 
             <p>
@@ -91,19 +91,30 @@
 
             <p class="text-success">
               After executing above statements, Your browser will print “Message 1” & “Message 3” first, then it will
-              print “Message 2”. This is where event loop comes into the picture, which makes sure your asynchronous
-              code runs after all the synchronous code is done executing.
+              print “Message 2”.
             </p>
 
-            <h4>Actually after executing all synchronous code it is responsibility from Event Loop to execute the all
+            <h6 class="text-danger">
+              This is the place where event loop comes into the picture, which makes sure your asynchronous
+              code runs after all the synchronous code is done executing.
+            </h6>
+
+            <h4>Actually after executing the  all synchronous code it is responsibility from Event Loop to execute the all
               asynchronous code. Actually when you create a asynchronous code then Event Loop job start to handle this.
             </h4>
 
             <a href="https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd"
-              class="btn btn-info">Tutorial</a>
+              class="btn btn-info btn-sm"  target="_blank">
+              Best Tutorial
+            </a>
 
-            <h2> <b>Promise:</b> <br>
-              All `thenable` callbacks of the promise are called first, then the setTimeout callback is called.</h2>
+            <hr class="bg-primary"/>
+
+            <div class="alert alert-info">
+              <h5 class="text-danger"> <b>How Promises manages the event loop:</b></h5>
+              <h6>Promises are the first priority then setTimeout is the second, Event Loop is placing the Promises in Callstack queue first</h6>
+              Actually all `thenable` callbacks of the promise are called first, then the setTimeout callback is called.
+            </div>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample</title>
+  <title>Arrow Function</title>
 </head>
 <body>
 <header>
@@ -70,15 +70,15 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <p>
-          One of the most interesting features in modern JavaScript is the introduction of arrow functions, sometimes called 'fat arrow' functions, utilizing the new token <code>=&gt;</code>.
+          One of the most interesting features in modern JavaScript is that introduction of the arrow functions, sometimes called 'fat arrow' functions also, utilizing the new token <code>=&gt;</code>.
         </p>
         
-        <p>This functions have two major benefits - one is a very clean & concise syntax and another one is more intuitive scoping and <code>this</code> binding.</p>
+        <p>This functions have two major benefits - one is a very clean & concise syntax and another one is more intuitive scoping with <code>this</code> binding.</p>
 
         <p class="text-danger">This is very similar to traditional functions, we just leave off the function keyword and add a fat arrow after the arguments.</p>
 
         <div> 
-            <img src="images/arrow_function_1.png" class="img-fluid" alt=""> 
+            <img src="../images/arrow_function_1.png" class="img-fluid" alt=""> 
         </div>
         <a class="btn btn-info" href="https://zendev.com/2018/10/01/javascript-arrow-functions-how-why-when.html" target="_blank"> Tutorial </a>
 
@@ -103,7 +103,7 @@
             <p>The handling of <code class="w3-codespan">this</code> is also different in arrow functions compared to regular functions.</p>
             <p>In short, with arrow functions there are no binding of
               
-              <code class="w3-codespan">this</code>.</p>
+              <code class="w3-codespan">this</code> keyword</p>
 
               <p>In regular functions the <code class="w3-codespan">this</code> keyword represented the object that called the 
               function, which could be the window, the document, a button or whatever.</p>
@@ -112,6 +112,36 @@
               object that 
               defined the arrow function.</p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <br class="bg-primary"/>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Example 1:</h5>
+        <img src="../images/arrow_function_2.png" alt="arrow_function_2" class="img-fluid" />
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Example 2:</h5>
+        <img src="../images/arrow_function_3.png" alt="arrow_function_3" class="img-fluid" />
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Example 3:</h5>
+        <img src="../images/arrow_function_4.png" alt="arrow_function_4" class="img-fluid" />
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Example 4:</h5>
+        <img src="../images/arrow_function_5.png" alt="arrow_function_5" class="img-fluid" />
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Example 5:</h5>
+        <img src="../images/arrow_function_6.png" alt="arrow_function_6" class="img-fluid" />
       </div>
     </div>
   </div>
@@ -137,44 +167,64 @@
 </script>
 
 <script>
+
   //Traditional Function
+  
   function abc(x){
     console.log("This is Traditional Function = ", x);
+    // Output: Yes
   }
 
-  abc("yes");
+  abc("Yes");
   console.log("abc type of =", typeof(abc));
+  // Output: function
+
 
   /*************************************************/
+  
   // Using Arrow Function
-  var xyz = a=>{
-    console.log("Using Arrow Function =",a);
+  var xyz = a => {
+    console.log("Using Arrow Function = ", a);
+    // Output:  correct
   }
 
   xyz("correct");
   console.log("xyz type of =", typeof(xyz));
+  // Output: function
 
   /*************************************************/
+
   // Using multiple parameters with Arrow Function
 
-  var wwe = (a,b,c,d)=>{
-    console.log("WWE - Tag Team Match =" + a,b + " vs " + c,d);
+  var wwe = (a, b, c, d) => {
+    console.log("WWE - Tag Team Match =" + a, b + " vs " + c, d);
+    // Output: WWE - Tag Team Match =Triple H John Ceena vs Batista Edge
   }
   
   wwe("Triple H","John Ceena","Batista","Edge");
 
+
   /*************************************************/
+  
   //Simple Function Expression
+
   let welcome  = function(pName){
     console.log(`Hello & welcome ${pName} !`);
+    // Output: Hello & welcome Rakesh ji !
   }
+
   welcome("Rakesh ji");
 
+
   // same above function with arrow function
-  let welcome2 = (pName,pAge) =>{
+
+  let welcome2 = (pName,pAge) => {
     console.log(`Hello & welcome ${pName} ji ! What is your current age is = ${pAge}`);
+    // Output: Hello & welcome Lalita ji ! What is your current age is = 32
   }
+
   welcome2("Lalita","32");
+
 </script>
 </body>
 </html>

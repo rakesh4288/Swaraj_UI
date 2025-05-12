@@ -73,7 +73,7 @@
     <section class="container" id="shallow-copy">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <p class="alert alert-warning">In JavaScript, shallow copy and deep copy are two ways to clone an object or
+          <p class="alert alert-warning">In JavaScript, Shallow Copy and Deep Copy are the two ways to clone an object or
             array</p>
           <h4>Shallow Copy:</h4>
           <p>A shallow copy occurs when you copy the reference of an object to a new variable.</p>
@@ -81,7 +81,7 @@
             the original memory location. This means that if you change the nested properties in one object, those
             changes will reflect in the other because they share the same memory reference.</p>
 
-          <h5>How Shallow Copy Works:</h5>
+          <h5>How the Shallow Copy Works:</h5>
           <p>When you assign one object to another using the assignment operator (=), a shallow copy is created:</p>
 
           <p>
@@ -89,7 +89,9 @@
           </p>
 
           <p>
-            <b>Explanation:</b> From the above example, it is seen that when the name of newEmployee is modified, it is also reflected for the old employee object. This can cause data inconsistency. This is known as a shallow copy. The newly created object has the same memory address as the old one.
+            <b>Explanation:</b> From the above example, it is seen that when the address of newEmployee is modified, so it is also reflected for the old employee object as well. By this approach this can cause data inconsistency. <br/>
+            This is known as a shallow copy. The newly created object has the same memory address as the old one. <br/>
+            we should avoid to use the Shallow Copy approach !!
           </p>
         </div>
       </div>
@@ -102,7 +104,7 @@
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <h4>Deep Copy:</h4>
           <p>
-            A deep copy creates a completely independent copy of the object, including all nested objects or arrays. This ensures that changes made to one object do not affect the other. Each object is stored in a separate memory location, making them entirely independent.
+            A deep copy creates a completely independent copy of the object, including all nested objects or arrays. This ensures that changes made to one object do not affect the other. <br/> Each object is stored in a separate memory location, making them entirely independent.
           </p>
 
           <h5>Creating a Deep Copy:</h5>
@@ -115,7 +117,7 @@
           </p>
 
           <p>
-            <b>Explanation:</b> Here the new object is created using the JSON.parse() and JSON.stringify() methods of JavaScript. JSON.stringify() takes a JavaScript object as an argument and then transforms it into a JSON string. This JSON string is passed to the JSON.parse() method which then transforms it into a JavaScript object.
+            <b>Explanation:</b> Here the new object is created using the <b>JSON.parse()</b> and <b>JSON.stringify()</b> methods of JavaScript. <br/> <b>JSON.stringify()</b> takes a JavaScript object as an argument and then transforms it into a JSON string. <br/> This JSON string is passed to the <b>JSON.parse()</b> method which then transforms it into a JavaScript object.
           </p>
         </div>
       </div>
