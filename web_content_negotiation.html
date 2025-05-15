@@ -8,7 +8,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="css/mainStyle.css" rel="stylesheet" />
-  <title>All UI Practice</title>
+  <title>Content Negotiation</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
 
             <li class="nav-item">
@@ -55,7 +55,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <h1>Sample Heading ! <i class="fa fa-address-card-o" aria-hidden="true"></i> </h1>
+            <h1>What is the Content Negotiation in Web API ? <i class="fa fa-id-card-o" aria-hidden="true"></i> </h1>
           </div>
         </div>
       </div>
@@ -64,7 +64,58 @@
     <section class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          content
+          Content negotiation is the best format for getting the response from the server. When a client is requesting the data from the server so server offer few options to send the data like JSON format or XML format. 
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h5>Here's a more detailed explanation:</h6=5>
+            <h6>The Problem:</h6>
+            <ul>
+              <li>
+                Web APIs often need to serve the data to different clients, which may have varying preferences (e.g., some clients might prefer JSON, while others prefer XML).
+              </li>
+
+              <li>
+                It's crucial to deliver the data in a format that each client can efficiently process and understand. 
+              </li>
+            </ul>
+
+            <h5>The Solution: Content Negotiation:</h5>
+            <ul>
+              <li>Clients send an HTTP request including headers like Accept to specify their preferred media types.</li>
+              <li>The server uses this information to select the most appropriate representation of the data to return.</li>
+              <li>If the server can fulfill the client's request, it returns the data in the specified format.</li>
+              <li>If no acceptable format is available, the server might return a 406 Not Acceptable error or a response in a default format. </li>
+            </ul>
+
+            <h5>Example:</h5>
+            <ul>
+              <li>A client sends a request with Accept: application/json. </li>
+              <li>The server, if it can generate JSON, sends back the data in JSON format. </li>
+              <li>If the client sends Accept: application/xml and the server can generate XML, it sends the data in XML format. </li>
+            </ul>
+
+            <p>
+              In essence, content negotiation enables APIs to provide data in a variety of formats, making them more versatile and accommodating to different client applications. 
+            </p>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <div class="alert alert-info">
+            <h6>Content-Type: application/json</h6>
+            <p>
+              <img src="images/Web_Api_JSON_Response.jpg" alt="Web API JSON" class="img-fluid" />
+            </p>
+
+            <hr class="bg-dark"/>
+
+            <h6>Content-Type: application/xml</h6>
+            <p>
+              <img src="images/Web_Api_XML_Response.jpg" alt="Web API XML" class="img-fluid" />
+            </p>
+          </div>
         </div>
       </div>
     </section>
