@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="pull-left">
-            <h1>JavaScript Heading !</h1>
+            <h1>How to print 1 2 3 by seconds</h1>
           </div>
 
           <div class="pull-right">
@@ -69,7 +69,10 @@
   <section class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <h2>Sample Heading</h2>
+
+        <p>
+          <img src="../images/For_Loop_1.png" alt="for loop" />
+        </p>
       </div>
     </div>
   </section>
@@ -94,10 +97,10 @@
 </script>
 
 <script>
-  //   for(var i=0; i<5;i++){
+  // for(var i=0; i<5; i++){
   //   setTimeout(function(){
   //     console.log(i);
-  //   },1000);
+  //   }, 2000);
   // }
 
   // setInterval(function(){
@@ -106,13 +109,13 @@
   //   }
   // },1000);
 
-  for (var i = 0; i < 5; i++) {
-    (function (i) {
-      setTimeout(function () {
-        console.log(i);
-      }, 3000*i);
-    })(i);
-  };
+  // for (var i = 0; i < 5; i++) {
+  //   (function (i) {
+  //     setTimeout(function () {
+  //       console.log(i);
+  //     }, 2000*i);
+  //   })(i);
+  // };
 
   // for(var i =1; i<9; i++){
   //   (function (i){
@@ -121,6 +124,24 @@
   //     },2000*i);
   //   })(i);
   // }
+
+
+  for(let i =1; i <=5; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, 3000);
+  }
+
+
+  for(var i = 1; i<=5; i++) {
+    (function(i){
+      setTimeout(() => {
+        console.log(i);
+      }, 2000*i);
+    }) (i)
+  }
+
+
   </script>
 </body>
 </html>

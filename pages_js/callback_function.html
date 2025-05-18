@@ -112,9 +112,9 @@
   let year = now.getFullYear();
   document.getElementById("currentYear").innerHTML = year;
 </script>
+
 <script>
-  
-  
+
   function processThis(message,myCallback){
     console.log("Running with first message = ", message);
     if(typeof myCallback == "function"){
@@ -126,6 +126,22 @@
     console.log("I am callback function" + message);
   });
 
+  // create a new callback function
+  function sayGoodbye() {
+    console.log('GoodBye');
+  }
+
+  // create a function where you can pass the callback function as a parameter
+  function greetUser(name, callback) {
+    console.log(`Hello ${name}`);
+    callback();
+  }
+
+  // now call the greetUser function and pass the callback as an argument
+  greetUser('Rakesh', sayGoodbye);
+  // Output: 
+  // Hello Rakesh
+  // GoodBye
 
 
 </script>
