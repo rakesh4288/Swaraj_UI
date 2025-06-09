@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Objects values method</title>
+  <title>Default Parameters</title>
 </head>
 <body>
   <header>
@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="pull-left">
-            <h1>JavaScript Object.values()</h1>
+            <h1>Default Parameters</h1>
           </div>
 
           <div class="pull-right">
@@ -68,52 +68,20 @@
 
   <section class="container">
     <div class="row">
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-        <p class="alert alert-primary">
-          The Object.values() method returns the values of an object. <br/>
-          <b>If you wanted to find out the values of the object so this is the best method to find out the values.</b>
-        </p>
-        
-        <p class="alert alert-primary">The Object.values() method does not change the original object.</p>
-
-        <div class="alert alert-danger">
-          <h4>Related Methods:</h4>
-          <p><a href="objects_keys_method.html">Object.keys()</a> returns the keys (properties) of any object type.</p>
-          <p><a href="objects_values_method.html">Object.values()</a> returns the values of all object keys (properties).</p>
-          <p><a href="objects_entries_method.html">Object.entries()</a> returns the keys and values of any object types.</p>
-          <p>The methods above return an <b>Iterable</b> (enumerable array).</p>
-          <p><b>Iterables</b> makes it simpler to use objects in loops and to convert objects into maps.</p>
-        </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <h6>
+          Default parameters in JavaScript allow you to assign the default values to function parameters
+        </h6>
+        <h6>
+          This means that - If you are calling the function without passing the specefic parameter, so instead of this default value will be used.
+        </h6>
 
         <p>
-          <h6>While Passing the Array inside Object.values() method</h6>
-          <img src="../images/Object_values_2.png" alt="Object_values_2" class="img-fluid" />
+          <img src="../images/Default_parameter_1.png" alt="default paramter 1" class="img-fluid"/>
         </p>
-      </div>
-
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-        <h5>Syntax:</h5>
-        <pre class="alert-success"><span>Object.values(obj);</span></pre>
-
-        <h5>Parameter:</h5>
-        <ul>
-          <li>obj: It is the object whose enumerable properties are to be returned.</li>
-        </ul>
-
-        <h6>Remember few points: </h6>
-        <ul>
-          <li>O is the capital letter while typing Object.values()</li>
-          <li>v is the small letter while typing .values()</li>
-          <li>It will always return the array</li>
-          <li>If you are passing the object inside the Object.values() then it will return the values within the array</li>
-          <li>And if you are passing the array inside the Object.values then it will return the values within the array</li>
-        </ul>
-
-        <h5>Return Value:</h5>
-        <p>It Returns an array containing all the enumerable property values of the given object. </p>
 
         <p>
-          <img src="../images/Object_values.png" alt="Object_values" class="img-fluid" />
+          <img src="../images/Default_parameter_2.png" alt="default paramter 2" class="img-fluid"/>
         </p>
       </div>
     </div>
@@ -139,36 +107,21 @@
 </script>
 
 <script>
-  // While passing the object inside the Object.values()
-  const employee = {
-    id: 1,
-    name: 'Rakesh Shah',
-    city: 'Pune',
-    position: 'Team Lead'
+  // This is the traditional function
+  // Here we are passing the two values while calling the function and using two parameter also.
+  function sample(a, b) {
+    console.log(a, b);
   }
-
-  console.log("Object.keys 1 =", Object.values(employee));
-  // Expected Output: [1, 'Rakesh Shah', 'Pune', 'Team Lead']
+  sample(10, 20);
 
 
-  // While passing the array inside the Object.values()
-  const cities = ["Pune", "Hyderabad", "Chennai", "Bhopal", "Delhi"];
-  const result = Object.values(cities);
-  console.log('cities values =', result);
-  // Output: ['Pune', 'Hyderabad', 'Chennai', 'Bhopal', 'Delhi']
 
-  // find the object values using filter method
-  const fruits = {
-    keys1: 'apple',
-    keys2: 'banana',
-    keys3: 'orange',
-    keys4: 'kiwi',
+  // Let Suppose If we are not passing the second values while calling the function
+  // This is the default parameter if you see below while passing the second paramter.
+  function abc(a, b =60) {
+    console.log(a, b);
   }
-
-  const input = "I have banana, orange and kiwi";
-  const fruitsResult = Object.values(fruits).filter((item) => input.includes(item));
-  console.log('fruitsResult =', fruitsResult);
-
+  abc(45);
 </script>
 </body>
 </html>

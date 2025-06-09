@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Promises in JavaScript</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_js/Javascript_Dashboard.html">JavaScript</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<main class="mainBody">
+  <section class="pageHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="pull-left">
+            <h1>Promise All Method</h1>
+          </div>
+
+          <div class="pull-right">
+            <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Back to Dashboard </a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <h6>
+          The Promise.all() method in JavaScript is used for handling multiple asynchronous operations simultaneously. It takes an array (or any iterable) of promises and returns a single promise that resolves when all the input promises resolve or reject if any one of the promises fails. This makes it ideal for scenarios where you need to wait for multiple asynchronous tasks to complete before proceeding.
+        </h6>
+
+        <p>
+          Promise.all() is a static method in JavaScript that takes an iterable (typically an array) of Promises as input and returns a single Promise. This returned Promise resolves when all of the input Promises have successfully resolved, or it rejects as soon as any one of the input Promises rejects. 
+        </p>
+
+        <h5>Syntax:</h5>
+        <pre class="alert alert-info"><span>Promise.all( iterable )</span></pre>
+
+        <h5>Parameters:</h5>
+        <h6>
+          <b>iterable:</b> An array or other iterable object containing promises or other values. Non-promise values are treated as resolved promises.
+        </h6>
+
+        <h5><b>Return values:</b> It follows some rules to return a single promise: </h5>
+        <ul>
+          <li>If passed argument is empty, then it returns a Promise that is already resolved.</li>
+          <li>If the passed iterable contains no promises, it returns a Promise that is resolved asynchronously.</li>
+          <li>For all other cases, it returns a pending Promise.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="siteFooter">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
+
+<script>
+  let p1 = Promise.resolve(50);
+  let p2 = 200;
+  let p3= new Promise(function(resolve, reject) {
+    setTimeout(resolve, 300, "Hello");
+  });
+
+  Promise.all([p1, p2, p3]).then(function(values){
+    console.log("Promises =", values);
+  });
+</script>
+</body>
+</html>

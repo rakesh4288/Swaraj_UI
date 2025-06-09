@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>For in For of Loop</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<main class="mainBody">
+  <section class="pageHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="pull-left">
+            <h1>Difference Between For in For of Loop</h1>
+          </div>
+
+          <div class="pull-right">
+            <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Back to Dashboard </a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <h6>
+          The for...in and for...of loops are both used for iteration purpose in JavaScript
+        </h6>
+
+        <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Feature</th>
+                  <th>for...in</th>
+                  <th>for...of</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><b>Purpose</b></td>
+                  <td><span>Iterates over enumerable properties of an object</span></td>
+                  <td><span>Iterates over iterable objects like arrays, strings, maps, etc.</span></td>
+              </tr>
+              <tr>
+                  <td><b>Type of Values</b></td>
+                  <td><span>Returns the&nbsp;</span><b>keys</b><span>&nbsp;(property names)</span></td>
+                  <td><span>Returns the&nbsp;</span><b>values</b><span>&nbsp;of the iterable</span></td>
+              </tr>
+              <tr>
+                  <td><b>Use Case</b></td>
+                  <td><span>Best for iterating over&nbsp;</span><b>object properties</b></td>
+                  <td><span>Best for iterating over&nbsp;</span><b>array elements</b><span>&nbsp;or any iterable</span></td>
+              </tr>
+              <tr>
+                  <td><b>Common Usage</b></td>
+                  <td><code><span>for (let key in obj) {...}</span></code></td>
+                  <td><code><span>for (let value of iterable) {...}</span></code></td>
+              </tr>
+              <tr>
+                  <td><b>Works with Arrays</b></td>
+                  <td><span>Yes, but iterates over&nbsp;</span><b>index keys</b><span>&nbsp;(not recommended)</span></td>
+                  <td><span>Yes, iterates directly over&nbsp;</span><b>array values</b></td>
+              </tr>
+              <tr>
+                  <td><b>Prototype Properties</b></td>
+                  <td><span>Yes, includes inherited properties if not filtered</span></td>
+                  <td><span>No, only iterates over actual iterable elements</span></td>
+              </tr>
+              <tr>
+                  <td><b>Symbol Iterators</b></td>
+                  <td><span>Does not use&nbsp;</span><code><span>[Symbol.iterator]</span></code></td>
+                  <td><span>Uses&nbsp;</span><code><span>[Symbol.iterator]</span></code><span>, so it works with any iterable</span></td>
+              </tr>
+              <tr>
+                  <td><b>Best Practice</b></td>
+                  <td><span>Use with objects only</span></td>
+                  <td><span>Use with arrays, strings, maps, sets, etc.</span></td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+    </div>
+
+    <hr class="bg-info"/>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>for in Loop</h5>
+         <p>
+          The for..in loop is designed for iterating over an object's keys or property names, making it more useful when accessing the each property in an object.
+         </p>
+
+        <p>
+          The JavaScript for-in loops through the enumerable properties of an object. The loop will iterate over all enumerable properties of the object itself and those the object inherits from its constructor's prototype.
+        </p>
+
+        <pre class="alert alert-info"> <span>for (variable in object)</span><br><span>    statement</span></pre>
+
+        <p>
+          <img src="../images/For_in_Loop.png" alt="For_in_Loop" class="img-fluid" />
+        </p>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>for of Loop</h5>
+        <p>
+          This for of loop is helping to itrate the data structures like Arrays, Strings, Maps, Node Lists, and more. 
+          It calls a custom iteration hook with instructions to execute on the value of each property of the object.
+        </p>
+        <pre class="alert alert-info"><span>for (variable of iterable) {</span><br><span>  statement</span><br><span>}</span></pre>
+
+        <p>
+          <img src="../images/For_of_Loop.png" alt="For_of_Loop" class="img-fluid" />
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="siteFooter">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+          </div>
+      </div>
+  </div>
+</footer>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
+
+<script>
+
+
+  // Example 1: for in loop with Object
+  let person = {
+    firstName: 'Rakesh',
+    lastName: 'Shah'
+  }
+
+  for (let key in person) {
+    console.log('person Key =', key);
+    // Output: firstName
+    // Output: lastName
+  }
+  // This will show the key of object
+
+  /*******************************/
+
+  // Example 2: for in loop with Array
+  let months = ["Jan", "Feb", "March"];
+
+  for (let key in months) {
+    console.log("months =", key);
+    // Outout: 0
+    // Outout: 1
+    // Outout: 2
+  }
+  // This will show the index of Array
+
+
+
+
+  /*******************************/
+
+  // for of loop iterates over the array and print the value
+  for (let key of months) {
+    console.log("months =", key);
+    // Output: Jan
+    // Output: Feb
+    // Output: March
+  }
+
+
+
+</script>
+</body>
+</html>
