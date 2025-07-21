@@ -74,14 +74,19 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <p>JavaScript Closure is nothing but just mechanism or approach which can be used for accessing a private member
-            or information from another function.</p>
+            or information from the another function.</p>
 
           <p class="text-danger">
-            We can understand by its meaning - It is helping to get private data of any function.
+            We can understand by its meaning - It is helping to get the private data of any function.
           </p>
 
           <p>
-            <img src="../images/closure.png" alt="closure" class="img-fluid" />
+            <img src="../images/closure_1.png" alt="closure" class="img-fluid" />
+          </p>
+
+          <p>
+            <h5>Closure example with for loop with setTimeout:</h5>
+            <img src="../images/closure_2.png" alt="closure" class="img-fluid" />
           </p>
         </div>
       </div>
@@ -161,7 +166,36 @@
       Child();
     }
     Parent();
+
+    /**************************************/
+
+    for(var i=0; i<=10; i++){
+      setTimeout(() => {
+        console.log(i);
+      }, 1000);
+    }
+
+    /**************************************/
+
+    for(let i=0; i<=10; i++){
+      setTimeout(() => {
+        console.log(i);
+      }, 1000);
+    }
+
+    /**************************************/
+    
+    
+    // Closure Example:
+    for(let i=0; i<=10; i++){
+      (function(i){
+        setTimeout(() => {
+          console.log(i);
+        }, i*1000);
+      }) (i)
+    }
+
+
   </script>
 </body>
-
 </html>

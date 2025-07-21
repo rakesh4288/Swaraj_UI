@@ -73,16 +73,21 @@
     <section class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <p>JavaScript hoisting is the default behavior of moving the declaration on of the top.</p>
+          <p>
+            JavaScript hoisting is the default behavior of moving the declaration on the top of page.
+          </p>
+          
           <p>
             In a JavaScript - We can use any variable and later we can declare. In the other words you can say that
             variable can be used before it has been declared.
           </p>
 
-          <p class="alert alert-danger">Note: Function expression cannot be hoisted, only traditional function can be hoisted.
+          <p class="alert alert-danger">
+            Note: Function expression cannot be hoisted, only traditional function can be hoisted.
           </p>
 
-          <p class="alert alert-danger">Note: Let & Var keyword also cannot be hoisted. </p>
+          <p class="alert alert-danger">
+            Note: Let & Var keyword also cannot be hoisted. </p>
         </div>
       </div>
 
@@ -176,9 +181,9 @@
 
     let city = "Pune";
     const sindoor = () => {
-      console.log("City 1 =", city);
+      console.log("City 1 =", city); // Undefined
       city = "Phoenix";
-      console.log("City 2 =", city);
+      console.log("City 2 =", city); // Phoenix
       var city;
     }
 

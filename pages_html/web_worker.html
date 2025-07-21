@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Promises in JavaScript</title>
+  <title>Web Worker</title>
 </head>
 <body>
   <header>
@@ -26,7 +26,7 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+              <a class="nav-link active" href="HTML_Dashboard.html">HTML</a>
             </li>
   
             <li class="nav-item">
@@ -38,7 +38,7 @@
             </li>
   
             <li class="nav-item">
-              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
             </li>
           </ul>
         </div>
@@ -52,11 +52,11 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="pull-left">
-            <h1>Promise All Method</h1>
+            <h1>What is a Web Worker? ?</h1>
           </div>
 
           <div class="pull-right">
-            <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
+            <a href="HTML_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
               Back to Dashboard </a>
           </div>
@@ -70,27 +70,30 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <h6>
-          The Promise.all() method in JavaScript is used for handling the multiple asynchronous operations simultaneously. It takes an array of promises and returns a single promise that resolves when all the input promises resolve or reject if any one of the promises fails. This makes it ideal for scenarios where you need to wait for the multiple asynchronous tasks to complete before proceeding.
+          A web worker is an external JavaScript file that runs in the background, without affecting the performance of the page.
         </h6>
 
-        <p>
-          Promise.all() is a static method in JavaScript that takes an iterable (typically an array) of Promises as input and returns a single Promise. This returned Promise resolves when all of the input Promises have brnn successfully resolved, or it rejects as soon as any one of the input Promises rejects. 
-        </p>
-
-        <h5>Syntax:</h5>
-        <pre class="alert alert-info"><span>Promise.all(iterable)</span></pre>
-
-        <h5>Parameters:</h5>
         <h6>
-          <b>iterable:</b> An array or other iterable object containing promises or other values. Non-promise values are treated as resolved promises.
+          When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
+          <br/>
+          A web worker is an external JavaScript file that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc.
         </h6>
 
-        <h5><b>Return values:</b> It follows the some rules to return a single promise: </h5>
-        <ul>
-          <li>If passed argument is empty, then it returns a Promise that is already resolved.</li>
-          <li>If you are passing the array which is contains no promises, it returns a Promise that is resolved asynchronously.</li>
-          <li>For all other cases, it returns a pending Promise.</li>
-        </ul>
+        <h6>
+          Web workers are useful for heavy code that can't be run on the main thread, without causing long tasks that make the page unresponsive.
+        </h6>
+
+        <hr/>
+
+        <h6>
+          Web Workers are a feature of the browser that allows JavaScript to run in the background on a separate thread.
+        </h6>
+        
+        <h6>
+          This means they can handle tasks like heavy computations, data processing, and other resource-intensive operations without blocking the main thread, which is responsible for updating the UI
+        </h6>
+
+        <a href="https://www.w3schools.com/js/js_api_web_workers.asp" target="_blank"> Best Tutorial </a>
       </div>
     </div>
   </div>
@@ -116,15 +119,12 @@
 </script>
 
 <script>
-  let p1 = Promise.resolve(50);
-  let p2 = 200;
-  let p3= new Promise(function(resolve, reject) {
-    setTimeout(resolve, 300, "Hello");
-  });
-
-  Promise.all([p1, p2, p3]).then(function(values){
-    console.log("Promises =", values);
-  });
+  // Before creating a web worker, check whether the user's browser supports it:
+  if(typeof(Worker) !== 'undefined') {
+    console.log('Yes! Web worker support!');
+  } else {
+    console.log('Sorry! No Web Worker support..');
+  }
 </script>
 </body>
 </html>

@@ -54,7 +54,7 @@
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="pull-left">
-              <h1>Es6 .map() Method</h1>
+              <h1>ES6 .map() Method</h1>
             </div>
 
             <div class="pull-right">
@@ -84,11 +84,6 @@
           </p>
 
           <p>
-            <code class="text-danger">map()</code> method of Array instances creates a new array populated with the
-            results of calling a provided function on every element in the calling array.
-          </p>
-
-          <p>
             <img src="../images/array_map.png" alt="array_map" class="img-fluid" />
           </p>
         </div>
@@ -101,21 +96,27 @@
           <p>map() and forEach() both are valuable methods for working with arrays in JavaScript.</p>
           <h5>map() Method:</h5>
           <ul>
-            <li>Map method producing a new array without the changing original array</li>
+            <li>Map method producing a new array without the changing the original array</li>
             <li>And you can add any condition and that condition will iterate on every element</li>
+            <li>.map() method is returning the array and you can store in into separate variable.</li>
           </ul>
 
           <h5>forEach() Loop : </h5>
           <ul>
-            <li>forEach() loop is a built in function that executes a provided function for each array element.</li>
+            <li>forEach() loop is a built in function that executes a provided function for the each array element.</li>
             <li>It does not return a new array and does not modify the original array.</li>
-            <li>It is generally using for iteration purpose and performing the actions on each array element.</li>
+            <li>It is generally using for the iteration purpose and you can perform the any actions on each array element.</li>
+            <li>Where as forEach() does not return anything. If you will find undefined if you use the return statement. What you can do, you can make any operation inside forEach() block</li>
           </ul>
         </div>
 
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
           <p>
             <img src="../images/ForEachLoop.png" alt="map_vs_foreach" class="img-fluid" />
+          </p>
+
+          <p>
+            <img src="../images/map_vs_foreach_2.png" alt="map_vs_foreach" class="img-fluid" />
           </p>
         </div>
       </div>
@@ -125,7 +126,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <h5 class="alert alert-primary">
-            within .map() we can also add new key value in existing array of object. Using ...spread operator we can perform this operation
+            within .map() method we can also add the new key value in existing array of object. <br/> Using ...spread operator we can perform this operation
           </h5>
         </div>
 
@@ -140,7 +141,7 @@
 
       <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <h6>Based on condition Example:</h6>
+          <h6>Based on condition below Example:</h6>
           <p>
             <img src="../images/map_method_adding_new_properties_with_condition.png"
               class="img-fluid" alt="map_method_adding_new_properties_with_condition" />
@@ -361,8 +362,6 @@
       8: {id: 9, name: 'Subhash', age: 17, category: 'Younger'}
     */
     
-
-  
     
     // Example 1: forEach() Loop
     const array2 = [1, 2, 3, 4, 5];
@@ -387,6 +386,24 @@
     });
     console.log('array5 =', array5);
     // Output: [4, 16, 36, 64]
+
+    
+    
+    // .map() method while returning something
+    const array =  [2, 4, 6, 8];
+    const double = array.map((item) => {
+      return item*item;
+    });
+
+    console.log('double =', double); // Output: [4, 16, 36, 64]
+
+    // Let's try return keyword with forEach() Loop
+    const nowResult = array.forEach((item) => {
+      return item*item;
+    });
+    console.log('nowResult =', nowResult); // Output: undefined
+    // Because forEach() loop does not return anything
+    // You can make any operation inside forEach() block
 
 
   </script>

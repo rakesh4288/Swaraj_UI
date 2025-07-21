@@ -76,7 +76,7 @@
           <div>
             <p>
               Actually, both are using for creating a variable. Whereas Var keyword is the traditional approach and Let
-              is the new keyword which is associated from ECMA6
+              is the new keyword which is associated from the ES6
             </p>
 
             <p class="text-danger">The Main difference is that Let keyword has a block level scope and Var is the
@@ -207,7 +207,33 @@
     //bb = "Hello";
     // You can not re-assign the value which is defined by the const keyword.
     // And in this case bb has already defined with undefined values
+
+    function green() {
+      if(true) {
+        var country = 'INDIA';
+        let state = "MAHARASHTRA"
+        const city = "PUNE";
+      }
+      console.log('green country =', country);
+      // console.log('green state =', state); // Uncaught ReferenceError: state is not defined
+      // console.log('green city =', city); // Uncaught ReferenceError: city is not defined
+    }
+
+    green();
+
+    //------------------------------------------//
+
+    function xyz() {
+      if(true) {
+        var a = 25;
+        console.log('xyz b =', b);
+        const b = 50; // let_vs_var_const.html:229 Uncaught ReferenceError: Cannot access 'b' before initialization
+        // const b = 50; // let_vs_var_const.html:229 Uncaught ReferenceError: Cannot access 'b' before initialization
+        // var b = 50; // it will print undefined why because this variable is created by var keyword
+      }
+      console.log('xyz a =', a);
+    }
+    xyz();
   </script>
 </body>
-
 </html>

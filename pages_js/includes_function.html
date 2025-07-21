@@ -8,7 +8,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample</title>
+  <title>includes()</title>
 </head>
 
 <body>
@@ -86,7 +86,11 @@
           </p>
 
           <p>
-            <img src="../images/includes.png" class="img-fluid" alt="">
+            <img src="../images/includes_1.png" class="img-fluid" alt="">
+          </p>
+
+          <p>
+            <img src="../images/includes_2.png" class="img-fluid" alt="">
           </p>
         </div>
       </div>
@@ -110,6 +114,36 @@
     let year = now.getFullYear();
     document.getElementById("currentYear").innerHTML = year;
   </script>
-</body>
 
+  <script>
+    
+    
+    const fruits = ["Banana", "Mango", "Apple", "Oranges"];
+    console.log(fruits.includes("Mango")); // true
+
+    const fruitesObject = {
+      fruitOne: 'Mango',
+      fruitTwo: 'Apple', 
+      fruitThree: 'Banana',
+      fruitFour: 'Apple',
+      fruitFive: 'Oranges',
+    }
+
+    const input = 'I have Mango and Banana only';
+    const keys = Object.keys(fruitesObject);
+    console.log('keys =', keys);
+    // Output: ['fruitOne', 'fruitTwo', 'fruitThree', 'fruitFour', 'fruitFive']
+
+    const values = Object.values(fruitesObject);
+    console.log('values =', values);
+    // Output: ['Mango', 'Apple', 'Banana', 'Apple', 'Oranges']
+
+    const filter = values.filter((item) => input.includes(item));
+    console.log('filter =', filter);
+    // Output: ['Mango', 'Banana']
+
+
+
+  </script>
+</body>
 </html>

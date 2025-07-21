@@ -70,13 +70,13 @@
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <p class="alert alert-info">
-          The Object.keys() method returns an array with the keys of an object. If you wanted to find out the keys of object so in this case this is the best methond to find out. 
+          The Object.keys() method returns an array with the keys of an object. If you wanted to find out the keys of object so in this case this is the best method to find out. 
         <br/>
         <b>Best thing is that it provides the array and make any operations in array based requirement</b>
         </p>
         
         <p class="alert alert-warning">
-          The Object.keys() method does not change the original object. 
+          Note: The Object.keys() method does not change the original object. 
         </p>
 
         <div class="alert alert-danger">
@@ -84,7 +84,7 @@
           <p><a href="objects_keys_method.html">Object.keys()</a> returns the keys (properties) of any object type.</p>
           <p><a href="objects_values_method.html">Object.values()</a> returns the values of all object keys (properties).</p>
           <p><a href="objects_entries_method.html">Object.entries()</a> returns the keys and values of any object types.</p>
-          <p>The methods above return an <b>Iterable</b> (enumerable array).</p>
+          <p>The above methods return an <b>Iterable</b> (enumerable array).</p>
           <p><b>Iterables</b> makes it simpler to use objects in loops and to convert objects into maps.</p>
         </div>
       </div>
@@ -163,6 +163,76 @@
   console.log("Object.keys 1 =", Object.keys(student));
   // Expected Output: ['0', '1', '2', '3']
 
+
+const userData = {
+    "name": "Rakesh Shah",
+    "age": "35",
+    "salary": "130000",
+    "email": "rakesh.shah4288@gmail.com",
+    "id": 5140
+}
+// const result = Object.keys((userData).map(key => {
+//   return [key, userData[keys]]
+// }));
+
+const result = Object.keys(userData).map((key)=> {
+  return {key, ...key}
+});
+
+console.log('result =', result);
+
+[
+    {
+        "key": "name",
+        "userData": {
+            "name": "Rakesh Shah",
+            "age": "35",
+            "salary": "130000",
+            "email": "rakesh.shah4288@gmail.com",
+            "id": 5140
+        }
+    },
+    {
+        "key": "age",
+        "userData": {
+            "name": "Rakesh Shah",
+            "age": "35",
+            "salary": "130000",
+            "email": "rakesh.shah4288@gmail.com",
+            "id": 5140
+        }
+    },
+    {
+        "key": "salary",
+        "userData": {
+            "name": "Rakesh Shah",
+            "age": "35",
+            "salary": "130000",
+            "email": "rakesh.shah4288@gmail.com",
+            "id": 5140
+        }
+    },
+    {
+        "key": "email",
+        "userData": {
+            "name": "Rakesh Shah",
+            "age": "35",
+            "salary": "130000",
+            "email": "rakesh.shah4288@gmail.com",
+            "id": 5140
+        }
+    },
+    {
+        "key": "id",
+        "userData": {
+            "name": "Rakesh Shah",
+            "age": "35",
+            "salary": "130000",
+            "email": "rakesh.shah4288@gmail.com",
+            "id": 5140
+        }
+    }
+]
 </script>
 </body>
 </html>

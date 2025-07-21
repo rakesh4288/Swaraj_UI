@@ -122,6 +122,25 @@
     console.log(a, b);
   }
   abc(45);
+
+  // Best Interview question:
+  function human(fName, lName){
+    this.firstName = fName;
+    this.lName = lName;
+  }
+
+  const onePerson = new human("Mr.", "X");
+  console.log(onePerson);
+  // Output: human {firstName: 'Mr.', lName: 'X'}
+  // when we are calling a function with new keyword so it calls a constructor call
+  // this function is always return a Object
+  // and we can add the object keys with using this keyword
+
+
+  const anotherPerson = human("The", "Undertaker");
+  // this is a normal function call and it will return a undefined
+  // and this function is not returning anything
+  console.log(anotherPerson); // undefined
 </script>
 </body>
 </html>

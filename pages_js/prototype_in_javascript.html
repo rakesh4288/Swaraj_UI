@@ -70,9 +70,8 @@
         <div class="row">
           <div class="col-md-12">
             <div>
-              <h2>JavaScript Object Prototypes</h2>
               <p>
-                JavaScript is a prototype based language so, actually whenever we create a function using JavaScript, JavaScript engine adds a prototype property inside a function, Prototype property is basically an object (also known as Prototype object), where we are attaching methods and properties in a prototype object so this enables all the other objects to inherit these methods and properties.
+                JavaScript is basically a prototype based language which means whenever we are creatong a function insinde JavaScript, so JavaScript is just adds a prototype property over there, and with the help of prototype property we can attach the methods and properties inside that function
               </p>
   
               <h6>Consider the example below:-</h6>
@@ -113,7 +112,9 @@
         this.phone = phone;
       }
       // this will show the Person's property
-      console.log(Person.prototype);
+      console.log("Person 1=", Person.prototype);
+      Person.prototype.nationality = 'Indian'
+      console.log("Person 2=", Person.prototype);
 
       /************************************************************/
       var array_1 = [76,65,4,5,7896,5,3,355];
