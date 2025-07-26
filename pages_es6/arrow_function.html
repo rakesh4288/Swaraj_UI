@@ -90,7 +90,11 @@
               <li>one is - using Function Declarations</li>
               <li>And another one is -  Function Expresssion</li>
             </ul> 
-              And Actually Regular function can be constructible and callable. Since regular functions are constructible, So they can be called using the new keyword.
+
+            <p>
+              And Actually Regular function can be constructible and callable. Since regular functions are constructible, So that they can be called using the new keyword.
+            </p>
+            
             <p>
               However, the arrow functions are only <b>callable</b> and not <b>constructible</b>, 
               i.e arrow functions can never be used as constructor functions.
@@ -100,17 +104,22 @@
   
         <div class="bg-light alert text-primary">
           <h2>What About <code class="w3-codespan">this</code>?</h2>
-            <p>The handling of <code class="w3-codespan">this</code> is also different in arrow functions compared to regular functions.</p>
+            <p>
+              The handling of <code class="w3-codespan">this</code> is also different in arrow functions compared to regular functions.
+            </p>
             <p>In short, with arrow functions there are no binding of
               
               <code class="w3-codespan">this</code> keyword</p>
 
-              <p>In regular functions the <code class="w3-codespan">this</code> keyword represented the object that called the 
-              function, which could be the window, the document, a button or whatever.</p>
+            <p>
+                In regular functions the <code class="w3-codespan">this</code> keyword represented the object that called the 
+                function, which could be the window, the document, a button or whatever.
+            </p>
 
-              <p>With arrow functions the <code class="w3-codespan">this</code> keyword <em>always</em> represents the 
-              object that 
-              defined the arrow function.</p>
+            <p>
+              With arrow functions the <code class="w3-codespan">this</code> keyword <em>always</em> represents the 
+            object that defined the arrow function.
+            </p>
         </div>
       </div>
     </div>
@@ -169,7 +178,6 @@
 <script>
 
   //Traditional Function
-  
   function abc(x){
     console.log("This is Traditional Function = ", x);
     // Output: Yes
@@ -178,7 +186,6 @@
   abc("Yes");
   console.log("abc type of =", typeof(abc));
   // Output: function
-
 
   /*************************************************/
   
@@ -200,31 +207,78 @@
     console.log("WWE - Tag Team Match =" + a, b + " vs " + c, d);
     // Output: WWE - Tag Team Match =Triple H John Ceena vs Batista Edge
   }
-  
   wwe("Triple H","John Ceena","Batista","Edge");
-
 
   /*************************************************/
   
   //Simple Function Expression
-
   let welcome  = function(pName){
     console.log(`Hello & welcome ${pName} !`);
     // Output: Hello & welcome Rakesh ji !
   }
-
   welcome("Rakesh ji");
 
-
   // same above function with arrow function
-
   let welcome2 = (pName,pAge) => {
     console.log(`Hello & welcome ${pName} ji ! What is your current age is = ${pAge}`);
     // Output: Hello & welcome Lalita ji ! What is your current age is = 32
   }
-
   welcome2("Lalita","32");
 
+  /*************************************************/
+
+  // var name = "Lalita";
+  const person = {
+    name: 'Rakesh',
+    normalFunction: function() {
+      console.log(`normalFunction Hello ${this.name}`);
+      // Here this will find the current object so Rakesh will be print
+    },
+    arrowFunction: () => {
+      console.log(`arrowFunction Hello ${this.name}`);
+      // Here this is a lexical and it will touch your local scope of variable
+      // it will look at window object
+    }
+  }
+
+  // call the function using the person object
+  person.normalFunction(); // normal function calling
+  person.arrowFunction(); // arrow function calling
+
+  /*************************************************/
+
+  const city = () => {
+    return this.cityName = "This is the Pune City";
+  }
+  // const myCity = new city(); // making constructor
+  // console.log('myCity =', myCity);
+  // Uncaught TypeError: city is not a constructor 
+  // why Because this is the Arrow function
+
+  function cleanCity() {
+    return this.cityName = "Indore is cleanest city of India";
+  }
+  const whichCity = new cleanCity();
+  console.log('whichCity =', whichCity);
+  // {cityName: 'Indore is cleanest city of India'}
+  // Only traditional function can be construcable
+
+  /*************************************************/
+
+  // ONLY TRADITIONAL FUNCTION CAN BE HOISTED, SEE BELOW EXAMPLE
+  LakeCity("Bhopal"); 
+  function LakeCity(lake){
+    console.log("Which is a LakeCity = ", lake);
+  }
+  // this is a function hoisted, we can call the function before it declaration
+  // But the arrow function we can not hoisted, see below example
+
+  // FUNCTION EXPRESSION CAN NOT BE HOISTED
+  AyodhyaCity("Jai Jai Shree Ram"); 
+  // Uncaught ReferenceError: Cannot access 'AyodhyaCity' before initialization
+  const AyodhyaCity = (ram) => {
+    console.log("AyodhyaCity =", ram);
+  }
 </script>
 </body>
 </html>

@@ -44,6 +44,10 @@
             <li class="nav-item">
               <a class="nav-link" href="pages_es6/ES_6_Dashboard.html">ECMA 6</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pages_node_js/Node_JS_Dashboard.html">Node JS</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -211,11 +215,76 @@
   </script>
 
   <script>
-    const numbers = [1,2,3,4,5,6,7];
-    console.log("numbers 1 =", numbers);
+    const numbers = [1, 2, 3, 4, 5, 6, 7];
+    console.log("numbers 1 =", numbers); // [1, 2, 3, 4, 5, 6, 7]
     numbers[11] = 12
-    console.log("numbers 2 =", numbers);
+    console.log("numbers 2 =", numbers); // [1, 2, 3, 4, 5, 6, 7, empty × 4, 12]
+
+    /**********************************************/
+
+    // SPREAD OPERATOR with ARRAY - it helps to spread the array
+    // The JavaScript spread operator is denoted by three dots (…)
+    // The spread operator helps the iterable objects to expand into inside the individual elements.
+    // In other words, the spread operator allows us to copy all the elements from the existing array or object into another array or object. 
+    
+    const a = [10, 20, 30];
+    const b = [...a, 40, 50, 60]; // we can assign the spread at beginning 
+    console.log(b); // [10, 20, 30, 40, 50, 60]
+
+    const c = [40, 50, ...a] // we can assign the spread operator at last index of array also
+    console.log(c); // [40, 50, 10, 20, 30]
+
+    const d = [1, 2, ...a, 100]; // we can assign the spread operator in between also
+    console.log(d); // [1, 2, 10, 20, 30, 100]
+
+    const e = [...b];
+    console.log(e); // [10, 20, 30, 40, 50, 60]
+
+    /**********************************************/
+    
+    // SPREAD OPERATOR with OBJECT
+    const person = {
+      name: 'Rakesh Shah',
+      age: '37',
+      city: 'Pune',
+      country: 'India'
+    }
+    const updated = {...person, email: 'rakesh.shah4288@gmail.com'}
+    // here we can assign the new property using ...spread operator
+    // You can see the we are assigning new property with previous object
+    console.log('updated person =', updated);
+    // output: {name: 'Rakesh Shah', age: '37', city: 'Pune', country: 'India', email: 'rakesh.shah4288@gmail.com'}
+
+    // we can also overwrite the existing property of object using the ...spread operator
+
+    const newLocation = {...person, city: 'Phoenix', country: 'USA'}
+    console.log('newLocation =', newLocation);
+    // Output : {name: 'Rakesh Shah', age: '37', city: 'Phoenix', country: 'USA'}
+
+
+    /**********************************************/
+
+    // REST OPERATOR: it will help to get all the parameters in function
+    function basicSum(a, b){
+      return a + b;
+    }
+    console.log('basic sum =', basicSum(2, 4)); // 6
+
+    function addition(...input){
+      let sum = 0;
+      for(let i of input) {
+        sum = sum + i;
+      }
+      return sum;
+    }
+    console.log("addition =", addition(10, 20, 30, 40, 50, 60)); // 210
+
+
+    // DEFAULT PARAMETER
+    function sum(a, b, c = 10, d = 30){
+      return a + b + c + d;
+    }
+    console.log('Sum =', sum(2, 4)); // 46
   </script>
 </body>
-
 </html>
