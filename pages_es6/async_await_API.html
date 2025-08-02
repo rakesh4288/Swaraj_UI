@@ -109,8 +109,8 @@
     </div>
   </footer>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
   <script>
     // Copyright Year script
     const now = new Date();
@@ -124,12 +124,12 @@
     const userInfo = async () => {
       const res = await fetch('https://dummyjson.com/users');
       const response = await res.json();
-      console.log('userInfo response =', response.users);
       // here you are getting the response from API
       // Now you can loop for showing at UI
     }
-
     userInfo();
+
+    /***************************************/
 
     // Example 2
     // Now we can also use the try catch block for handling async await
@@ -139,16 +139,43 @@
       const res = await fetch('https://fakestoreapi.com/products');
       try {
         const response = await res.json();
-        console.log('productsInfo response =', response);
+        // console.log('productsInfo response =', response);
         // here you are getting the response from API
         // Now you can loop for showing at UI
       }
-
       catch (error) {
         console.log('productsInfo Error =', error);
       }
     }
     productsInfo();
+
+    /***************************************/
+    // Example 2
+    let userdData = [];
+    const fetchingUsers = async() => {
+      const url = 'https://dummyjson.com/users';
+      try {
+        const response = await fetch(url);
+        const res = await response.json();
+        console.log('fetchingUsers =', res.users);
+        userdData = res.users;
+        console.log('userdData =', userdData);
+        
+        const age40 = userdData.filter((item) => {
+          return item.age > 40
+        });
+        // filter method with return function
+        console.log('ages 35 =', age40);
+
+        const age35 = userdData.filter((item) => item.age > 35);
+        console.log('ages 35 =', age35);
+        // one line filter method
+      }
+      catch(error) {
+        console.log('fetchingUsers =', error);
+      }
+    }
+    fetchingUsers();
   </script>
 </body>
 </html>

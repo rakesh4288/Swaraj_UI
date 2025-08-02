@@ -135,6 +135,10 @@
         <p>
           If you see here we are getting all the paramters by using ...parameter
         </p>
+
+        <p>
+          <img src="../images/rest_operator_3.png" alt="rest_operator_3" class="img-fluid"/>
+        </p>
       </div>
     </div>
   </section>
@@ -169,7 +173,7 @@
   console.log("sum 2 = ", sum(2, 3, 4)); // output: 5
   console.log("sum 3 = ", sum(2, 3, 4, 5)); // output: 5
 
-
+  /**********************************/
 
   // Example 2: Without Using the Rest Parameter
   function addition(...input) {
@@ -184,7 +188,25 @@
 
   console.log('addition=', addition(1, 2)); // 3
   console.log('addition=', addition(1, 2, 3)); // 6
-  console.log('addition =', addition(1, 2, 3, 4)); // 10
+  console.log('addition =', addition(1, 2, 3, 4)); // 
+  
+  /**********************************/
+
+  function plusInfo(...input) {   
+    console.log('...input =', ...input); // 1 2 3 4 5
+    console.log('input =', input); [1, 2, 3, 4, 5] 
+    
+    // const plusAll = input.reduce((a, b) => {
+    //   return a + b
+    // });
+    // return plusAll;
+
+    const plusAll = input.reduce((a, b) => a + b);
+    return plusAll;
+  }
+
+  console.log('plusInfo =', plusInfo(1, 2, 3, 4, 5)); // 15
+
 </script>
 </body>
 </html>
