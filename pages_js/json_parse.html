@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Lexical Scoping</title>
+  <title>JSON.parse()</title>
 </head>
 <body>
   <header>
@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="pull-left">
-            <h1>What is Lexical Scoping in JavaScript?</h1>
+            <h1>What is JSON.parse() in JavaScript ?</h1>
           </div>
 
           <div class="pull-right">
@@ -69,26 +69,18 @@
   <section class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <p>
-          First thing JavaScript has lexical scoping with function scope. <br/>In other words, even though JavaScript
-          looks like it should have block level scope because it uses curly braces { }, a new scope is created only
-          when you create a new function.
-        </p>
+        <h6>
+          In JavaScript, the JSON.parse() method is used to convert a JSON string into a JavaScript object.
+        </h6>
+        
+        <h6>
+          This is the fundamental method when we are dealing with data received in JSON format, such as from API responses or local storage. so in that situation we can use the JSON.parse() method to convert the JSON string into a proper JSON format.
+        </h6>
 
-        <p> <img src="../images/lexical_scoping.png" class="img-fluid" alt=""> </p>
-
-        <p>
-          In this example, the variable x is available everywhere inside of outerFunction(). Also, the variable y is
-          available everywhere within the nestedFunction(), but neither are available outside of the function where
-          they were defined. The reason for this can be explained by lexical scoping. The scope of variables is
-          defined by their position in source code. In order to resolve variables, JavaScript starts at the
-          innermost scope and searches outwards until it finds the variable it was looking for.
-        </p>
+        <h6> Later we can perform the any operation based on key and values.</h6>
 
         <p>
-          Lexical scoping is nice, because we can easily figure out what the value of a variable will be by looking
-          at the code; whereas in dynamic scoping, the meaning of a variable can change at runtime, making it more
-          difficult.
+          <img src="../images/json_parse.png" alt="json_parse" class="img-fluid" />
         </p>
       </div>
     </div>
@@ -114,34 +106,22 @@
 </script>
 
 <script>
-  function OuterFunction() {
-    if (true) {
-      var x = 5;
-      console.log("from Outer Function the value of X =", x);
-      //console.log('from inner function the value of Y =', y); // this will give Reference Error
-    }
-    var innerFunction = function () {
-      console.log("from Inner Function the value of X =", x);
-      if (true) {
-        var y = 7;
-        console.log('from inner function the value of Y =', y);
-      }
-    }
-    innerFunction();
-  }
-  OuterFunction();
 
-  console.log('*******************');
+  const jsonString = '{"id": 1, "name": "Rakesh Shah", "city": "Pune", "state": "Maharashtra" }'
+  const data = JSON.parse(jsonString);
+  console.log('data =', data);
 
-  if(true) {
-    var city = "PUNE";
-    let state = "Maharashtra";
-    const country = "INDIA"
-  }
+  /*
   
-  console.log('City =', city);
-  // console.log('state =', state); Uncaught ReferenceError: state is not defined
-  // console.log('country =', country); // Uncaught ReferenceError: country is not defined
+  {
+    id: 1,
+    name: "Rakesh Shah",
+    city: "Pune",
+    state: "Maharashtra"
+  } 
+    
+  */
+
 </script>
 </body>
 </html>
