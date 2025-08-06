@@ -44,6 +44,10 @@
             <li class="nav-item">
               <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -87,12 +91,22 @@
             without blocking the main thread of the application and always fetch() method returns a Promise.
           </p>
 
+          <hr class="bg-primary"/>
+
           <p>
             <img src="../images/async_await_API_1.png" alt="async_await_API_1" class="img-fluid" />
           </p>
 
+          <hr class="bg-primary"/>
+
           <p>
             <img src="../images/async_await_API_2.png" alt="async_await_API_2" class="img-fluid" />
+          </p>
+
+          <hr class="bg-primary"/>
+
+          <p>
+            <img src="../images/async_await_API_3.png" alt="async_await_API_3" class="img-fluid" />
           </p>
         </div>
       </div>
@@ -150,7 +164,9 @@
     productsInfo();
 
     /***************************************/
-    // Example 2
+
+
+    // Example 3 including filter method also
     let userdData = [];
     const fetchingUsers = async() => {
       const url = 'https://dummyjson.com/users';
@@ -161,21 +177,24 @@
         userdData = res.users;
         console.log('userdData =', userdData);
         
+         // filter method: with return statement
         const age40 = userdData.filter((item) => {
           return item.age > 40
         });
-        // filter method with return function
         console.log('ages 35 =', age40);
 
+        // filter method: with one line only
         const age35 = userdData.filter((item) => item.age > 35);
         console.log('ages 35 =', age35);
-        // one line filter method
       }
+
       catch(error) {
         console.log('fetchingUsers =', error);
       }
     }
     fetchingUsers();
+
+
   </script>
 </body>
 </html>

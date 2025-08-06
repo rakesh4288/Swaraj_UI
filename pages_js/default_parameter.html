@@ -40,6 +40,10 @@
             <li class="nav-item">
               <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -122,12 +126,16 @@
   }
   sample(10, 20);
 
+  /*********************************/
+
   // Let Suppose If we are not passing the second values while calling the function
   // This is the default parameter if you see below while passing the second paramter.
   function abc(a, b =60) {
     console.log(a, b); // 45 60
   }
   abc(45);
+
+  /*********************************/
 
   // Best Interview question:
   function human(fName, lName){
@@ -157,17 +165,20 @@
   }
   console.log('Sum =', sum(2, 4)); // 46
 
-
-
   const addition = (a = 15, b = 20) => {
     console.log('addition =', a + b);
   }
+  
   addition(null, 10); // while passing the null so second parameter will get execute and output will be 10
   addition(undefined, 10); // it will print the 25
   //  why because 10 is passing via calling and 15 will take from default parameter
 
 
-  
+  const addAll = (a, b, c = 20) =>{
+    console.log("addAll =", a + b + c);
+  }
+
+  addAll(20, 10, 5);
 </script>
 </body>
 </html>

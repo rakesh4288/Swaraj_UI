@@ -40,6 +40,10 @@
           <li class="nav-item">
             <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
           </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
+            </li>
         </ul>
       </div>
     </div>
@@ -227,17 +231,19 @@
 
   /*************************************************/
 
-  // var name = "Lalita";
+  var name = "Lalita";
   const person = {
     name: 'Rakesh',
     normalFunction: function() {
-      console.log(`normalFunction Hello ${this.name}`);
+      console.log(`normal Function Hello ${this.name}`);
       // Here this will find the current object so Rakesh will be print
     },
     arrowFunction: () => {
-      console.log(`arrowFunction Hello ${this.name}`);
+      console.log(`arrow Function Hello ${this.name}`); 
+      // this will print Lalita and it will take from window level
+      // If var name is available then only that case
       // Here this is a lexical and it will touch your local scope of variable
-      // it will look at window object
+      // this will print undefined
     }
   }
 
@@ -274,7 +280,7 @@
   // But the arrow function we can not hoisted, see below example
 
   // FUNCTION EXPRESSION CAN NOT BE HOISTED
-  AyodhyaCity("Jai Jai Shree Ram"); 
+  // AyodhyaCity("Jai Jai Shree Ram"); 
   // Uncaught ReferenceError: Cannot access 'AyodhyaCity' before initialization
   const AyodhyaCity = (ram) => {
     console.log("AyodhyaCity =", ram);

@@ -38,11 +38,15 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../pages_js/Javascript_Dashboard.html">JavaScript</a>
+              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+              <a class="nav-link" href="../pages_js/ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
             </li>
           </ul>
         </div>
@@ -60,7 +64,7 @@
             </div>
 
             <div class="pull-right">
-              <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 Back to Dashboard </a>
             </div>
@@ -121,8 +125,6 @@
   </script>
 
   <script>
-
-
     const array1 = [12, 3, 10, 43, 10, 54, 333, 10, 34, 10];
     const duplicateValue = array1.filter((item, index) => array1.indexOf(item) !== index);
     console.log("duplicate =", duplicateValue);
@@ -138,8 +140,10 @@
     console.log("Duplicate Count = ", count);
     // Expected Output: 4
 
-
-
+   const filterArray = array1.filter((item) => item === 10);
+   console.log('filterArray 1 =', filterArray);
+   console.log('filterArray 1 length =', filterArray.length);
+   console.log(`filterArray = ${filterArray}`);
   </script>
 </body>
 
