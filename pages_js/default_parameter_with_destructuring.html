@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Default Parameters</title>
+  <title>Default Parameters with destructuring</title>
 </head>
 <body>
   <header>
@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="pull-left">
-            <h1>Default Parameters</h1>
+            <h1>Default Parameters with destructuring</h1>
           </div>
 
           <div class="pull-right">
@@ -74,26 +74,19 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <h6>
-          Default parameters in JavaScript allow you to assign the default values to function parameters
+          Default parameters in JavaScript allow you to assign the default values any object also
         </h6>
+
         <h6>
-          This means that - If you are calling the function without passing the specefic parameter, so instead of this default value will be used.
+          This means that - If you wanted to add any new key which is not present in existing object so here we can add this assigning value with variable name.
         </h6>
 
         <p>
-          <img src="../images/Default_parameter_1.png" alt="default parameter 1" class="img-fluid"/>
+          <img src="../images/Default_parameter_with_object_destructuring.png" alt="Default_parameter_with_object_destructuring" class="img-fluid"/>
         </p>
 
         <p>
-          <img src="../images/Default_parameter_2.png" alt="default parameter 2" class="img-fluid"/>
-        </p>
-
-        <p>
-          <img src="../images/Default_parameter_3.png" alt="default parameter 3" class="img-fluid"/>
-        </p>
-
-        <p>
-          <img src="../images/Default_parameter_4.png" alt="default parameter 4" class="img-fluid"/>
+          <a href="https://www.youtube.com/shorts/ZV8xHBAWM2U" target="_blank">https://www.youtube.com/shorts/ZV8xHBAWM2U</a>
         </p>
       </div>
     </div>
@@ -119,67 +112,28 @@
 </script>
 
 <script>
-  // This is the traditional function
-  // Here we are passing the two values while calling the function and using two parameter also.
-  function sample(a, b) {
-    console.log(a, b); // 10 20
-  }
-  sample(10, 20);
-
-  /*********************************/
-
-  // Let Suppose If we are not passing the second values while calling the function
-  // This is the default parameter if you see below while passing the second paramter.
-  function abc(a, b =60) {
-    console.log(a, b); // 45 60
-  }
-  abc(45);
-
-  /*********************************/
-
-  // Best Interview question:
-  function human(fName, lName){
-    this.firstName = fName;
-    this.lName = lName;
-  }
-
-  const onePerson = new human("Mr.", "X"); // we are making constructor here
-  console.log("onePerson=", onePerson);
-  // Output: human {firstName: 'Mr.', lName: 'X'}
-  // when we are calling a function with new keyword so it calls a constructor call
-  // this function is always return a Object
-  // and we can add the object keys with using this keyword
-
-  const anotherPerson = human("The", "Undertaker");
-  // this is a normal function call and it will return a undefined
-  // and this function is not returning anything
-  console.log("anotherPerson =", anotherPerson); // undefined
-
-  /**********************************************/
-
-
-  // DEFAULT PARAMETER
-
-  function sum(a, b, c = 10, d = 30){
-    return a + b + c + d;
-  }
-  console.log('Sum =', sum(2, 4)); // 46
-
-  const addition = (a = 15, b = 20) => {
-    console.log('addition =', a + b);
-  }
   
+
   
-  addition(null, 10); // while passing the null so second parameter will get execute and output will be 10
-  addition(undefined, 10); // it will print the 25
-  //  why because 10 is passing via calling and 15 will take from default parameter
-
-
-  const addAll = (a, b, c = 20) =>{
-    console.log("addAll =", a + b + c);
+  const person = {
+    name: 'Rakesh Shah',
+    email: 'rakesh.shah4288@gmail.com',
+    age: 37,
+    city: 'Pune'
   }
 
-  addAll(20, 10, 5);
+  const {name, email} = person;
+
+  console.log(`Person Name = ${name}`); // Rakesh Shah
+  console.log(`Person Email = ${email}`); // rakesh.shah4288@gmail.com
+
+  // How to add any new key which is not present in the Person object
+
+  const {country = "India"} = person;
+  console.log(`Person Country = ${country}`); // India
+
+
+
 </script>
 </body>
 </html>
