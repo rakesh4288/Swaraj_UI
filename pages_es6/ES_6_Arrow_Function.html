@@ -162,11 +162,11 @@
 
 <footer class="siteFooter">
   <div class="container">
-      <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
-          </div>
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
       </div>
+    </div>
   </div>
 </footer>
 
@@ -285,6 +285,28 @@
   const AyodhyaCity = (ram) => {
     console.log("AyodhyaCity =", ram);
   }
+
+// Another Example
+  const student = {
+    studentName: 'Rakesh Shah',
+    age: 18,
+    gender: 'male',
+    profile() {
+      console.log('Student Name -', this.studentName);
+    }
+  }
+
+  const college = {
+    studentName: 'Lalita Shah',
+    age: 22,
+    gender: 'male',
+    profile: () => {
+      console.log('college Student Name ', this.studentName);
+    }
+  }
+
+  student.profile();
+  college.profile();
 </script>
 </body>
 </html>

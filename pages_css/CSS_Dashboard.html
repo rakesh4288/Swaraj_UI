@@ -106,11 +106,11 @@
 
 <footer class="siteFooter">
   <div class="container">
-      <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
-          </div>
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
       </div>
+    </div>
   </div>
 </footer>
 
@@ -121,6 +121,18 @@
   const now = new Date();
   let year = now.getFullYear();
   document.getElementById("currentYear").innerHTML = year;
+
+  const age = [12, 3, 10, 41, 10, 54, 333, 10, 45, 34, 10, 43, 10];
+  const filterAge = age.filter((item, index) => age.indexOf(item) !== index);
+
+  // 1) filtered contains all duplicate occurrences
+  console.log('filterAge =', filterAge);
+  console.log('filterAge length =', filterAge.length);
+
+  // 2) unique repeated values (remove duplicates from filtered)
+  const uniqueRepeats = [...new Set(filterAge)];
+  console.log('unique repeated values =', uniqueRepeats);
+
 </script>
 </body>
 </html>

@@ -65,7 +65,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <p>
-            Content negotiation is the best format for getting the response from the server. When a client is requesting the data from the server so server offer few options to send the data like JSON format or XML format. 
+            Content negotiation is the best format for getting the response from the server. When a client is requesting the data from the server so server offer few options to send the data either it would be a JSON format or XML format. 
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@
             <h6>The Problem:</h6>
             <ul>
               <li>
-                Web APIs often need to serve the data to different clients, which may have varying preferences (e.g., some clients might prefer JSON, while others prefer XML).
+                Web APIs often need to serve the data to different clients, which may have varying preferences (e.g., some clients might prefer JSON, while others client needs a XML).
               </li>
 
               <li>
@@ -84,9 +84,9 @@
               </li>
             </ul>
 
-            <h5>The Solution: Content Negotiation:</h5>
+            <h5>The Solution is Content Negotiation</h5>
             <ul>
-              <li>Clients send an HTTP request including headers like Accept to specify their preferred media types.</li>
+              <li>Clients sending a HTTP request including headers with Accept to specify their preferred media types.</li>
               <li>The server uses this information to select the most appropriate representation of the data to return.</li>
               <li>If the server can fulfill the client's request, it returns the data in the specified format.</li>
               <li>If no acceptable format is available, the server might return a 406 Not Acceptable error or a response in a default format. </li>

@@ -231,13 +231,20 @@
       if(true) {
         var a = 25;
         console.log('xyz b =', b);
-        const b = 50; // let_vs_var_const.html:229 Uncaught ReferenceError: Cannot access 'b' before initialization
-        // const b = 50; // let_vs_var_const.html:229 Uncaught ReferenceError: Cannot access 'b' before initialization
+        const b = 50; // Uncaught ReferenceError: Cannot access 'b' before initialization
+        // const b = 50; // Uncaught ReferenceError: Cannot access 'b' before initialization
         // var b = 50; // it will print undefined why because this variable is created by var keyword
       }
       console.log('xyz a =', a);
     }
     xyz();
+
+    // Trying to re-decalre the let variable
+    let brand = "Rajvika_Garden";
+    // let brand = "RajLakshmi_Garden"; 
+    // Here we can not use the same variable name with let keyword
+    // this is allowed while using the var keyword
+    console.log("brand =", brand);
   </script>
 </body>
 </html>

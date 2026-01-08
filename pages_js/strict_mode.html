@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample</title>
+  <title>strict mode</title>
 </head>
   <body>
     <header>
@@ -56,7 +56,7 @@
           <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <div class="pull-left">
-                <h1>Heading</h1>
+                <h1>strict mode</h1>
               </div>
 
               <div class="pull-right">
@@ -73,7 +73,10 @@
       <section class="container">
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <h2>Sample Heading</h2>
+            <h2>The "use strict" Directive</h2>
+            <p>The "use strict" directive was new in ECMAScript version 5.</p>
+            <p>It defines that JavaScript code should be executed in "strict mode".</p>
+            <p>The purpose of "use strict" is to indicate that the code should be executed in "strict mode".</p>
           </div>
         </div>
       </section>
@@ -88,14 +91,28 @@
           </div>
       </div>
     </footer>
-    
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script>
+      "use strict"
       // Copyright Year script
       const now = new Date();
       let year = now.getFullYear();
       document.getElementById("currentYear").innerHTML = year;
+
+      function normalFunction () {
+        console.log("normalFunction ", this);
+      }
+
+      const arrowFunction = () => {
+        console.log("arrowFunction ", this);
+      }
+
+      normalFunction();
+      arrowFunction();
+      // without using strict mode both function will print the window object
+      // But when you are using a use strict then normal function will print 'undefined' and arrow function will print window object
+
     </script>
   </body>
 </html>

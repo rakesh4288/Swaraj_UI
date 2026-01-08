@@ -200,6 +200,17 @@
     console.log("new student =>", newStudent);
     // Output: {rollNumber: 32, name: 'Rajvika Shah', gender: 'female', address: 'Mumbai'}
 
+    let india = {
+      id: 1,
+      name: 'Rakesh Shah',
+      city: 'Pune'
+    }
+
+    // let usa = india; // this is a Shallow Copy
+    let usa = JSON.parse(JSON.stringify(india)); // this is a Deep Copy
+    usa.city = "Phoenix";
+    console.log('india =', india);
+    console.log('usa =', usa);
   </script>
 </body>
 

@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample</title>
+  <title>Find Substring</title>
 </head>
 <body>
   <header>
@@ -50,50 +50,44 @@
     </nav>
   </header>
 
-<main class="mainBody">
-  <section class="pageHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <div class="pull-left">
-            <h1>JavaScript Array Max Min !</h1>
-          </div>
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>Find Substring</h1>
+            </div>
 
-          <div class="pull-right">
-            <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              Back to Dashboard </a>
+            <div class="pull-right">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
           </div>
-          <div class="clearfix"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="container">
-    <div class="row">
-      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <p>
-          <img src="../images/array_max.png" alt="array_max" class="img-fluid" />
-        </p>
-
-        <p>
-          <img src="../images/array_min.png" alt="array_min" class="img-fluid" />
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="siteFooter">
-  <div class="container">
+    <section class="container">
       <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
-          </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          
+        </div>
       </div>
-  </div>
-</footer>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+            </div>
+        </div>
+    </div>
+  </footer>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script>
@@ -104,31 +98,21 @@
 </script>
 
 <script>
-  
-  // Maximum Value of Array
-  var array1 = [34, 65, 6, 88, 5, 33];
-  var maxValue = 0;
-  for(var i = 0; i<=array1.length; i++){
-    if(maxValue <= array1[i]) {
-      maxValue = array1[i];
-    } 
-  }
+  const string = "Hare Rama Hare Krishna Hare Krishna Krishna Hare Hare";
+  const isAvailable = string.includes("are"); // with the help of inlcudes we can get TRUE or FALSE
+  console.log("isAvailable =", isAvailable);
 
-  console.log("Maximum Value = ", maxValue); // Expected Value is: 88
-  console.log("Largest Value = ", Math.max(...array1));
+  const firstIndex = string.indexOf("Kri"); // this will help to find out the exact location
+  console.log("firstIndex =", firstIndex);
 
-  /**********************************************/
+  // If you string is coming multiple times indexOf can not provide the exact answer
+  // for this we can use the split() method
 
-  // Mimum Value of Array
-  var array2 = [34, 65, 6, 88, 5, 33];
-  var minValue = array2[0];
-  for(var i=0; i<=array2.length; i++){
-    if(minValue >= array2[i]){
-        minValue = array2[i];
-      }
-  }
-  console.log("Minimum Value = ", minValue); // Expected Value is: 5
-  console.log("Minimum Value = ", Math.min(...array2));
+  const howMany = string.split("are");
+  console.log("howMany =", howMany);
+  // split method is proving the array and it provides one element extra
+  const exactLength = string.split("are").length-1;
+  console.log("exactLength =", exactLength);
 </script>
 </body>
 </html>

@@ -91,14 +91,36 @@
 
 <footer class="siteFooter">
   <div class="container">
-      <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved 2023</span>
-          </div>
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
       </div>
+    </div>
   </div>
 </footer>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
+
+<script>
+  setTimeout(() => {
+    console.log("Step 1");
+    setTimeout(() => {
+      console.log("Step 2");
+      setTimeout(() => {
+        console.log("Step 3");
+        setTimeout(() => {
+          console.log("Step 4");
+        }, 1000);
+      }, 1000);
+    }, 1000);
+  }, 1000);
+</script>
 </body>
 </html>

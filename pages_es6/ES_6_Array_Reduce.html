@@ -190,6 +190,7 @@
     // // const reduceMethod = (prevValue, currentValue) => {
     // //   return prevValue + currentValue
     // // }
+    
     // const result = array1.reduce((prevValue, currentValue) => {
     //   return prevValue + currentValue
     // });
@@ -198,11 +199,9 @@
     // // const result = array1.reduce(reduceMethod);
     // // const result = array1.reduce((prev, current) => prev + current);
 
-
-
-    const array1 = [1,4,6,3,2];
+    const array1 = [1, 4, 6, 3, 2];
     const result = array1.reduce((prevValue, currentValue) => {
-      return prevValue + currentValue
+      return prevValue * currentValue
     });
     console.log('Result =', result);
     // Output: Result = 16

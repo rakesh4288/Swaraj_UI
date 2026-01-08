@@ -82,7 +82,7 @@
           <h4>await makes a function wait for a Promise</h4>
 
           <p>
-            Async and Await in JavaScript is used to simplify handling the asynchronous operations using promises. By
+            Async and Await is used to simplify handling the asynchronous operations using promises. By
             enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage
             complex asynchronous flows.
           </p>
@@ -171,6 +171,25 @@
     const now = new Date();
     let year = now.getFullYear();
     document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+    const secondJob = async() => {
+      await new Promise ((resolve, reject) => {
+        setTimeout(() => {
+          console.log("B");
+          resolve();
+        }, 1000);
+      });
+    }
+
+    const main = async () => {
+      console.log("A");
+      await secondJob();
+      console.log("C");
+    }
+
+    main();
   </script>
 </body>
 </html>
