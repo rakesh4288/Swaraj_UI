@@ -10,45 +10,45 @@
   <title>Objects assign method</title>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
-            </li>
-  
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
-            </li>
-  
-            <li class="nav-item">
-              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
-            </li>
-  
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
-            </li>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
-            </li>
-          </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
 <main class="mainBody">
   <section class="pageHeader">
@@ -119,7 +119,18 @@
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <p>
-          <img src="../images/Object_assign.png" class="img-fluid" alt="Object_assign" />
+          <img src="../images/Object_assign_1.png" class="img-fluid" alt="Object_assign" />
+        </p>
+      </div>
+    </div>
+
+    <hr class="bg-primary"/>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>We can also use Object.assign() method for converting Array into Object</h5>
+        <p>
+          <img src="../images/Object_assign_2.png" class="img-fluid" alt="Object_assign" />
         </p>
       </div>
     </div>
@@ -173,6 +184,11 @@
     lastName: "Shah"
   */
 
+  const Brics = ["Brazil", "Russia", "China", "India", "South Africa,"];
+  const newBrics = Object.assign({}, Brics);
+  console.log("newBrics =", newBrics);
+  // Expected Output:
+  // {0: 'Brazil', 1: 'Russia', 2: 'China', 3: 'India', 4: 'South Africa,'}
 
 </script>
 </body>

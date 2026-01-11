@@ -10,265 +10,304 @@
   <link href="../css/mainStyle.css" rel="stylesheet" />
   <title>Objects entries method</title>
 </head>
-
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
-          UI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-            </li>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+        UI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
-            </li>
-          </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
-  <main class="mainBody">
-    <section class="pageHeader">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <div class="pull-left">
-              <h1>JavaScript Object.entries()</h1>
-            </div>
-
-            <div class="pull-right">
-              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                Back to Dashboard </a>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container">
-      <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <p class="alert alert-info">The <b>Object.entries()</b> method returns an array of the key/value pairs of an
-            object. If you wanted to retrieve the key and value both then you can use this method </p>
-          
-            <p class="alert alert-warning">Note: The <b>Object.entries()</b> method does not change the original object.</p>
-          
-          <div class="alert alert-danger">
-            <h4>Related Methods:</h4>
-            <p><a href="objects_keys_method.html">Object.keys()</a> returns the keys (properties) of any object type.
-            </p>
-            <p><a href="objects_values_method.html">Object.values()</a> returns the values of all object keys
-              (properties).</p>
-            <p><a href="objects_entries_method.html">Object.entries()</a> returns the keys and values of any object
-              types.</p>
-            <p>The methods above return an <b>Iterable</b> (enumerable array).</p>
-            <p><b>Iterables</b> makes it simpler to use objects in loops and to convert objects into maps.</p>
-          </div>
-
-          <h5>How to use Loop using Object.entries</h5>
-          <p>
-            <img src="../images/Object_entries_loop_1.png" alt="Object_entries_loop_1" class="img-fluid" />
-          </p>
-        </div>
-
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <h5>Syntax:</h5>
-          <pre class="alert-success"><span>Object.entries(obj);</span></pre>
-
-          <h5>Parameter:</h5>
-          <ul>
-            <li>obj: It is the object whose enumerable property [key, value] pairs are to be returned.</li>
-          </ul>
-
-          <h5>Return Value:</h5>
-          <p>Object.entries() returns an array consisting of enumerable property [key, value] pairs of the object
-            passed.</p>
-
-          <p>
-            <img src="../images/Object_entries_1.png" alt="Object_entries_1" class="img-fluid" />
-          </p>
-
-          <p>
-            Output: <br/>
-            <img src="../images/Object_entries_2.png" alt="Object_entries_2" class="img-fluid" />
-          </p>
-
-          <p>The Object.entries() method in JavaScript is used to retrieve an array of an object’s enumerable property
-            [key, value] pairs. <br/>This method is particularly useful for transforming and iterating over objects in
-            situations where array-like manipulation is needed.</p>
-        </div>
-      </div>
-
-      <hr class="bg-primary"/>
-
-      <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <h5>How to convert Arrays from Object:</h5>
-          <p>Since Object.entries() returns an array of arrays, it is useful for converting objects into arrays, especially when you need to work with array-specific functions.</p>
-          <p>
-            <img src="../images/Object_entries_3.png" alt="Object_entries_3" class="img-fluid" />
-          </p>
-
-          <p>
-            <img src="../images/Object_entries_4.png" alt="Object_entries_4" class="img-fluid" />
-          </p>
-        </div>
-
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <h5>How to convert Objects from Arrays:</h5>
-          <p class="alert-info">We can use the <b>Object.fromEntries(object)</b> to convert into array again</p>
-
-          <p>
-            <img src="../images/Object_entries_5.png" alt="Object_entries_5" class="img-fluid" />
-          </p>
-        </div>
-      </div>
-
-      <hr class="bg-danger"/>
-
-      <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <h5>Transforming Objects:</h5>
-          <p>
-            You can use Object.entries() to manipulate or transform an object, such as changing its structure or reformatting it.
-          </p>
-
-          <p>
-            <img src="../images/Object_entries_6.png" alt="Object_entries_6" class="img-fluid" />
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="siteFooter">
+<main class="mainBody">
+  <section class="pageHeader">
     <div class="container">
       <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="pull-left">
+            <h1>JavaScript Object.entries()</h1>
+          </div>
+
+          <div class="pull-right">
+            <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Back to Dashboard </a>
+          </div>
+          <div class="clearfix"></div>
         </div>
       </div>
     </div>
-  </footer>
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Copyright Year script
-    const now = new Date();
-    let year = now.getFullYear();
-    document.getElementById("currentYear").innerHTML = year;
-  </script>
+  </section>
 
-  <script>
-    const emp = {
-      id: 1,
-      name: 'Rakesh Shah',
-      city: 'Pune',
-      position: 'Team Lead'
-    }
-    // Displaying the enumerable property [key, value]
-    // pairs of the object using object.entries() method
-    console.log("Object.entries =", Object.entries(emp));
+  <section class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <p class="alert alert-info">The <b>Object.entries()</b> method returns an array of the key/value pairs of an
+          object. If you wanted to retrieve the key and value both then you can use this method </p>
+        
+          <p class="alert alert-warning">Note: The <b>Object.entries()</b> method does not change the original object.</p>
+        
+        <div class="alert alert-danger">
+          <h4>Related Methods:</h4>
+          <p><a href="objects_keys_method.html">Object.keys()</a> returns the keys (properties) of any object type.
+          </p>
+          <p><a href="objects_values_method.html">Object.values()</a> returns the values of all object keys
+            (properties).</p>
+          <p><a href="objects_entries_method.html">Object.entries()</a> returns the keys and values of any object
+            types.</p>
+          <p>The methods above return an <b>Iterable</b> (enumerable array).</p>
+          <p><b>Iterables</b> makes it simpler to use objects in loops and to convert objects into maps.</p>
+        </div>
 
-    /*********************************************/
-    
-    // How to use loop using object.entries
-    const empObject = {
-      id: 3,
-      name: 'Vijay Adane',
-      city: 'Bangalore',
-      position: 'Senior Delivery Manager'
-    }
+        <h5>How to use Loop using Object.entries</h5>
+        <p>
+          <img src="../images/Object_entries_loop_1.png" alt="Object_entries_loop_1" class="img-fluid" />
+        </p>
+      </div>
 
-    Object.entries(empObject).forEach(([key, value]) => {
-      console.log(`${key}: ${value}`);
-    })
-    // Expected Output: 
-    /*
-      id: 3
-      name: Vijay Adane
-      city: Bangalore
-      position: Senior Delivery Manager
-    */
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Syntax:</h5>
+        <pre class="alert-success"><span>Object.entries(obj);</span></pre>
+
+        <h5>Parameter:</h5>
+        <ul>
+          <li>obj: It is the object whose enumerable property [key, value] pairs are to be returned.</li>
+        </ul>
+
+        <h5>Return Value:</h5>
+        <p>Object.entries() returns an array consisting of enumerable property [key, value] pairs of the object
+          passed.</p>
+
+        <p>
+          <img src="../images/Object_entries_1.png" alt="Object_entries_1" class="img-fluid" />
+        </p>
+
+        <p>
+          Output: <br/>
+          <img src="../images/Object_entries_2.png" alt="Object_entries_2" class="img-fluid" />
+        </p>
+
+        <p>The Object.entries() method in JavaScript is used to retrieve an array of an object’s enumerable property
+          [key, value] pairs. <br/>This method is particularly useful for transforming and iterating over objects in
+          situations where array-like manipulation is needed.</p>
+      </div>
+    </div>
+
+    <hr class="bg-primary"/>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>How to convert Arrays from Object:</h5>
+        <p>Since Object.entries() returns an array of arrays, it is useful for converting objects into arrays, especially when you need to work with array-specific functions.</p>
+        <p>
+          <img src="../images/Object_entries_3.png" alt="Object_entries_3" class="img-fluid" />
+        </p>
+
+        <p>
+          <img src="../images/Object_entries_4.png" alt="Object_entries_4" class="img-fluid" />
+        </p>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>How to convert Objects from Arrays:</h5>
+        <p class="alert-info">We can use the <b>Object.fromEntries(object)</b> to convert into array again</p>
+
+        <p>
+          <img src="../images/Object_entries_5.png" alt="Object_entries_5" class="img-fluid" />
+        </p>
+      </div>
+    </div>
+
+    <hr class="bg-danger"/>
+
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <h5>Transforming Objects:</h5>
+        <p>
+          You can use Object.entries() to manipulate or transform an object, such as changing its structure or reformatting it.
+        </p>
+
+        <p>
+          <img src="../images/Object_entries_6.png" alt="Object_entries_6" class="img-fluid" />
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="siteFooter">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
+
+<script>
+  const emp = {
+    id: 1,
+    name: 'Rakesh Shah',
+    city: 'Pune',
+    position: 'Team Lead'
+  }
+  // Displaying the enumerable property [key, value]
+  // pairs of the object using object.entries() method
+  console.log("Object.entries =", Object.entries(emp));
+
+  /*********************************************/
   
+  // How to use loop using object.entries
+  const empObject = {
+    id: 3,
+    name: 'Vijay Adane',
+    city: 'Bangalore',
+    position: 'Senior Delivery Manager'
+  }
 
-    // How to convert Objects to Arrays:
-    const house = {
+  Object.entries(empObject).forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+  })
+  // Expected Output: 
+  /*
+    id: 3
+    name: Vijay Adane
+    city: Bangalore
+    position: Senior Delivery Manager
+  */
+
+  /***********************************************/
+
+  // How to convert Objects to Arrays:
+  const house = {
+    name: 'Rajvika House',
+    capacity: 2500,
+    city: 'Singrauli',
+    state: 'Madhya Pradesh'
+  };
+  const newHouse = Object.entries(house);
+  console.log('newHouse =', newHouse);
+  // Expected Output:
+  /*
+    ['name', 'Rajvika House']
+    ['capacity', 2500]
+    ['city', 'Singrauli']
+    ['state', 'Madhya Pradesh']
+  */  
+
+  const eventHouse = Object.fromEntries(newHouse);
+  // Expected Output:
+  /*
+    {
       name: 'Rajvika House',
       capacity: 2500,
       city: 'Singrauli',
       state: 'Madhya Pradesh'
-    };
-    const newHouse = Object.entries(house);
-    console.log('newHouse =', newHouse);
-    // Expected Output:
-    /*
-      ['name', 'Rajvika House']
-      ['capacity', 2500]
-      ['city', 'Singrauli']
-      ['state', 'Madhya Pradesh']
-    */  
-
-    const eventHouse = Object.fromEntries(newHouse);
-    // Expected Output:
-    /*
-      {
-        name: 'Rajvika House',
-        capacity: 2500,
-        city: 'Singrauli',
-        state: 'Madhya Pradesh'
-      }
-
-    */
-
-    const student = {
-      name: 'Rakesh Shah',
-      city: 'Bhopal',
-      college: 'NIIST Bhopal'
     }
 
-    const transformed = Object.entries(student).map(([key,value]) => {
-      return (
-        [key.toUpperCase(), value]
-      )
-    });
-    console.log('transformed =', transformed);
-    // Expected Output:
-    /*
-      ['NAME', 'Rakesh Shah']
-      ['CITY', 'Bhopal']
-      ['COLLEGE', 'NIIST Bhopal']
-    */
+  */
+  
+  /***********************************************/
 
-  </script>
+  const student = {
+    name: 'Rakesh Shah',
+    city: 'Bhopal',
+    college: 'NIIST Bhopal'
+  }
+
+  const transformed = Object.entries(student).map(([key, value]) => {
+    return (
+      [key.toUpperCase(), value]
+    )
+  });
+
+  console.log('transformed =', transformed);
+  // Expected Output:
+  /*
+    ['NAME', 'Rakesh Shah']
+    ['CITY', 'Bhopal']
+    ['COLLEGE', 'NIIST Bhopal']
+  */
+
+  /***********************************************/
+
+  const coaching = {
+    name: 'Khan Sir',
+    capacity: 3000,
+    address: 'Patna, Bihar'
+  }
+
+  const objectKeys = Object.keys(coaching);
+  console.log('coaching objectKeys =', objectKeys);
+
+  const objectValues = Object.values(coaching);
+  console.log('coaching objectValues =', objectValues);
+
+  const objectEntries = Object.entries(coaching);
+  console.log('coaching objectEntries =', objectEntries);
+
+  // let keys = [];
+  // let index = 0;
+  // let values;
+  // for(k in coaching) {
+  //   keys[k] = index;
+  //   index ++ 
+  // }
+
+  // console.log("KEYS =", keys);
+  const keyValue = objectEntries.map((key, value) => {
+    return {
+      key: key,
+      value: value,
+      type: typeof value
+    }
+  });
+
+  console.log('keyValue =', keyValue);
+</script>
 </body>
 </html>

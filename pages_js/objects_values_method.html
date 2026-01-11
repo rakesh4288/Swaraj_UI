@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,14 +10,17 @@
   <link href="../css/mainStyle.css" rel="stylesheet" />
   <title>Objects values method</title>
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
           <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -24,19 +28,19 @@
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../index.html">Home</a>
             </li>
-            
+
             <li class="nav-item">
               <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
             </li>
-  
+
             <li class="nav-item">
               <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
             </li>
-  
+
             <li class="nav-item">
               <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
             </li>
-  
+
             <li class="nav-item">
               <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
             </li>
@@ -50,129 +54,156 @@
     </nav>
   </header>
 
-<main class="mainBody">
-  <section class="pageHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <div class="pull-left">
-            <h1>JavaScript Object.values()</h1>
-          </div>
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>JavaScript Object.values()</h1>
+            </div>
 
-          <div class="pull-right">
-            <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              Back to Dashboard </a>
+            <div class="pull-right">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
           </div>
-          <div class="clearfix"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="container">
-    <div class="row">
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-        <p class="alert alert-primary">
-          The Object.values() method returns the values of an object. <br/>
-          <b>If you wanted to find out the values of the object so this is the best method to find out the values.</b>
-        </p>
-        
-        <p class="alert alert-warning">Note: The Object.values() method does not change the original object.</p>
+    <section class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <p class="alert alert-primary">
+            The Object.values() method returns the values of an object. <br />
+            <b>If you wanted to find out the values of the object so this is the best method to find out the values.</b>
+          </p>
 
-        <div class="alert alert-danger">
-          <h4>Related Methods:</h4>
-          <p><a href="objects_keys_method.html">Object.keys()</a> returns the keys (properties) of any object type.</p>
-          <p><a href="objects_values_method.html">Object.values()</a> returns the values of all object keys (properties).</p>
-          <p><a href="objects_entries_method.html">Object.entries()</a> returns the keys and values of any object types.</p>
-          <p>The methods above return an <b>Iterable</b> (enumerable array).</p>
-          <p><b>Iterables</b> makes it simpler to use objects in loops and to convert objects into maps.</p>
-        </div>
+          <p class="alert alert-warning">Note: The Object.values() method does not change the original object.</p>
 
-        <p>
+          <div class="alert alert-danger">
+            <h4>Related Methods:</h4>
+            <p><a href="objects_keys_method.html">Object.keys()</a> returns the keys (properties) of any object type.
+            </p>
+            <p><a href="objects_values_method.html">Object.values()</a> returns the values of all object keys
+              (properties).</p>
+            <p><a href="objects_entries_method.html">Object.entries()</a> returns the keys and values of any object
+              types.</p>
+            <p>The methods above return an <b>Iterable</b> (enumerable array).</p>
+            <p><b>Iterables</b> makes it simpler to use objects in loops and to convert objects into maps.</p>
+          </div>
+
+          <p>
           <h6>While Passing the Array inside Object.values() method</h6>
           <img src="../images/Object_values_2.png" alt="Object_values_2" class="img-fluid" />
-        </p>
+          </p>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h5>Syntax:</h5>
+          <pre class="alert-success"><span>Object.values(obj);</span></pre>
+
+          <h5>Parameter:</h5>
+          <ul>
+            <li>obj: It is the object whose enumerable properties are to be returned.</li>
+          </ul>
+
+          <h6>Remember few points: </h6>
+          <ul>
+            <li>O is the capital letter while typing Object.values()</li>
+            <li>v is the small letter while typing .values()</li>
+            <li>It will always return the array</li>
+            <li>If you are passing the object inside the Object.values() then it will return the values within the array
+            </li>
+            <li>And if you are passing the array inside the Object.values then it will return the values within the
+              array</li>
+          </ul>
+
+          <h5>Return Value:</h5>
+          <p>It Returns an array containing all the enumerable property values of the given object. </p>
+
+          <p>
+            <img src="../images/Object_values.png" alt="Object_values" class="img-fluid" />
+          </p>
+        </div>
       </div>
 
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-        <h5>Syntax:</h5>
-        <pre class="alert-success"><span>Object.values(obj);</span></pre>
+      <hr/>
 
-        <h5>Parameter:</h5>
-        <ul>
-          <li>obj: It is the object whose enumerable properties are to be returned.</li>
-        </ul>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <p>
+            <img src="../images/Object_values_3.png" alt="Object_values_3" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <h6>Remember few points: </h6>
-        <ul>
-          <li>O is the capital letter while typing Object.values()</li>
-          <li>v is the small letter while typing .values()</li>
-          <li>It will always return the array</li>
-          <li>If you are passing the object inside the Object.values() then it will return the values within the array</li>
-          <li>And if you are passing the array inside the Object.values then it will return the values within the array</li>
-        </ul>
-
-        <h5>Return Value:</h5>
-        <p>It Returns an array containing all the enumerable property values of the given object. </p>
-
-        <p>
-          <img src="../images/Object_values.png" alt="Object_values" class="img-fluid" />
-        </p>
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
 
-<footer class="siteFooter">
-  <div class="container">
-      <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
-          </div>
-      </div>
-  </div>
-</footer>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script>
-  // Copyright Year script
-  const now = new Date();
-  let year = now.getFullYear();
-  document.getElementById("currentYear").innerHTML = year;
-</script>
+  <script>
+    // While passing the object inside the Object.values()
+    const employee = {
+      id: 1,
+      name: 'Rakesh Shah',
+      city: 'Pune',
+      position: 'Team Lead'
+    }
 
-<script>
-  // While passing the object inside the Object.values()
-  const employee = {
-    id: 1,
-    name: 'Rakesh Shah',
-    city: 'Pune',
-    position: 'Team Lead'
-  }
+    console.log("Object.keys 1 =", Object.values(employee));
+    // Expected Output: [1, 'Rakesh Shah', 'Pune', 'Team Lead']
 
-  console.log("Object.keys 1 =", Object.values(employee));
-  // Expected Output: [1, 'Rakesh Shah', 'Pune', 'Team Lead']
+    /*********************************/
 
+    // While passing the array inside the Object.values()
+    const cities = ["Pune", "Hyderabad", "Chennai", "Bhopal", "Delhi"];
+    const result = Object.values(cities);
+    console.log('cities values =', result);
+    // Output: ['Pune', 'Hyderabad', 'Chennai', 'Bhopal', 'Delhi']
 
-  // While passing the array inside the Object.values()
-  const cities = ["Pune", "Hyderabad", "Chennai", "Bhopal", "Delhi"];
-  const result = Object.values(cities);
-  console.log('cities values =', result);
-  // Output: ['Pune', 'Hyderabad', 'Chennai', 'Bhopal', 'Delhi']
+    /*********************************/
 
-  // find the object values using filter method
-  const fruits = {
-    keys1: 'apple',
-    keys2: 'banana',
-    keys3: 'orange',
-    keys4: 'kiwi',
-  }
+    // find the object values using filter method
+    const fruits = {
+      keys1: 'apple',
+      keys2: 'banana',
+      keys3: 'orange',
+      keys4: 'kiwi',
+    }
 
-  const input = "I have banana, orange and kiwi";
-  const fruitsResult = Object.values(fruits).filter((item) => input.includes(item));
-  console.log('fruitsResult =', fruitsResult);
+    const input = "I have banana and kiwi ";
+    // first step we need to find out the object values in Array format
+    const objectValues = Object.values(fruits);
+    console.log('object Values =', objectValues);
+    // Expected Output
+    // ['apple', 'banana', 'orange', 'kiwi']
 
-</script>
+    const matching = objectValues.filter((item) => input.includes(item));
+    console.log('matching Values =', matching);
+    // Expected Output
+    // ['banana', 'kiwi']
+
+  </script>
 </body>
+
 </html>
