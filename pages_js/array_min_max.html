@@ -7,7 +7,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>Sample</title>
+  <title>Array Min & Max</title>
 </head>
 <body>
   <header>
@@ -77,8 +77,15 @@
           <img src="../images/array_max.png" alt="array_max" class="img-fluid" />
         </p>
 
+        <hr class="bg-danger" />
+
         <p>
           <img src="../images/array_min.png" alt="array_min" class="img-fluid" />
+        </p>
+
+        <hr class="bg-primary" />
+        <p>
+          <img src="../images/array_min_max.png" alt="array_min_max" class="img-fluid" />
         </p>
       </div>
     </div>
@@ -129,6 +136,27 @@
   }
   console.log("Minimum Value = ", minValue); // Expected Value is: 5
   console.log("Minimum Value = ", Math.min(...array2));
+
+  /**********************************************/
+
+
+  const array3 = [10, 6, 32, 43, 12, 54, 40];
+  let largest = array3[0];
+  let smallest = array3[0];
+
+  for(let i = 0; i< array3.length; i++) {
+    if(array3[i] > largest) {
+      largest = array3[i]
+    }
+    if (array3[i] < smallest){
+      smallest = array3[i]
+    }
+  }
+
+  console.log('Largest Value =', largest); // 54
+  console.log('Smallest Value =', smallest); // 6
+
+
 </script>
 </body>
 </html>

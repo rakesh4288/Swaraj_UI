@@ -129,6 +129,29 @@
   Promise.all([p1, p2, p3]).then(function(values){
     console.log("Promises =", values);
   });
+
+  /***********************************/
+
+  const myPromise = new Promise((resolve, reject) => {
+    if(true) {
+      resolve('Yes - Everything is fine');
+    } else {
+      reject('No - Still trying');
+    }
+  });
+
+  myPromise.then((data) => {
+    console.log('myPromise data =', data);
+  }).catch((error) => {
+    console.log('myPromise error =', error);
+  })
+
+  /***********************************/
+
+
+  const city = "Singrauli, Bhopal, Pune, Phoenix";
+  const array = city.split(",");
+  console.log('Array of City =', array);
 </script>
 </body>
 </html>

@@ -3,6 +3,7 @@ body{
     font-size: 14px;
 }
 
+p{ margin-bottom: 10px;}
 .mainBody{
     display: block;
     position: relative;
@@ -15,17 +16,9 @@ body{
     background: linear-gradient(90deg, rgba(2,0,36,1) 26%, rgba(52,6,168,1) 74%, rgba(0,212,255,1) 100%);
 }
 
-.logoOrange{
-    color: orange;
-}
-
-.logoWhite{
-    color: white;
-}
-
-.logoGreen{
-    color: green;
-}
+.logoOrange{ color: orange;}
+.logoWhite{ color: white;}
+.logoGreen{ color: green;}
 
 .pageHeader{
     display: block;
@@ -44,9 +37,7 @@ body{
     background-image: linear-gradient(139deg, #fb8817,#ff4b01,#c12127, #e02aff);
 }
 
-.footerContent{
-    font-size: 12px;
-}
+.footerContent{ font-size: 12px;}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
