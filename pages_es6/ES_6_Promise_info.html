@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <link href="../css/mainStyle.css" rel="stylesheet" />
+  <title>Promise Info</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradienHeader">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
+          UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_js/Javascript_Dashboard.html">JavaScript</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="ES_6_Dashboard.html">ECMA 6</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../pages_node_js/Node_JS_Dashboard.html">Node JS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainBody">
+    <section class="pageHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="pull-left">
+              <h1>What is the promises and how many types in javascript ?</h1>
+            </div>
+
+            <div class="pull-right">
+              <a href="ES_6_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Dashboard </a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h6>
+            A Promise is an object in JavaScript which is used for handling the asynchronous operations like API calls
+            without distrurbing to a different code.
+          </h6>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <p>
+            Promise States (Types of Promise States) : A Promise can be in one of three states:
+          <h6>1. Pending</h6>
+          <ul>
+            <li>Initial state</li>
+            <li>Operation is not completed yet</li>
+          </ul>
+
+          <h6>2. Fulfilled (Resolved)</h6>
+          <ul>
+            <li>Operation completed successfully</li>
+            <li>then() is executed</li>
+          </ul>
+
+          <h6>3.Rejected</h6>
+          <ul>
+            <li>Operation failed</li>
+            <li>catch() is executed</li>
+          </ul>
+          </p>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <p>
+            <img src="../images/promise_info_1.png" alt="promise_info_1" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <p>
+            We can handle the resolve and reject status by using then and catch block. Yes, Promise providing the two
+            method for handing the upcoming response.
+          </p>
+
+          <p class="text-danger">
+            We can use promise - when we have to perform some set of action and after that it will execute some or
+            produce some result. Promise is very eager it will definitely be executed whether the result will
+            success or failed.After we can map the execution flow using .then() and .catch() callback function.
+          </p>
+        </div>
+      </div>
+
+      <hr class="bg-primary" />
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <h5>1.Promise.resolve()</h5>
+          <h6>
+            Returns a Promise object that is already resolved with the given value. Useful for functions that might be
+            asynchronous but sometimes return a synchronous value.
+            <br />
+            <b>Promise.resolve("Success").then(console.log);</b>
+          </h6>
+
+          <h5>2. Promise.reject()</h5>
+          <h6>
+            Returns a Promise object that is already rejected with the given reason.
+            <br />
+            <b>Promise.reject("Error").catch(console.log);</b>
+          </h6>
+
+          <h5>3. Promise.all()</h5>
+          <h6>
+            Takes an iterable of promises and returns a single Promise that resolves when all of the promises in the
+            iterable have resolved, or rejects if any of the promises in the iterable rejects.
+            <br />
+            <b>Promise.all([p1, p2, p3]).then(console.log);</b>
+          </h6>
+
+          <h5>4. Promise.allSettled()</h5>
+          <h6>
+            Takes an iterable of promises and returns a single promise that resolves after all of the given promises
+            have either fulfilled or rejected. It returns an array of objects describing the outcome of each promise.
+            <br />
+            <b>Promise.allSettled([p1, p2]);</b>
+          </h6>
+
+          <h5>5. Promise.race()</h5>
+          <h6>
+            Takes an iterable of promises and returns a single Promise that resolves or rejects as soon as one of the
+            promises in the iterable resolves or rejects, with the value or reason from that first promise.
+            <br />
+            <b>Promise.race([p1, p2]);</b>
+          </h6>
+
+          <p>
+            <img src="../images/promise_all_1.png" alt="promise_all_1" class="im-fluid" />
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Copyright Year script
+    const now = new Date();
+    let year = now.getFullYear();
+    document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+    const myPromise = new Promise((resolve, reject) => {
+      let success = true;
+      if (success) {
+        resolve("Operation Successful !")
+      } else {
+        reject("Operation Failed !!");
+      }
+    })
+
+    myPromise.then((result) => {
+      console.log("My Promise Success =", result);
+    }).catch((error) => {
+      console.log("My Promise Failed =", error);
+    }).finally(() => {
+      console.log("My Promise Completed");
+    });
+
+    /***************************************************/
+    
+    const promiseAllMethod = async () => {
+      const usersApi = 'https://jsonplaceholder.typicode.com/users';
+      const postApi = 'https://jsonplaceholder.typicode.com/posts';
+      const commentsApi = 'https://jsonplaceholder.typicode.com/comments';
+      try {
+        const [usersApiResponse, postApiResponse, commentsApiResponse] = await Promise.all([
+          fetch(usersApi), fetch(postApi), fetch(commentsApi)
+        ]);
+        const [userApiResult, postApiResult, commentApiResult] = await Promise.all([
+          usersApiResponse.json(), 
+          postApiResponse.json(), 
+          commentsApiResponse.json()
+        ]);
+
+        console.log('userApiResult =', userApiResult);
+        console.log('postApiResult =', postApiResult);
+        console.log('commentApiResult =', commentApiResult);
+      }
+      catch(error) {
+        console.log('Promise.all failed');
+      }
+    }
+    promiseAllMethod();
+
+
+  </script>
+</body>
+
+</html>
