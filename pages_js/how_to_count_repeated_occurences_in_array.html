@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,19 +7,17 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
   <link href="../css/mainStyle.css" rel="stylesheet" />
-  <title>String character count</title>
+  <title>count repeated occurences in array
+</title>
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark gradienHeader fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
           <img src="../images/favicon.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b>
-          UI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <b><span class="logoOrange">स्व</span><span class="logoWhite">रा</span><span class="logoGreen">ज</span></b> UI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -28,19 +25,19 @@
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../index.html">Home</a>
             </li>
-
+            
             <li class="nav-item">
               <a class="nav-link" href="../pages_html/HTML_Dashboard.html">HTML</a>
             </li>
-
+  
             <li class="nav-item">
               <a class="nav-link" href="../pages_css/CSS_Dashboard.html">CSS</a>
             </li>
-
+  
             <li class="nav-item">
               <a class="nav-link active" href="Javascript_Dashboard.html">JavaScript</a>
             </li>
-
+  
             <li class="nav-item">
               <a class="nav-link" href="../pages_es6/ES_6_Dashboard.html">ECMA 6</a>
             </li>
@@ -60,11 +57,11 @@
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="pull-left">
-              <h1>How to count the number of string character</h1>
+              <h1>How to count repeated occurences in array</h1>
             </div>
 
             <div class="pull-right">
-              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2">
+              <a href="Javascript_Dashboard.html" class="btn btn-dark btn-sm mt-2"> 
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 Back to Dashboard </a>
             </div>
@@ -77,14 +74,8 @@
     <section class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <h2>Using ES6 For of loop we can easily count the string character</h2>
-
           <p>
-            <img src="../images/string_character_count_1.png" alt="string_character_count_1" class="img-fluid" />
-          </p>
-
-          <p>
-            <img src="../images/string_character_count_2.png" alt="string_character_count_2" class="img-fluid" />
+            <img src="../images/arra_count_repeated_occurences.png" class="img-fluid"/>
           </p>
         </div>
       </div>
@@ -93,46 +84,41 @@
 
   <footer class="siteFooter">
     <div class="container">
-      <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <span class="footerContent">Copyright &copy; All right Reserved <span id="currentYear"></span></span>
+            </div>
         </div>
-      </div>
     </div>
   </footer>
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Copyright Year script
-    const now = new Date();
-    let year = now.getFullYear();
-    document.getElementById("currentYear").innerHTML = year;
-  </script>
+  
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright Year script
+  const now = new Date();
+  let year = now.getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+</script>
 
-  <script>
-    const string = "Hare Rama Hare Krishna Krishna Krishna Hare Hare";
-    const obj = {};
-    for(let str of string) {
-      if(obj[str]) {
-        obj[str] = obj[str] + 1;
-      } else {
-        obj[x] = 1
-      }
+<script>
+  const array = [100, 300, 100, 900, 300, 400, 500, 200, 400, 100, 300, 200];
+  const object = {}
+  
+  for(let i = 0; i<array.length; i ++) {
+    if(object[array[i]]) {
+      object[array[i]] = object[array[i]] + 1
+    } else {
+      object[array[i]] = 1;
     }
-    console.log("Repeated Characters =", obj);
+  }
 
-    
-    const words = string.split(' '); // Splits by space
-    const wordCounts = {};
+  console.log('object =', object);
+  // Expected Output:
+  /*
+    {100: 3, 200: 2, 300: 3, 400: 2, 500: 1, 900: 1}
+  */
 
-    for (const word of words) {
-      const lowerWord = word.toLowerCase(); // Case-insensitive
-      wordCounts[lowerWord] = (wordCounts[lowerWord] || 0) + 1;
-    }
-
-    console.log("Word Counts:", wordCounts);
-    // Output: {hare: 4, rama: 1, krishna: 3}
-  </script>
+</script>
 </body>
-
 </html>
