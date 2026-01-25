@@ -150,8 +150,8 @@
     // this is a best approach for Error handling
 
     const productsInfo = async () => {
-      const res = await fetch('https://fakestoreapi.com/products');
       try {
+        const res = await fetch('https://fakestoreapi.com/products');
         const response = await res.json();
         // console.log('productsInfo response =', response);
         // here you are getting the response from API

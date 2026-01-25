@@ -74,7 +74,7 @@
       </div>
     </section>
 
-    <div class="container">
+    <section class="container">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div>
@@ -92,13 +92,14 @@
         </div>
       </div>
 
-      <hr class="bg-danger"/>
+      <hr class="bg-danger" />
 
       <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <h5>More Details:</h5>
           <h6>
-            <b>var:</b> Declares variables with function or global scope and allows re-declaration and updates within the same scope.
+            <b>var:</b> Declares variables with function or global scope and allows re-declaration and updates within
+            the same scope.
           </h6>
         </div>
 
@@ -107,42 +108,65 @@
         </div>
       </div>
 
-      <hr class="bg-primary"/>
+      <hr class="bg-primary" />
 
       <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <h5>Block Scope with let</h5>
           <h6>
-            This feature introduced in ES6. This means the variable is only accessible within the block (like loops or conditionals) where it is declared.
+            This feature introduced in ES6. This means the variable is only accessible within the block (like loops or
+            conditionals) where it is declared.
           </h6>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <img src="../images/let_var_const_img_2.png" alt="let_var_const_img_2" class="img-fluid" /> <br/><br/>
+          <img src="../images/let_var_const_img_2.png" alt="let_var_const_img_2" class="img-fluid" /> <br /><br />
           <img src="../images/let_var_const_img_3.png" alt="let_var_const_img_3" class="img-fluid" />
         </div>
       </div>
 
-      <hr class="bg-success"/>
+      <hr class="bg-success" />
 
       <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <h5>Immutability with const</h5>
           <h6>
-            const is used to declare variables that should not be reassigned after their initial assignment. This keyword is also block-scoped like let.
+            const is used to declare variables that should not be reassigned after their initial assignment. This
+            keyword is also block-scoped like let.
           </h6>
 
           <ul>
-            <li>The variable country is declared with const, meaning its value cannot be reassigned after initialization.</li>
+            <li>The variable country is declared with const, meaning its value cannot be reassigned after
+              initialization.</li>
             <li>The value of country (which is India) is printed to the console.</li>
           </ul>
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <img src="../images/let_var_const_img_4.png" alt="let_var_const_img_4" class="img-fluid" /> 
+          <img src="../images/let_var_const_img_4.png" alt="let_var_const_img_4" class="img-fluid" />
         </div>
       </div>
-    </div>
+    </section>
+
+    <hr class="bg-success" />
+
+    <section class="container">
+      <div class="row"> 
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <p>
+            <img src="../images/let_var_const_img_5.png" alt="let_var_const_img_5" class="img-fluid" />
+          </p>
+
+          <p>
+            <img src="../images/let_var_const_img_6.png" alt="let_var_const_img_6" class="img-fluid" />
+          </p>
+
+          <p>
+            <img src="../images/let_var_const_img_7.png" alt="let_var_const_img_7" class="img-fluid" />
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="siteFooter">
@@ -193,7 +217,7 @@
     abc();
 
 
-    if(true){
+    if (true) {
       const country = "India";
       console.log(country); // Output: India
     }
@@ -213,7 +237,7 @@
     // And in this case bb has already defined with undefined values
 
     function green() {
-      if(true) {
+      if (true) {
         var country = 'INDIA';
         let state = "MAHARASHTRA"
         const city = "PUNE";
@@ -228,9 +252,9 @@
     //------------------------------------------//
 
     function xyz() {
-      if(true) {
+      if (true) {
         var a = 25;
-        console.log('xyz b =', b);
+        // console.log('xyz b =', b);
         const b = 50; // Uncaught ReferenceError: Cannot access 'b' before initialization
         // const b = 50; // Uncaught ReferenceError: Cannot access 'b' before initialization
         // var b = 50; // it will print undefined why because this variable is created by var keyword
@@ -245,6 +269,43 @@
     // Here we can not use the same variable name with let keyword
     // this is allowed while using the var keyword
     console.log("brand =", brand);
+
+    /******************************************************/
+
+    const bicycle = () => {
+      {
+        var a = "Hero Bicycle";
+        var b = "Caya Bicycle"
+      }
+      console.log("bicycle 1 =", a);
+      console.log("bicycle 2 =", b);
+      // Both will print the successfully, 
+
+      // Let's suppose if you wanted to thse a & b variable should not accessible from scope
+      // so We can use let keyword like below
+      {
+        let c = "Montra";
+        let d = "Avon Cycles"
+      }
+      // console.log("bicycle 3 =", c);
+      // console.log("bicycle 4 =", d);
+      // Now these two consoles will throw the error
+      // ES_6_let_vs_var_const.html:268 Uncaught ReferenceError: c is not defined at bicycle
+
+      // So How can we do this without using let keyword
+      // Answer is (IIFE) Immediately Invoked Function Expression
+
+      {
+        (function () {
+          var e = "Giant Bicycle";
+          var f = "KTM Bicycle";
+        })()
+      }
+      console.log("bicycle 5 =", e);
+      console.log("bicycle 6 =", f);
+      // Now this will throw the error
+    }
+    bicycle();
   </script>
 </body>
 </html>
