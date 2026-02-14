@@ -239,6 +239,14 @@
 
     <hr class="bg-dark" />
 
+    <section class="container mb-3">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <img src="../images/concatation.png" class="img-fluid"/>
+        </div>
+      </div>
+    </section>
+
     <section id="exception-vs-error" class="bg-info pt-3 pb-3">
       <div class="container">
         <div class="row">
@@ -279,6 +287,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="siteFooter">
@@ -298,6 +307,37 @@
     const now = new Date();
     let year = now.getFullYear();
     document.getElementById("currentYear").innerHTML = year;
+  </script>
+
+  <script>
+
+
+    let result_1 = 5 + "5";
+    console.log('result_1 =', result_1); // 55
+
+    let result_2 = 5 + + "5";
+    console.log('result_2 =', result_2); // 10
+
+    let result_3 = 5 - "5";
+    console.log('result_3 =', result_3); // 0
+
+    let result_4 = 5 - - "5";
+    console.log('result_4 =', result_4); // 10
+
+    let result_5 = 5 - - "5" - "5";
+    console.log('result_5 =', result_5); // 5
+
+    let result_6 = 5 + + "5" + "5";
+    console.log('result_6 =', result_6); // 105
+
+    let result_7 = 5  + "5" + "5";
+    console.log('result_7 =', result_7); // 555
+
+    let result_8 = 5 - "5" + "5";
+    console.log('result_8 =', result_8); // 05
+
+
+
   </script>
 </body>
 

@@ -1,9 +1,10 @@
 body{
-    padding-top: 55px;
+    padding-top: 40px;
     font-size: 14px;
 }
 
 p{ margin-bottom: 10px;}
+
 .mainBody{
     display: block;
     position: relative;
@@ -14,6 +15,8 @@ p{ margin-bottom: 10px;}
 .gradienHeader {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 26%, rgba(52,6,168,1) 74%, rgba(0,212,255,1) 100%);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .logoOrange{ color: orange;}
@@ -45,10 +48,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: #edb413;
     text-shadow: 0 2px 3px rgb(0 0 0 / 30%);
     font-weight: 500;
+    margin-bottom: 0;
 }
 
 h2{
